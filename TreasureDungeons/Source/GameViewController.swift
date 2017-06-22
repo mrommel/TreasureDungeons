@@ -39,12 +39,42 @@ class GameViewController: GLKViewController {
     var x: Float = 0
     var y: Float = -5
     
+    var map: Map? {
+        didSet {
+            rebuildDungeon()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupGLcontext()
         setupGLupdater()
         setupScene()
+        
+        let map = Map(width: 4, height: 4)
+        
+        map.tiles[0, 0] = Tile(point: Point(x: 0, y: 0), type: .wall)
+        map.tiles[0, 1] = Tile(point: Point(x: 0, y: 1), type: .wall)
+        map.tiles[0, 2] = Tile(point: Point(x: 0, y: 2), type: .floor)
+        map.tiles[0, 3] = Tile(point: Point(x: 0, y: 3), type: .floor)
+        
+        map.tiles[1, 0] = Tile(point: Point(x: 1, y: 0), type: .floor)
+        map.tiles[1, 1] = Tile(point: Point(x: 1, y: 1), type: .floor)
+        map.tiles[1, 2] = Tile(point: Point(x: 1, y: 2), type: .floor)
+        map.tiles[1, 3] = Tile(point: Point(x: 1, y: 3), type: .wall)
+        
+        map.tiles[2, 0] = Tile(point: Point(x: 2, y: 0), type: .wall)
+        map.tiles[2, 1] = Tile(point: Point(x: 2, y: 1), type: .floor)
+        map.tiles[2, 2] = Tile(point: Point(x: 2, y: 2), type: .floor)
+        map.tiles[2, 3] = Tile(point: Point(x: 2, y: 3), type: .wall)
+        
+        map.tiles[3, 0] = Tile(point: Point(x: 3, y: 0), type: .floor)
+        map.tiles[3, 1] = Tile(point: Point(x: 3, y: 1), type: .floor)
+        map.tiles[3, 2] = Tile(point: Point(x: 3, y: 2), type: .floor)
+        map.tiles[3, 3] = Tile(point: Point(x: 3, y: 3), type: .wall)
+        
+        self.map = map
     }
     
     override func didReceiveMemoryWarning() {
@@ -118,11 +148,43 @@ extension GameViewController {
             1,
             150)
         
-        self.models.append(Cube(shader: self.shader))
+        self.rebuildDungeon()
+    }
+    
+    func rebuildDungeon() {
         
-        /*let secondCube = Cube(shader: self.shader)
-        secondCube.position = GLKVector3(v: (5.0, 0.0, 0.0))
-        self.models.append(secondCube)*/
+        self.models = []
+        
+        guard self.map != nil else {
+            return
+        }
+        
+        if let map = self.map {
+            
+            for x in 0..<map.tiles.columnCount() {
+                for y in 0..<map.tiles.rowCount() {
+                    
+                    if let tile = map.tiles[x, y] {
+                    
+                        switch tile.type {
+                        case .floor:
+                            let floor0 = Floor(shader: self.shader)
+                            floor0.position = GLKVector3(v: (Float(tile.point.x * 2), 0.0, Float(tile.point.y * 2)))
+                            self.models.append(floor0)
+                            break
+                        case .wall:
+                            let wall0 = Wall(shader: self.shader)
+                            wall0.position = GLKVector3(v: (Float(tile.point.x * 2), 0.0, Float(tile.point.y * 2)))
+                            self.models.append(wall0)
+                            break
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+        /*self.models.append(Cube(shader: self.shader))
         
         let wall0 = Wall(shader: self.shader)
         wall0.position = GLKVector3(v: (5.0, 0.0, 0.0))
@@ -130,7 +192,7 @@ extension GameViewController {
         
         let floor0 = Floor(shader: self.shader)
         floor0.position = GLKVector3(v: (-1.0, 0.0, -1.0))
-        self.models.append(floor0)
+        self.models.append(floor0)*/
     }
     
 }

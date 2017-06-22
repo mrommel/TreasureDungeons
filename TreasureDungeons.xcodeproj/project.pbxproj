@@ -10,6 +10,8 @@
 		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
 		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
 		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
+		1A56C17E1EFC57F60016BD8C /* floor_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A56C17C1EFC57F60016BD8C /* floor_gray.png */; };
+		1A56C17F1EFC57F60016BD8C /* floor_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A56C17D1EFC57F60016BD8C /* floor_blue.png */; };
 		1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */; };
 		1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */; };
 		1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B11EFBC74700E5CADE /* Cube.swift */; };
@@ -30,20 +32,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = Game/Game.swift; sourceTree = "<group>"; };
-		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Game/Map.swift; sourceTree = "<group>"; };
-		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = Utils/Array2D.swift; sourceTree = "<group>"; };
+		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = TreasureDungeons/Source/Game/Game.swift; sourceTree = "<group>"; };
+		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = TreasureDungeons/Source/Game/Map.swift; sourceTree = "<group>"; };
+		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = TreasureDungeons/Source/Utils/Array2D.swift; sourceTree = "<group>"; };
+		1A56C17C1EFC57F60016BD8C /* floor_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = floor_gray.png; path = TreasureDungeons/Resources/floor_gray.png; sourceTree = "<group>"; };
+		1A56C17D1EFC57F60016BD8C /* floor_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = floor_blue.png; path = TreasureDungeons/Resources/floor_blue.png; sourceTree = "<group>"; };
 		1A90C1AE1EFBC74700E5CADE /* TreasureDungeons-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TreasureDungeons-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TreasureDungeons/Source/AppDelegate.swift; sourceTree = "<group>"; };
-		1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEffect.swift; path = TreasureDungeons/Source/BaseEffect.swift; sourceTree = "<group>"; };
-		1A90C1B11EFBC74700E5CADE /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cube.swift; path = TreasureDungeons/Source/Cube.swift; sourceTree = "<group>"; };
-		1A90C1B21EFBC74700E5CADE /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Floor.swift; path = TreasureDungeons/Source/Floor.swift; sourceTree = "<group>"; };
-		1A90C1B31EFBC74700E5CADE /* GLKMatrix+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GLKMatrix+Array.swift"; path = "TreasureDungeons/Source/GLKMatrix+Array.swift"; sourceTree = "<group>"; };
-		1A90C1B41EFBC74700E5CADE /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = TreasureDungeons/Source/Model.swift; sourceTree = "<group>"; };
-		1A90C1B51EFBC74700E5CADE /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Square.swift; path = TreasureDungeons/Source/Square.swift; sourceTree = "<group>"; };
-		1A90C1B61EFBC74700E5CADE /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vertex.swift; path = TreasureDungeons/Source/Vertex.swift; sourceTree = "<group>"; };
+		1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEffect.swift; path = TreasureDungeons/Source/OpenGL/BaseEffect.swift; sourceTree = "<group>"; };
+		1A90C1B11EFBC74700E5CADE /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cube.swift; path = TreasureDungeons/Source/Models/Cube.swift; sourceTree = "<group>"; };
+		1A90C1B21EFBC74700E5CADE /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Floor.swift; path = TreasureDungeons/Source/Models/Floor.swift; sourceTree = "<group>"; };
+		1A90C1B31EFBC74700E5CADE /* GLKMatrix+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GLKMatrix+Array.swift"; path = "TreasureDungeons/Source/OpenGL/GLKMatrix+Array.swift"; sourceTree = "<group>"; };
+		1A90C1B41EFBC74700E5CADE /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = TreasureDungeons/Source/OpenGL/Model.swift; sourceTree = "<group>"; };
+		1A90C1B51EFBC74700E5CADE /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Square.swift; path = TreasureDungeons/Source/Models/Square.swift; sourceTree = "<group>"; };
+		1A90C1B61EFBC74700E5CADE /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vertex.swift; path = TreasureDungeons/Source/OpenGL/Vertex.swift; sourceTree = "<group>"; };
 		1A90C1B71EFBC74700E5CADE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = TreasureDungeons/Source/GameViewController.swift; sourceTree = "<group>"; };
-		1A90C1B81EFBC74700E5CADE /* Wall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wall.swift; path = TreasureDungeons/Source/Wall.swift; sourceTree = "<group>"; };
+		1A90C1B81EFBC74700E5CADE /* Wall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wall.swift; path = TreasureDungeons/Source/Models/Wall.swift; sourceTree = "<group>"; };
 		1A90C1C31EFBC75600E5CADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = TreasureDungeons/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		1A90C1C41EFBC75600E5CADE /* dungeon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dungeon_01.png; path = TreasureDungeons/Resources/dungeon_01.png; sourceTree = "<group>"; };
 		1A90C1C51EFBC75600E5CADE /* SimpleFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleFragmentShader.glsl; path = TreasureDungeons/Resources/SimpleFragmentShader.glsl; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		1A90C1AD1EFBC6D900E5CADE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A56C17C1EFC57F60016BD8C /* floor_gray.png */,
+				1A56C17D1EFC57F60016BD8C /* floor_blue.png */,
 				1A90C1C31EFBC75600E5CADE /* Assets.xcassets */,
 				1A90C1C41EFBC75600E5CADE /* dungeon_01.png */,
 				1A90C1C51EFBC75600E5CADE /* SimpleFragmentShader.glsl */,
@@ -210,11 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A56C17F1EFC57F60016BD8C /* floor_blue.png in Resources */,
 				1A90C1D41EFBC7DF00E5CADE /* Main.storyboard in Resources */,
 				1A90C1C81EFBC75600E5CADE /* Assets.xcassets in Resources */,
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
 				1A90C1CA1EFBC75600E5CADE /* SimpleFragmentShader.glsl in Resources */,
 				1A90C1D31EFBC7DF00E5CADE /* LaunchScreen.storyboard in Resources */,
+				1A56C17E1EFC57F60016BD8C /* floor_gray.png in Resources */,
 				1A90C1CB1EFBC75600E5CADE /* SimpleVertexShader.glsl in Resources */,
 				1A90C1C91EFBC75600E5CADE /* dungeon_01.png in Resources */,
 			);

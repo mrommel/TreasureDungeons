@@ -13,33 +13,33 @@ class Floor : Model {
         
         // Front
         Vertex( 1, -1, 1,  1, 0, 0, 1,  1, 0,  0, 0, 1), // 0
-        Vertex( 1, -0.9, 1,  0, 1, 0, 1,  1, 1,  0, 0, 1), // 1
-        Vertex(-1, -0.9, 1,  0, 0, 1, 1,  0, 1,  0, 0, 1), // 2
+        Vertex( 1, -0.95, 1,  0, 1, 0, 1,  1, 1,  0, 0, 1), // 1
+        Vertex(-1, -0.95, 1,  0, 0, 1, 1,  0, 1,  0, 0, 1), // 2
         Vertex(-1, -1, 1,  0, 0, 0, 1,  0, 0,  0, 0, 1), // 3
         
         // Back
         Vertex(-1, -1, -1, 0, 0, 1, 1,  1, 0,  0, 0,-1), // 4
-        Vertex(-1, -0.9, -1, 0, 1, 0, 1,  1, 1,  0, 0,-1), // 5
-        Vertex( 1, -0.9, -1, 1, 0, 0, 1,  0, 1,  0, 0,-1), // 6
+        Vertex(-1, -0.95, -1, 0, 1, 0, 1,  1, 1,  0, 0,-1), // 5
+        Vertex( 1, -0.95, -1, 1, 0, 0, 1,  0, 1,  0, 0,-1), // 6
         Vertex( 1, -1, -1, 0, 0, 0, 1,  0, 0,  0, 0,-1), // 7
         
         // Left
         Vertex(-1, -1,  1, 1, 0, 0, 1,  1, 0, -1, 0, 0), // 8
-        Vertex(-1, -0.9,  1, 0, 1, 0, 1,  1, 1, -1, 0, 0), // 9
-        Vertex(-1, -0.9, -1, 0, 0, 1, 1,  0, 1, -1, 0, 0), // 10
+        Vertex(-1, -0.95,  1, 0, 1, 0, 1,  1, 1, -1, 0, 0), // 9
+        Vertex(-1, -0.95, -1, 0, 0, 1, 1,  0, 1, -1, 0, 0), // 10
         Vertex(-1, -1, -1, 0, 0, 0, 1,  0, 0, -1, 0, 0), // 11
         
         // Right
         Vertex( 1, -1, -1, 1, 0, 0, 1,  1, 0,  1, 0, 0), // 12
-        Vertex( 1, -0.9, -1, 0, 1, 0, 1,  1, 1,  1, 0, 0), // 13
-        Vertex( 1, -0.9,  1, 0, 0, 1, 1,  0, 1,  1, 0, 0), // 14
+        Vertex( 1, -0.95, -1, 0, 1, 0, 1,  1, 1,  1, 0, 0), // 13
+        Vertex( 1, -0.95,  1, 0, 0, 1, 1,  0, 1,  1, 0, 0), // 14
         Vertex( 1, -1,  1, 0, 0, 0, 1,  0, 0,  1, 0, 0), // 15
         
         // Top
-        Vertex( 1, -0.9,  1, 1, 0, 0, 1,  1, 0,  0, 1, 0), // 16
-        Vertex( 1, -0.9, -1, 0, 1, 0, 1,  1, 1,  0, 1, 0), // 17
-        Vertex(-1, -0.9, -1, 0, 0, 1, 1,  0, 1,  0, 1, 0), // 18
-        Vertex(-1, -0.9,  1, 0, 0, 0, 1,  0, 0,  0, 1, 0), // 19
+        Vertex( 1, -0.95,  1, 1, 0, 0, 1,  1, 0,  0, 1, 0), // 16
+        Vertex( 1, -0.95, -1, 0, 1, 0, 1,  1, 1,  0, 1, 0), // 17
+        Vertex(-1, -0.95, -1, 0, 0, 1, 1,  0, 1,  0, 1, 0), // 18
+        Vertex(-1, -0.95,  1, 0, 0, 0, 1,  0, 0,  0, 1, 0), // 19
         
         // Bottom
         Vertex( 1, -1, -1, 1, 0, 0, 1,  1, 0,  0,-1, 0), // 20
@@ -77,13 +77,12 @@ class Floor : Model {
     ]
     
     init(shader: BaseEffect) {
-        super.init(name: "cube", shader: shader, vertices: vertexList, indices: indexList)
-        self.loadTexture("dungeon_01.png")
+        super.init(name: "floor", shader: shader, vertices: vertexList, indices: indexList)
+        self.loadTexture("floor_blue.png")
     }
     
     override func updateWithDelta(_ dt: TimeInterval) {
-        //self.rotationZ = self.rotationZ + Float(M_PI*dt)
-        self.rotationY = self.rotationY + Float(Double.pi * dt / 8)
+        //self.rotationY = self.rotationY + Float(Double.pi * dt / 8)
     }
 
 }
