@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
+		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
+		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
 		1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */; };
 		1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */; };
 		1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B11EFBC74700E5CADE /* Cube.swift */; };
@@ -15,7 +18,7 @@
 		1A90C1BE1EFBC74700E5CADE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B41EFBC74700E5CADE /* Model.swift */; };
 		1A90C1BF1EFBC74700E5CADE /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B51EFBC74700E5CADE /* Square.swift */; };
 		1A90C1C01EFBC74700E5CADE /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B61EFBC74700E5CADE /* Vertex.swift */; };
-		1A90C1C11EFBC74700E5CADE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B71EFBC74700E5CADE /* ViewController.swift */; };
+		1A90C1C11EFBC74700E5CADE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B71EFBC74700E5CADE /* GameViewController.swift */; };
 		1A90C1C21EFBC74700E5CADE /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B81EFBC74700E5CADE /* Wall.swift */; };
 		1A90C1C81EFBC75600E5CADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A90C1C31EFBC75600E5CADE /* Assets.xcassets */; };
 		1A90C1C91EFBC75600E5CADE /* dungeon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A90C1C41EFBC75600E5CADE /* dungeon_01.png */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = Game/Game.swift; sourceTree = "<group>"; };
+		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Game/Map.swift; sourceTree = "<group>"; };
+		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = Utils/Array2D.swift; sourceTree = "<group>"; };
 		1A90C1AE1EFBC74700E5CADE /* TreasureDungeons-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TreasureDungeons-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TreasureDungeons/Source/AppDelegate.swift; sourceTree = "<group>"; };
 		1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEffect.swift; path = TreasureDungeons/Source/BaseEffect.swift; sourceTree = "<group>"; };
@@ -36,7 +42,7 @@
 		1A90C1B41EFBC74700E5CADE /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = TreasureDungeons/Source/Model.swift; sourceTree = "<group>"; };
 		1A90C1B51EFBC74700E5CADE /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Square.swift; path = TreasureDungeons/Source/Square.swift; sourceTree = "<group>"; };
 		1A90C1B61EFBC74700E5CADE /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vertex.swift; path = TreasureDungeons/Source/Vertex.swift; sourceTree = "<group>"; };
-		1A90C1B71EFBC74700E5CADE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = TreasureDungeons/Source/ViewController.swift; sourceTree = "<group>"; };
+		1A90C1B71EFBC74700E5CADE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = TreasureDungeons/Source/GameViewController.swift; sourceTree = "<group>"; };
 		1A90C1B81EFBC74700E5CADE /* Wall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wall.swift; path = TreasureDungeons/Source/Wall.swift; sourceTree = "<group>"; };
 		1A90C1C31EFBC75600E5CADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = TreasureDungeons/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		1A90C1C41EFBC75600E5CADE /* dungeon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dungeon_01.png; path = TreasureDungeons/Resources/dungeon_01.png; sourceTree = "<group>"; };
@@ -59,20 +65,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A56C1751EFBFA600016BD8C /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				1A56C1761EFBFA770016BD8C /* Game.swift */,
+				1A56C1781EFBFA830016BD8C /* Map.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 		1A90C1981EFBC66700E5CADE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1A90C1D71EFBC9B700E5CADE /* Utils */,
+				1A90C1D61EFBC97E00E5CADE /* OpenGL */,
+				1A90C1D51EFBC96C00E5CADE /* Models */,
+				1A56C1751EFBFA600016BD8C /* Game */,
 				1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */,
-				1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */,
-				1A90C1B11EFBC74700E5CADE /* Cube.swift */,
-				1A90C1B21EFBC74700E5CADE /* Floor.swift */,
-				1A90C1B31EFBC74700E5CADE /* GLKMatrix+Array.swift */,
-				1A90C1B41EFBC74700E5CADE /* Model.swift */,
-				1A90C1B51EFBC74700E5CADE /* Square.swift */,
-				1A90C1B61EFBC74700E5CADE /* Vertex.swift */,
-				1A90C1B71EFBC74700E5CADE /* ViewController.swift */,
-				1A90C1B81EFBC74700E5CADE /* Wall.swift */,
-				1A90C1AE1EFBC74700E5CADE /* TreasureDungeons-Bridging-Header.h */,
+				1A90C1B71EFBC74700E5CADE /* GameViewController.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -87,6 +97,37 @@
 				1A90C1C71EFBC75600E5CADE /* wall.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		1A90C1D51EFBC96C00E5CADE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A90C1B11EFBC74700E5CADE /* Cube.swift */,
+				1A90C1B21EFBC74700E5CADE /* Floor.swift */,
+				1A90C1B51EFBC74700E5CADE /* Square.swift */,
+				1A90C1B81EFBC74700E5CADE /* Wall.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1A90C1D61EFBC97E00E5CADE /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */,
+				1A90C1B41EFBC74700E5CADE /* Model.swift */,
+				1A90C1B61EFBC74700E5CADE /* Vertex.swift */,
+				1A90C1B31EFBC74700E5CADE /* GLKMatrix+Array.swift */,
+			);
+			name = OpenGL;
+			sourceTree = "<group>";
+		};
+		1A90C1D71EFBC9B700E5CADE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1A90C1AE1EFBC74700E5CADE /* TreasureDungeons-Bridging-Header.h */,
+				1A56C17A1EFBFAD50016BD8C /* Array2D.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		4E5D7D2D1C84C39A006246F7 = {
@@ -189,12 +230,15 @@
 				1A90C1BD1EFBC74700E5CADE /* GLKMatrix+Array.swift in Sources */,
 				1A90C1BC1EFBC74700E5CADE /* Floor.swift in Sources */,
 				1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */,
-				1A90C1C11EFBC74700E5CADE /* ViewController.swift in Sources */,
+				1A90C1C11EFBC74700E5CADE /* GameViewController.swift in Sources */,
 				1A90C1BF1EFBC74700E5CADE /* Square.swift in Sources */,
 				1A90C1BE1EFBC74700E5CADE /* Model.swift in Sources */,
+				1A56C1771EFBFA770016BD8C /* Game.swift in Sources */,
 				1A90C1C01EFBC74700E5CADE /* Vertex.swift in Sources */,
 				1A90C1C21EFBC74700E5CADE /* Wall.swift in Sources */,
+				1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */,
 				1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */,
+				1A56C1791EFBFA830016BD8C /* Map.swift in Sources */,
 				1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

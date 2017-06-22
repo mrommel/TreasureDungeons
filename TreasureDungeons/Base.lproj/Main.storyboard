@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <!--GLKit View Controller-->
         <scene sceneID="nBQ-zt-7QO">
             <objects>
-                <glkViewController preferredFramesPerSecond="30" id="94b-jH-d8g" customClass="ViewController" customModule="SpecularLight" customModuleProvider="target" sceneMemberID="viewController">
+                <glkViewController preferredFramesPerSecond="30" id="94b-jH-d8g" customClass="GameViewController" customModule="TreasureDungeons" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vMb-od-cEg"/>
                         <viewControllerLayoutGuide type="bottom" id="cxv-ZR-TWZ"/>

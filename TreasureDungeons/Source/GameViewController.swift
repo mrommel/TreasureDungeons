@@ -11,9 +11,9 @@ import GLKit
 
 class GLKUpdater : NSObject, GLKViewControllerDelegate {
     
-    weak var glkViewController : ViewController!
+    weak var glkViewController : GameViewController!
     
-    init(glkViewController : ViewController) {
+    init(glkViewController : GameViewController) {
         self.glkViewController = glkViewController
     }
     
@@ -25,7 +25,7 @@ class GLKUpdater : NSObject, GLKViewControllerDelegate {
 }
 
 
-class ViewController: GLKViewController {
+class GameViewController: GLKViewController {
     
     var glkView: GLKView!
     var glkUpdater: GLKUpdater!
@@ -83,7 +83,7 @@ class ViewController: GLKViewController {
     
 }
 
-extension ViewController {
+extension GameViewController {
     
     func setupGLcontext() {
         glkView = self.view as! GLKView
@@ -91,15 +91,15 @@ extension ViewController {
         glkView.drawableDepthFormat = .format16         // for depth testing
         EAGLContext.setCurrent(glkView.context)
         
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap(gestureRecognizer:)))
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(GameViewController.handleTap(gestureRecognizer:)))
         tapRecognizer.delegate = self
         glkView.addGestureRecognizer(tapRecognizer)
         
-        let pinchRecognizer = UIPinchGestureRecognizer(target:self, action: #selector(ViewController.pinchDetected(gestureRecognizer:)))
+        let pinchRecognizer = UIPinchGestureRecognizer(target:self, action: #selector(GameViewController.pinchDetected(gestureRecognizer:)))
         pinchRecognizer.delegate = self
         glkView.addGestureRecognizer(pinchRecognizer)
         
-        let panRecognizer = UIPanGestureRecognizer(target:self, action: #selector(ViewController.panDetected(gestureRecognizer:)))
+        let panRecognizer = UIPanGestureRecognizer(target:self, action: #selector(GameViewController.panDetected(gestureRecognizer:)))
         panRecognizer.delegate = self
         glkView.addGestureRecognizer(panRecognizer)
     }
@@ -135,7 +135,7 @@ extension ViewController {
     
 }
 
-extension ViewController: UIGestureRecognizerDelegate {
+extension GameViewController: UIGestureRecognizerDelegate {
     
     func panDetected(gestureRecognizer: UIPanGestureRecognizer) {
         
