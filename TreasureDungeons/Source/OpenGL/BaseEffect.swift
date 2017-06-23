@@ -50,9 +50,9 @@ class BaseEffect {
         glUniform1f(self.lightAmbientIntensityUniform, 0.1);
         
         // 유니폼 주입
-        let lightDirection : GLKVector3 = GLKVector3(v: (0, 1, -1))
+        let lightDirection : GLKVector3 = GLKVector3(v: (0, -1, -2))
         glUniform3f(self.lightDirectionUniform, lightDirection.x, lightDirection.y, lightDirection.z)
-        glUniform1f(self.lightDiffuseIntensityUniform, 0.7)
+        glUniform1f(self.lightDiffuseIntensityUniform, 0.9)
         
         // 유니폼 주입
         glUniform1f(self.lightSpecularIntensityUniform, 0.1)

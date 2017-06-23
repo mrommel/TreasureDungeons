@@ -41,6 +41,19 @@ public class Array2D <T: Equatable> {
 
 extension Array2D {
     
+    subscript(point: Point) -> T? {
+        get {
+            return array[(point.y * columns) + point.x]
+        }
+        set(newValue) {
+            array[(point.y * columns) + point.x] = newValue
+        }
+    }
+    
+}
+
+extension Array2D {
+    
     public func fill(with value: T) {
         
         for x in 0..<columns {

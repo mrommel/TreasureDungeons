@@ -28,6 +28,7 @@ class GLKUpdater : NSObject, GLKViewControllerDelegate {
 class GameViewController: GLKViewController {
     
     var glkView: GLKView!
+    @IBOutlet weak var positionLabel: UILabel!
     var glkUpdater: GLKUpdater!
     var shader: BaseEffect!
     
@@ -36,8 +37,8 @@ class GameViewController: GLKViewController {
     var pitch: Float = 0
     var yaw: Float = 0
     var roll: Float = 0
-    var x: Float = 0
-    var y: Float = -5
+    var x: Float = -2
+    var y: Float = -2
     
     var map: Map? {
         didSet {
@@ -52,27 +53,47 @@ class GameViewController: GLKViewController {
         setupGLupdater()
         setupScene()
         
-        let map = Map(width: 4, height: 4)
+        let map = Map(width: 5, height: 7)
         
-        map.tiles[0, 0] = Tile(point: Point(x: 0, y: 0), type: .wall)
-        map.tiles[0, 1] = Tile(point: Point(x: 0, y: 1), type: .wall)
-        map.tiles[0, 2] = Tile(point: Point(x: 0, y: 2), type: .floor)
-        map.tiles[0, 3] = Tile(point: Point(x: 0, y: 3), type: .floor)
+        map.tiles[0, 0] = Tile(at: Point(x: 0, y: 0), type: .wall)
+        map.tiles[0, 1] = Tile(at: Point(x: 0, y: 1), type: .wall)
+        map.tiles[0, 2] = Tile(at: Point(x: 0, y: 2), type: .wall)
+        map.tiles[0, 3] = Tile(at: Point(x: 0, y: 3), type: .wall)
+        map.tiles[0, 4] = Tile(at: Point(x: 0, y: 4), type: .wall)
+        map.tiles[0, 5] = Tile(at: Point(x: 0, y: 5), type: .wall)
+        map.tiles[0, 6] = Tile(at: Point(x: 0, y: 6), type: .wall)
         
-        map.tiles[1, 0] = Tile(point: Point(x: 1, y: 0), type: .floor)
-        map.tiles[1, 1] = Tile(point: Point(x: 1, y: 1), type: .floor)
-        map.tiles[1, 2] = Tile(point: Point(x: 1, y: 2), type: .floor)
-        map.tiles[1, 3] = Tile(point: Point(x: 1, y: 3), type: .wall)
+        map.tiles[1, 0] = Tile(at: Point(x: 1, y: 0), type: .wall)
+        map.tiles[1, 1] = Tile(at: Point(x: 1, y: 1), type: .floor)
+        map.tiles[1, 2] = Tile(at: Point(x: 1, y: 2), type: .floor)
+        map.tiles[1, 3] = Tile(at: Point(x: 1, y: 3), type: .floor)
+        map.tiles[1, 4] = Tile(at: Point(x: 1, y: 4), type: .wall)
+        map.tiles[1, 5] = Tile(at: Point(x: 1, y: 5), type: .floor)
+        map.tiles[1, 6] = Tile(at: Point(x: 1, y: 6), type: .wall)
         
-        map.tiles[2, 0] = Tile(point: Point(x: 2, y: 0), type: .wall)
-        map.tiles[2, 1] = Tile(point: Point(x: 2, y: 1), type: .floor)
-        map.tiles[2, 2] = Tile(point: Point(x: 2, y: 2), type: .floor)
-        map.tiles[2, 3] = Tile(point: Point(x: 2, y: 3), type: .wall)
+        map.tiles[2, 0] = Tile(at: Point(x: 2, y: 0), type: .floor)
+        map.tiles[2, 1] = Tile(at: Point(x: 2, y: 1), type: .floor)
+        map.tiles[2, 2] = Tile(at: Point(x: 2, y: 2), type: .floor)
+        map.tiles[2, 3] = Tile(at: Point(x: 2, y: 3), type: .floor)
+        map.tiles[2, 4] = Tile(at: Point(x: 2, y: 4), type: .floor)
+        map.tiles[2, 5] = Tile(at: Point(x: 2, y: 5), type: .floor)
+        map.tiles[2, 6] = Tile(at: Point(x: 2, y: 6), type: .wall)
         
-        map.tiles[3, 0] = Tile(point: Point(x: 3, y: 0), type: .floor)
-        map.tiles[3, 1] = Tile(point: Point(x: 3, y: 1), type: .floor)
-        map.tiles[3, 2] = Tile(point: Point(x: 3, y: 2), type: .floor)
-        map.tiles[3, 3] = Tile(point: Point(x: 3, y: 3), type: .wall)
+        map.tiles[3, 0] = Tile(at: Point(x: 3, y: 0), type: .wall)
+        map.tiles[3, 1] = Tile(at: Point(x: 3, y: 1), type: .floor)
+        map.tiles[3, 2] = Tile(at: Point(x: 3, y: 2), type: .floor)
+        map.tiles[3, 3] = Tile(at: Point(x: 3, y: 3), type: .floor)
+        map.tiles[3, 4] = Tile(at: Point(x: 3, y: 4), type: .wall)
+        map.tiles[3, 5] = Tile(at: Point(x: 3, y: 5), type: .floor)
+        map.tiles[3, 6] = Tile(at: Point(x: 3, y: 6), type: .wall)
+        
+        map.tiles[4, 0] = Tile(at: Point(x: 4, y: 0), type: .wall)
+        map.tiles[4, 1] = Tile(at: Point(x: 4, y: 1), type: .wall)
+        map.tiles[4, 2] = Tile(at: Point(x: 4, y: 2), type: .wall)
+        map.tiles[4, 3] = Tile(at: Point(x: 4, y: 3), type: .wall)
+        map.tiles[4, 4] = Tile(at: Point(x: 4, y: 4), type: .wall)
+        map.tiles[4, 5] = Tile(at: Point(x: 4, y: 5), type: .wall)
+        map.tiles[4, 6] = Tile(at: Point(x: 4, y: 6), type: .wall)
         
         self.map = map
     }
@@ -145,8 +166,8 @@ extension GameViewController {
         self.shader.projectionMatrix = GLKMatrix4MakePerspective(
             GLKMathDegreesToRadians(85.0),
             GLfloat(self.view.bounds.size.width / self.view.bounds.size.height),
-            1,
-            150)
+            0.5,
+            50)
         
         self.rebuildDungeon()
     }
@@ -176,6 +197,8 @@ extension GameViewController {
                             let wall0 = Wall(shader: self.shader)
                             wall0.position = GLKVector3(v: (Float(tile.point.x * 2), 0.0, Float(tile.point.y * 2)))
                             self.models.append(wall0)
+                            break
+                        case .outside:
                             break
                         }
                     }
@@ -227,9 +250,28 @@ extension GameViewController: UIGestureRecognizerDelegate {
     func handleTap(gestureRecognizer: UIGestureRecognizer) {
         
         // go forward
-        self.x -= sin(GLKMathDegreesToRadians(self.yaw)) * 0.5
-        self.y += cos(GLKMathDegreesToRadians(self.yaw)) * 0.5
+        let newX = self.x - sin(GLKMathDegreesToRadians(self.yaw)) * 0.5
+        let newY = self.y + cos(GLKMathDegreesToRadians(self.yaw)) * 0.5
         
-        // TODO: collision detection
+        let forwardX = self.x - sin(GLKMathDegreesToRadians(self.yaw)) * 1.0
+        let forwardY = self.y + cos(GLKMathDegreesToRadians(self.yaw)) * 1.0
+        
+        let positionOnMap = Point(x: -Int((newX - 1.0) / 2.0) , y: -Int((newY - 1.0) / 2.0))
+        let forwardOnMap = Point(x: -Int(forwardX / 2.0) , y: -Int(forwardY / 2.0))
+        
+        let tileOnMap = self.map?.tile(at: positionOnMap)
+        let forwardTileOnMap = self.map?.tile(at: forwardOnMap)
+        
+        if let tileOnMap = tileOnMap, let forwardTileOnMap = forwardTileOnMap {
+            
+            // collision detection
+            //if tileOnMap.canAccess() && forwardTileOnMap.canAccess() {
+            if tileOnMap.canAccess() {
+                self.x = newX
+                self.y = newY
+         
+                self.positionLabel.text = "\(positionOnMap.x),\(positionOnMap.y) => \(tileOnMap.type)"
+            }
+        }
     }
 }

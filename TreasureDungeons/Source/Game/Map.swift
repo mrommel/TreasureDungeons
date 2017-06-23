@@ -26,6 +26,8 @@ func == (lhs: Point, rhs: Point) -> Bool {
 enum TileType {
     case floor
     case wall
+    
+    case outside
 }
 
 class Tile: Equatable {
@@ -33,9 +35,17 @@ class Tile: Equatable {
     let type: TileType
     let point: Point
     
-    init(point: Point, type: TileType) {
+    init(at point: Point, type: TileType) {
         self.point = point
         self.type = type
+    }
+    
+    func canAccess() -> Bool {
+        if self.type == .floor {
+            return true
+        }
+        
+        return false
     }
 }
 
@@ -49,6 +59,36 @@ class Map {
     
     init(width: Int, height: Int) {
         self.tiles = Array2D<Tile>(columns: width, rows: height)
+    }
+    
+    public func has(point: Point) -> Bool {
+        return point.x >= 0 && point.x < self.self.tiles.columnCount() && point.y >= 0 && point.y < self.tiles.rowCount()
+    }
+    
+    public func hasAt(x: Int, y: Int) -> Bool {
+        return x >= 0 && x < self.tiles.columnCount() && y >= 0 && y < self.tiles.rowCount()
+    }
+
+    /**
+     Getter for `Tile` at `position`
+     
+     - Parameter position: location in the grid to return the `Tile`
+     
+     - Returns: `Tile` at `position`
+     */
+    public func tile(at position: Point) -> Tile {
+        
+        // check bounds
+        guard self.has(point: position) else {
+            return Tile(at: position, type: .outside)
+        }
+        
+        return self.tiles[position]!
+    }
+    
+    public func tileAt(x: Int, y: Int) -> Tile {
+        
+        return tile(at: Point(x: x, y: y))
     }
     
 }
