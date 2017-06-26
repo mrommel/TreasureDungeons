@@ -19,14 +19,18 @@ uniform Light u_Light;
 void main(void) {
     
     // Ambient
-    lowp vec3 AmbientColor = u_Light.Color * u_Light.AmbientIntensity;
+    /*lowp vec3 AmbientColor = u_Light.Color * u_Light.AmbientIntensity;
     
     // Diffuse
     lowp vec3 Normal = normalize(frag_Normal);
     lowp float DiffuseFactor = max(-dot(Normal, u_Light.Direction), 0.0);
     lowp vec3 DiffuseColor = u_Light.Color * u_Light.DiffuseIntensity * DiffuseFactor;
     
-    gl_FragColor = texture2D(u_Texture, frag_TexCoord) * vec4((AmbientColor + DiffuseColor), 1.0);
+    gl_FragColor = texture2D(u_Texture, frag_TexCoord) * vec4((AmbientColor + DiffuseColor), 1.0);*/
+    
+    // Ambient
+    lowp vec4 AmbientColor = vec4(u_Light.Color, 1.0) * u_Light.AmbientIntensity;
+    gl_FragColor = texture2D(u_Texture, frag_TexCoord) * AmbientColor;
     
     // Specular
     /*lowp vec3 Eye = normalize(frag_Position);

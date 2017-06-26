@@ -114,15 +114,12 @@ class GameViewController: GLKViewController {
         glEnable(GLenum(GL_BLEND))
         glBlendFunc(GLenum(GL_SRC_ALPHA), GLenum(GL_ONE_MINUS_SRC_ALPHA))
         
-        //let viewMatrix: GLKMatrix4 = GLKMatrix4Rotate(GLKMatrix4MakeTranslation(0, 0, -5), GLKMathDegreesToRadians(self.rotation), 1, 1, 0)
+        // construct view matrix = camera
         var viewMatrix: GLKMatrix4 = GLKMatrix4Identity
-        
-        //viewMatrix = GLKMatrix4RotateX(viewMatrix, GLKMathDegreesToRadians(20))
         viewMatrix = GLKMatrix4RotateX(viewMatrix, GLKMathDegreesToRadians(self.pitch))
         viewMatrix = GLKMatrix4RotateY(viewMatrix, GLKMathDegreesToRadians(self.yaw))
         viewMatrix = GLKMatrix4RotateZ(viewMatrix, GLKMathDegreesToRadians(self.roll))
         viewMatrix = GLKMatrix4Translate(viewMatrix, self.x, 0, self.y)
-        
         
         for model in self.models {
             model.renderWithParentModelViewMatrix(viewMatrix)
@@ -163,11 +160,8 @@ extension GameViewController {
     func setupScene() {
         self.shader = BaseEffect(vertexShader: "SimpleVertexShader.glsl", fragmentShader: "SimpleFragmentShader.glsl")
         
-        self.shader.projectionMatrix = GLKMatrix4MakePerspective(
-            GLKMathDegreesToRadians(85.0),
-            GLfloat(self.view.bounds.size.width / self.view.bounds.size.height),
-            0.5,
-            50)
+        let aspect = fabs(self.view.bounds.size.width / self.view.bounds.size.height)
+        self.shader.projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(85.0), Float(aspect), 0.1, 100)
         
         self.rebuildDungeon()
     }
@@ -206,6 +200,8 @@ extension GameViewController {
             }
             
         }
+        
+        self.models.append(Skybox(shader: self.shader))
         
         /*self.models.append(Cube(shader: self.shader))
         
@@ -253,19 +249,13 @@ extension GameViewController: UIGestureRecognizerDelegate {
         let newX = self.x - sin(GLKMathDegreesToRadians(self.yaw)) * 0.5
         let newY = self.y + cos(GLKMathDegreesToRadians(self.yaw)) * 0.5
         
-        let forwardX = self.x - sin(GLKMathDegreesToRadians(self.yaw)) * 1.0
-        let forwardY = self.y + cos(GLKMathDegreesToRadians(self.yaw)) * 1.0
-        
         let positionOnMap = Point(x: -Int((newX - 1.0) / 2.0) , y: -Int((newY - 1.0) / 2.0))
-        let forwardOnMap = Point(x: -Int(forwardX / 2.0) , y: -Int(forwardY / 2.0))
         
         let tileOnMap = self.map?.tile(at: positionOnMap)
-        let forwardTileOnMap = self.map?.tile(at: forwardOnMap)
         
-        if let tileOnMap = tileOnMap, let forwardTileOnMap = forwardTileOnMap {
+        if let tileOnMap = tileOnMap {
             
             // collision detection
-            //if tileOnMap.canAccess() && forwardTileOnMap.canAccess() {
             if tileOnMap.canAccess() {
                 self.x = newX
                 self.y = newY

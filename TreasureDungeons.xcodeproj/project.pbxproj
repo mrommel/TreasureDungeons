@@ -29,6 +29,9 @@
 		1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A90C1C71EFBC75600E5CADE /* wall.png */; };
 		1A90C1D31EFBC7DF00E5CADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A90C1CF1EFBC7DE00E5CADE /* LaunchScreen.storyboard */; };
 		1A90C1D41EFBC7DF00E5CADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A90C1D11EFBC7DE00E5CADE /* Main.storyboard */; };
+		1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57C1F01449B00CBC07B /* Camera.swift */; };
+		1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57E1F014E5200CBC07B /* Skybox.swift */; };
+		1A9CC5811F014E8300CBC07B /* skybox.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9CC5801F014E8300CBC07B /* skybox.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		1A90C1C71EFBC75600E5CADE /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall.png; path = TreasureDungeons/Resources/wall.png; sourceTree = "<group>"; };
 		1A90C1D01EFBC7DE00E5CADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TreasureDungeons/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A90C1D21EFBC7DE00E5CADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TreasureDungeons/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A9CC57C1F01449B00CBC07B /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = TreasureDungeons/Source/OpenGL/Camera.swift; sourceTree = "<group>"; };
+		1A9CC57E1F014E5200CBC07B /* Skybox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Skybox.swift; path = TreasureDungeons/Source/Models/Skybox.swift; sourceTree = "<group>"; };
+		1A9CC5801F014E8300CBC07B /* skybox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox.png; path = TreasureDungeons/Resources/skybox.png; sourceTree = "<group>"; };
 		4E5D7D361C84C39A006246F7 /* TreasureDungeons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreasureDungeons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,7 @@
 				1A56C17C1EFC57F60016BD8C /* floor_gray.png */,
 				1A56C17D1EFC57F60016BD8C /* floor_blue.png */,
 				1A90C1C31EFBC75600E5CADE /* Assets.xcassets */,
+				1A9CC5801F014E8300CBC07B /* skybox.png */,
 				1A90C1C41EFBC75600E5CADE /* dungeon_01.png */,
 				1A90C1C51EFBC75600E5CADE /* SimpleFragmentShader.glsl */,
 				1A90C1C61EFBC75600E5CADE /* SimpleVertexShader.glsl */,
@@ -110,6 +117,7 @@
 			children = (
 				1A90C1B11EFBC74700E5CADE /* Cube.swift */,
 				1A90C1B21EFBC74700E5CADE /* Floor.swift */,
+				1A9CC57E1F014E5200CBC07B /* Skybox.swift */,
 				1A90C1B51EFBC74700E5CADE /* Square.swift */,
 				1A90C1B81EFBC74700E5CADE /* Wall.swift */,
 			);
@@ -123,6 +131,7 @@
 				1A90C1B41EFBC74700E5CADE /* Model.swift */,
 				1A90C1B61EFBC74700E5CADE /* Vertex.swift */,
 				1A90C1B31EFBC74700E5CADE /* GLKMatrix+Array.swift */,
+				1A9CC57C1F01449B00CBC07B /* Camera.swift */,
 			);
 			name = OpenGL;
 			sourceTree = "<group>";
@@ -221,6 +230,7 @@
 				1A90C1C81EFBC75600E5CADE /* Assets.xcassets in Resources */,
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
 				1A90C1CA1EFBC75600E5CADE /* SimpleFragmentShader.glsl in Resources */,
+				1A9CC5811F014E8300CBC07B /* skybox.png in Resources */,
 				1A90C1D31EFBC7DF00E5CADE /* LaunchScreen.storyboard in Resources */,
 				1A56C17E1EFC57F60016BD8C /* floor_gray.png in Resources */,
 				1A90C1CB1EFBC75600E5CADE /* SimpleVertexShader.glsl in Resources */,
@@ -236,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A90C1BD1EFBC74700E5CADE /* GLKMatrix+Array.swift in Sources */,
+				1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */,
 				1A90C1BC1EFBC74700E5CADE /* Floor.swift in Sources */,
 				1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */,
 				1A90C1C11EFBC74700E5CADE /* GameViewController.swift in Sources */,
@@ -247,6 +258,7 @@
 				1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */,
 				1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */,
 				1A56C1791EFBFA830016BD8C /* Map.swift in Sources */,
+				1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */,
 				1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
