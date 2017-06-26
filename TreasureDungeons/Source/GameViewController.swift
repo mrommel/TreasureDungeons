@@ -126,7 +126,7 @@ class GameViewController: GLKViewController {
         }
         
         // reset pitch
-        self.pitch = self.pitch * 0.9
+        self.pitch = self.pitch * 0.95
     }
     
 }
