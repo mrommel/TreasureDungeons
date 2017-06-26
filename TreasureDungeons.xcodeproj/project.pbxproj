@@ -32,6 +32,7 @@
 		1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57C1F01449B00CBC07B /* Camera.swift */; };
 		1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57E1F014E5200CBC07B /* Skybox.swift */; };
 		1A9CC5811F014E8300CBC07B /* skybox.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9CC5801F014E8300CBC07B /* skybox.png */; };
+		1A9CC5831F0157CF00CBC07B /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC5821F0157CE00CBC07B /* Matrix4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		1A9CC57C1F01449B00CBC07B /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = TreasureDungeons/Source/OpenGL/Camera.swift; sourceTree = "<group>"; };
 		1A9CC57E1F014E5200CBC07B /* Skybox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Skybox.swift; path = TreasureDungeons/Source/Models/Skybox.swift; sourceTree = "<group>"; };
 		1A9CC5801F014E8300CBC07B /* skybox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox.png; path = TreasureDungeons/Resources/skybox.png; sourceTree = "<group>"; };
+		1A9CC5821F0157CE00CBC07B /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix4.swift; path = TreasureDungeons/Source/OpenGL/Matrix4.swift; sourceTree = "<group>"; };
 		4E5D7D361C84C39A006246F7 /* TreasureDungeons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreasureDungeons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				1A90C1B61EFBC74700E5CADE /* Vertex.swift */,
 				1A90C1B31EFBC74700E5CADE /* GLKMatrix+Array.swift */,
 				1A9CC57C1F01449B00CBC07B /* Camera.swift */,
+				1A9CC5821F0157CE00CBC07B /* Matrix4.swift */,
 			);
 			name = OpenGL;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A90C1BD1EFBC74700E5CADE /* GLKMatrix+Array.swift in Sources */,
+				1A9CC5831F0157CF00CBC07B /* Matrix4.swift in Sources */,
 				1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */,
 				1A90C1BC1EFBC74700E5CADE /* Floor.swift in Sources */,
 				1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */,
