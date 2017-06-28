@@ -198,8 +198,11 @@ extension GameViewController {
                     }
                 }
             }
-            
         }
+        
+        let treasure = Treasure(shader: self.shader)
+        treasure.position = GLKVector3(v: (3.0, -1.0, 3.0))
+        self.models.append(treasure)
         
         self.models.append(Skybox(shader: self.shader))
         
@@ -221,6 +224,7 @@ extension GameViewController: UIGestureRecognizerDelegate {
     func panDetected(gestureRecognizer: UIPanGestureRecognizer) {
         
         let translation = gestureRecognizer.translation(in: self.view)
+        let velocity = gestureRecognizer.velocity(in: self.view)
         
         if fabs(translation.x) < fabs(translation.y) {
             // pan up / down 
@@ -231,11 +235,7 @@ extension GameViewController: UIGestureRecognizerDelegate {
             }
         } else {
             // pan left / right
-            if translation.x < 0 {
-                self.yaw += 1.0
-            } else {
-                self.yaw -= 1.0
-            }
+            self.yaw -= Float(velocity.x / 80.0)
         }
     }
     

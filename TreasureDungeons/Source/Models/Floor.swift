@@ -49,7 +49,7 @@ class Floor : Model {
         
     ]
     
-    let indexList : [GLubyte] = [
+    let indexList : [GLuint] = [
         
         // Front
         0, 1, 2,

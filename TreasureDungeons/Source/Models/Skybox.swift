@@ -55,7 +55,7 @@ class Skybox : Model {
         
     ]
     
-    let indexList : [GLubyte] = [
+    let indexList : [GLuint] = [
         
         // Front
         0, 2, 1,

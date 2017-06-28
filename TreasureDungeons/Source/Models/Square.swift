@@ -16,7 +16,7 @@ class Square : Model {
         Vertex(-1.0, -1.0, 0, 1.0, 1.0, 0.0, 1.0)
     ]
     
-    let indexList : [GLubyte] = [
+    let indexList : [GLuint] = [
         0, 1, 2,
         2, 3, 0
     ]

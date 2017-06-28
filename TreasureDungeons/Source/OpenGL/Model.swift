@@ -15,7 +15,7 @@ class Model {
     var name: String!
     var vertices: [Vertex]!
     var vertexCount: GLuint! // 없어도 됨
-    var indices: [GLubyte]!
+    var indices: [GLuint]!
     var indexCount: GLuint! // 없어도 됨
     
     var vao: GLuint = 0
@@ -31,7 +31,7 @@ class Model {
     var rotationZ : Float = 0.0
     var scale : Float = 1.0
     
-    init(name: String, shader: BaseEffect, vertices: [Vertex], indices: [GLubyte]) {
+    init(name: String, shader: BaseEffect, vertices: [Vertex], indices: [GLuint]) {
         self.name = name
         self.shader = shader
         self.vertices = vertices
@@ -51,7 +51,7 @@ class Model {
         
         glGenBuffers(GLsizei(1), &indexBuffer)
         glBindBuffer(GLenum(GL_ELEMENT_ARRAY_BUFFER), indexBuffer)
-        glBufferData(GLenum(GL_ELEMENT_ARRAY_BUFFER), indices.count * MemoryLayout<GLubyte>.size, indices, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ELEMENT_ARRAY_BUFFER), indices.count * MemoryLayout<GLuint>.size, indices, GLenum(GL_STATIC_DRAW))
         
         
         // 현재 vao가 바인딩 되어 있어서 아래 함수를 실행하면 정점과 인덱스 데이터가 모두 vao에 저장된다.
@@ -115,7 +115,7 @@ class Model {
         shader.prepareToDraw()
         
         glBindVertexArrayOES(vao)
-        glDrawElements(GLenum(GL_TRIANGLES), GLsizei(indices.count), GLenum(GL_UNSIGNED_BYTE), nil)
+        glDrawElements(GLenum(GL_TRIANGLES), GLsizei(indices.count), GLenum(GL_UNSIGNED_INT), nil)
         glBindVertexArrayOES(0)
 
     }
