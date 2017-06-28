@@ -10,6 +10,8 @@ TreasureDungeons is a small trial based on https://github.com/skyfe79/LearningOp
 
 ## ToDo
 
-* main menu
+* emitter system
+* sound
+* main menu / game intro / game outro
 * small game handling
 
