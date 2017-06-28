@@ -34,11 +34,7 @@ class GameViewController: GLKViewController {
     
     var models: [Model] = []
     
-    var pitch: Float = 0
-    var yaw: Float = 0
-    var roll: Float = 0
-    var x: Float = -2
-    var y: Float = -2
+    var camera: Camera?
     
     var map: Map? {
         didSet {
@@ -51,6 +47,7 @@ class GameViewController: GLKViewController {
         
         setupGLcontext()
         setupGLupdater()
+        setupCamera()
         setupScene()
         
         let map = Map(width: 5, height: 7)
@@ -115,18 +112,14 @@ class GameViewController: GLKViewController {
         glBlendFunc(GLenum(GL_SRC_ALPHA), GLenum(GL_ONE_MINUS_SRC_ALPHA))
         
         // construct view matrix = camera
-        var viewMatrix: GLKMatrix4 = GLKMatrix4Identity
-        viewMatrix = GLKMatrix4RotateX(viewMatrix, GLKMathDegreesToRadians(self.pitch))
-        viewMatrix = GLKMatrix4RotateY(viewMatrix, GLKMathDegreesToRadians(self.yaw))
-        viewMatrix = GLKMatrix4RotateZ(viewMatrix, GLKMathDegreesToRadians(self.roll))
-        viewMatrix = GLKMatrix4Translate(viewMatrix, self.x, 0, self.y)
-        
-        for model in self.models {
-            model.renderWithParentModelViewMatrix(viewMatrix)
+        if let viewMatrix = camera?.viewMatrix {
+            for model in self.models {
+                model.renderWithParentModelViewMatrix(viewMatrix)
+            }
         }
         
         // reset pitch
-        self.pitch = self.pitch * 0.95
+        self.camera?.reset()
     }
     
 }
@@ -155,6 +148,10 @@ extension GameViewController {
     func setupGLupdater() {
         self.glkUpdater = GLKUpdater(glkViewController: self)
         self.delegate = self.glkUpdater
+    }
+    
+    func setupCamera() {
+        self.camera = Camera()
     }
     
     func setupScene() {
@@ -228,14 +225,14 @@ extension GameViewController: UIGestureRecognizerDelegate {
         
         if fabs(translation.x) < fabs(translation.y) {
             // pan up / down 
-            if translation.y < 0 {
+            /*if translation.y < 0 {
                 self.pitch += 0.5
             } else {
                 self.pitch -= 0.5
-            }
+            }*/
         } else {
             // pan left / right
-            self.yaw -= Float(velocity.x / 80.0)
+            self.camera?.turn(leftAndRight: Float(velocity.x / 80.0))
         }
     }
     
@@ -246,21 +243,14 @@ extension GameViewController: UIGestureRecognizerDelegate {
     func handleTap(gestureRecognizer: UIGestureRecognizer) {
         
         // go forward
-        let newX = self.x - sin(GLKMathDegreesToRadians(self.yaw)) * 0.5
-        let newY = self.y + cos(GLKMathDegreesToRadians(self.yaw)) * 0.5
-        
-        let positionOnMap = Point(x: -Int((newX - 1.0) / 2.0) , y: -Int((newY - 1.0) / 2.0))
-        
-        let tileOnMap = self.map?.tile(at: positionOnMap)
-        
-        if let tileOnMap = tileOnMap {
-            
-            // collision detection
-            if tileOnMap.canAccess() {
-                self.x = newX
-                self.y = newY
+        if let positionOnMap = self.camera?.predictedPositionOnMap {
+            if let tileOnMap = self.map?.tile(at: positionOnMap) {
+                // collision detection
+                if tileOnMap.canAccess() {
+                    self.camera?.moveForward()
          
-                self.positionLabel.text = "\(positionOnMap.x),\(positionOnMap.y) => \(tileOnMap.type)"
+                    self.positionLabel.text = "\(positionOnMap.x),\(positionOnMap.y) => \(tileOnMap.type)"
+                }
             }
         }
     }
