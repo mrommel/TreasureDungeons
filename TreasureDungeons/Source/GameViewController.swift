@@ -21,6 +21,8 @@ class GLKUpdater : NSObject, GLKViewControllerDelegate {
         for model in self.glkViewController.models {
             model.updateWithDelta(self.glkViewController.timeSinceLastUpdate)
         }
+        
+        self.glkViewController.emitter?.updateWithDelta(delta: self.glkViewController.timeSinceLastUpdate)
     }
 }
 
@@ -36,6 +38,9 @@ class GameViewController: GLKViewController {
     
     var camera: Camera?
     
+    var emitterEffect: ParticleEmitterEffect?
+    var emitter: ParticleEmitter?
+    
     var map: Map? {
         didSet {
             rebuildDungeon()
@@ -49,6 +54,7 @@ class GameViewController: GLKViewController {
         setupGLupdater()
         setupCamera()
         setupScene()
+        setupParticleEmitter()
         
         let map = Map(width: 5, height: 7)
         
@@ -118,6 +124,8 @@ class GameViewController: GLKViewController {
             }
         }
         
+        self.emitter?.renderParticles()
+        
         // reset pitch
         self.camera?.reset()
     }
@@ -161,6 +169,17 @@ extension GameViewController {
         self.shader.projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(85.0), Float(aspect), 0.1, 100)
         
         self.rebuildDungeon()
+    }
+    
+    func setupParticleEmitter() {
+        
+        self.emitterEffect = ParticleEmitterEffect(vertexShader: "EmitterVertexShader.glsl", fragmentShader: "EmitterFragmentShader.glsl")
+        
+        self.emitter = ParticleEmitter(shaderEffect: self.emitterEffect!)
+        
+        for i in 0..<100 {
+            self.emitter?.addParticle()
+        }
     }
     
     func rebuildDungeon() {

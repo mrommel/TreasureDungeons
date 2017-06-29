@@ -5,18 +5,15 @@
 //  Created by burt on 2016. 2. 27..
 //  Copyright © 2016년 BurtK. All rights reserved.
 //
-//  VAO가 있어서 이렇게 정점 및 인덱스 데이터를 모델로 따로 분리할 수 있다.
-//  모델 생성시나 렌더링 전 필요한 시기에 VAO를 만들고 정점 및 인덱스 데이터를 
-//  CPU에서 GPU로 올리면 된다.
 import GLKit
 
 class Model {
     var shader: BaseEffect!
     var name: String!
     var vertices: [Vertex]!
-    var vertexCount: GLuint! // 없어도 됨
+    var vertexCount: GLuint!
     var indices: [GLuint]!
-    var indexCount: GLuint! // 없어도 됨
+    var indexCount: GLuint! 
     
     var vao: GLuint = 0
     var vertexBuffer: GLuint = 0

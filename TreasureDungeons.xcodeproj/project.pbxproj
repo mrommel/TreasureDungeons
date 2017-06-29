@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3408CC1F03C6D800092F53 /* treasure_chest.png */; };
+		1A3408CF1F04379100092F53 /* EmitterVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A3408CE1F04379100092F53 /* EmitterVertexShader.glsl */; };
+		1A3408D11F0437AE00092F53 /* EmitterFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1A3408D01F0437AE00092F53 /* EmitterFragmentShader.glsl */; };
+		1A3408D31F04393200092F53 /* ParticleEmitterEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D21F04393200092F53 /* ParticleEmitterEffect.swift */; };
+		1A3408D51F04E9B100092F53 /* ParticleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D41F04E9B100092F53 /* ParticleEmitter.swift */; };
+		1A3408D71F04F40600092F53 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D61F04F40600092F53 /* Random.swift */; };
+		1A3408D91F05295300092F53 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D81F05295300092F53 /* Array.swift */; };
 		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
 		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
 		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
@@ -39,6 +45,12 @@
 
 /* Begin PBXFileReference section */
 		1A3408CC1F03C6D800092F53 /* treasure_chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treasure_chest.png; path = TreasureDungeons/Resources/treasure_chest.png; sourceTree = "<group>"; };
+		1A3408CE1F04379100092F53 /* EmitterVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = EmitterVertexShader.glsl; path = TreasureDungeons/Resources/EmitterVertexShader.glsl; sourceTree = "<group>"; };
+		1A3408D01F0437AE00092F53 /* EmitterFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = EmitterFragmentShader.glsl; path = TreasureDungeons/Resources/EmitterFragmentShader.glsl; sourceTree = "<group>"; };
+		1A3408D21F04393200092F53 /* ParticleEmitterEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleEmitterEffect.swift; path = TreasureDungeons/Source/OpenGL/ParticleEmitterEffect.swift; sourceTree = "<group>"; };
+		1A3408D41F04E9B100092F53 /* ParticleEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleEmitter.swift; path = TreasureDungeons/Source/OpenGL/ParticleEmitter.swift; sourceTree = "<group>"; };
+		1A3408D61F04F40600092F53 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = TreasureDungeons/Source/Utils/Random.swift; sourceTree = "<group>"; };
+		1A3408D81F05295300092F53 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = TreasureDungeons/Source/Utils/Array.swift; sourceTree = "<group>"; };
 		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = TreasureDungeons/Source/Game/Game.swift; sourceTree = "<group>"; };
 		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = TreasureDungeons/Source/Game/Map.swift; sourceTree = "<group>"; };
 		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = TreasureDungeons/Source/Utils/Array2D.swift; sourceTree = "<group>"; };
@@ -115,6 +127,8 @@
 				1A90C1C51EFBC75600E5CADE /* SimpleFragmentShader.glsl */,
 				1A90C1C61EFBC75600E5CADE /* SimpleVertexShader.glsl */,
 				1A90C1C71EFBC75600E5CADE /* wall.png */,
+				1A3408D01F0437AE00092F53 /* EmitterFragmentShader.glsl */,
+				1A3408CE1F04379100092F53 /* EmitterVertexShader.glsl */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -141,6 +155,8 @@
 				1A90C1B31EFBC74700E5CADE /* GLKMatrix+Array.swift */,
 				1A9CC57C1F01449B00CBC07B /* Camera.swift */,
 				1A9CC5821F0157CE00CBC07B /* Matrix4.swift */,
+				1A3408D21F04393200092F53 /* ParticleEmitterEffect.swift */,
+				1A3408D41F04E9B100092F53 /* ParticleEmitter.swift */,
 			);
 			name = OpenGL;
 			sourceTree = "<group>";
@@ -150,6 +166,8 @@
 			children = (
 				1A90C1AE1EFBC74700E5CADE /* TreasureDungeons-Bridging-Header.h */,
 				1A56C17A1EFBFAD50016BD8C /* Array2D.swift */,
+				1A3408D61F04F40600092F53 /* Random.swift */,
+				1A3408D81F05295300092F53 /* Array.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -240,11 +258,13 @@
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
 				1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */,
 				1A90C1CA1EFBC75600E5CADE /* SimpleFragmentShader.glsl in Resources */,
+				1A3408D11F0437AE00092F53 /* EmitterFragmentShader.glsl in Resources */,
 				1A9CC5811F014E8300CBC07B /* skybox.png in Resources */,
 				1A90C1D31EFBC7DF00E5CADE /* LaunchScreen.storyboard in Resources */,
 				1A56C17E1EFC57F60016BD8C /* floor_gray.png in Resources */,
 				1A90C1CB1EFBC75600E5CADE /* SimpleVertexShader.glsl in Resources */,
 				1A90C1C91EFBC75600E5CADE /* dungeon_01.png in Resources */,
+				1A3408CF1F04379100092F53 /* EmitterVertexShader.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +277,18 @@
 			files = (
 				1A90C1BD1EFBC74700E5CADE /* GLKMatrix+Array.swift in Sources */,
 				1A9CC5831F0157CF00CBC07B /* Matrix4.swift in Sources */,
+				1A3408D51F04E9B100092F53 /* ParticleEmitter.swift in Sources */,
 				1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */,
 				1A90C1BC1EFBC74700E5CADE /* Floor.swift in Sources */,
 				1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */,
 				1A90C1C11EFBC74700E5CADE /* GameViewController.swift in Sources */,
 				1A90C1BF1EFBC74700E5CADE /* Square.swift in Sources */,
+				1A3408D31F04393200092F53 /* ParticleEmitterEffect.swift in Sources */,
+				1A3408D91F05295300092F53 /* Array.swift in Sources */,
 				1A9CC5851F03B34400CBC07B /* Treasure.swift in Sources */,
 				1A90C1BE1EFBC74700E5CADE /* Model.swift in Sources */,
 				1A56C1771EFBFA770016BD8C /* Game.swift in Sources */,
+				1A3408D71F04F40600092F53 /* Random.swift in Sources */,
 				1A90C1C01EFBC74700E5CADE /* Vertex.swift in Sources */,
 				1A90C1C21EFBC74700E5CADE /* Wall.swift in Sources */,
 				1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */,
