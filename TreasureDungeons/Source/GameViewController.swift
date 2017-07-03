@@ -22,7 +22,8 @@ class GLKUpdater : NSObject, GLKViewControllerDelegate {
             model.updateWithDelta(self.glkViewController.timeSinceLastUpdate)
         }
         
-        self.glkViewController.emitter?.updateWithDelta(delta: self.glkViewController.timeSinceLastUpdate)
+        self.glkViewController.emitter?.updateWithDelta(self.glkViewController.timeSinceLastUpdate)
+        self.glkViewController.emitter?.faceTo(camera: self.glkViewController.camera!)
     }
 }
 
@@ -38,8 +39,7 @@ class GameViewController: GLKViewController {
     
     var camera: Camera?
     
-    var emitterEffect: ParticleEmitterEffect?
-    var emitter: ParticleEmitter?
+    var emitter: Particle?
     
     var map: Map? {
         didSet {
@@ -120,17 +120,17 @@ class GameViewController: GLKViewController {
         // construct view matrix = camera
         if let viewMatrix = camera?.viewMatrix {
             for model in self.models {
-                model.renderWithParentModelViewMatrix(viewMatrix)
+                model.render(withParentModelViewMatrix: viewMatrix)
             }
+            
+            //self.emitter?.render(withParentModelViewMatrix: viewMatrix)
         }
-        
-        self.emitter?.renderParticles()
-        
+
         // reset pitch
         self.camera?.reset()
     }
-    
 }
+
 
 extension GameViewController {
     
@@ -172,14 +172,13 @@ extension GameViewController {
     }
     
     func setupParticleEmitter() {
+        self.emitter = Particle(shader: self.shader, at: GLKVector3(v: (0.5, 0.0, 0.5)), for: 60.0)
         
-        self.emitterEffect = ParticleEmitterEffect(vertexShader: "EmitterVertexShader.glsl", fragmentShader: "EmitterFragmentShader.glsl")
-        
-        self.emitter = ParticleEmitter(shaderEffect: self.emitterEffect!)
-        
-        for i in 0..<100 {
-            self.emitter?.addParticle()
-        }
+        //self.emitter?.addParticle()
+        //self.emitter?.addParticle()
+        //for i in 0..<100 {
+            //self.emitter?.addParticle()
+        //}
     }
     
     func rebuildDungeon() {

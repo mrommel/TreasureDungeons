@@ -31,6 +31,12 @@ class Model {
     init(name: String, shader: BaseEffect, vertices: [Vertex], indices: [GLuint]) {
         self.name = name
         self.shader = shader
+        
+        self.updateBuffers(vertices: vertices, indices: indices)
+    }
+    
+    func updateBuffers(vertices: [Vertex], indices: [GLuint]) {
+        
         self.vertices = vertices
         self.vertexCount = GLuint(vertices.count)
         self.indices = indices
@@ -85,7 +91,7 @@ class Model {
             GLenum(GL_FLOAT),
             GLboolean(GL_FALSE),
             GLsizei(MemoryLayout<Vertex>.size), BUFFER_OFFSET((3+4+2) * MemoryLayout<GLfloat>.size)) // x, y, z | r, g, b, a | u, v | nx, ny, nz :: offset is (3+4+2)*sizeof(GLfloat)
-
+        
         
         // 바인딩을 끈다
         glBindVertexArrayOES(0)
@@ -103,7 +109,7 @@ class Model {
         return modelMatrix
     }
     
-    func renderWithParentModelViewMatrix(_ parentModelViewMatrix: GLKMatrix4) {
+    func render(withParentModelViewMatrix parentModelViewMatrix: GLKMatrix4) {
         
         let modelViewMatrix : GLKMatrix4 = GLKMatrix4Multiply(parentModelViewMatrix, modelMatrix())
         
