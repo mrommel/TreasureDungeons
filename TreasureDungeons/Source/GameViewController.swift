@@ -22,8 +22,7 @@ class GLKUpdater : NSObject, GLKViewControllerDelegate {
             model.updateWithDelta(self.glkViewController.timeSinceLastUpdate)
         }
         
-        self.glkViewController.emitter?.updateWithDelta(self.glkViewController.timeSinceLastUpdate)
-        self.glkViewController.emitter?.faceTo(camera: self.glkViewController.camera!)
+        self.glkViewController.emitter?.updateWithDelta(self.glkViewController.timeSinceLastUpdate, andFaceTo: self.glkViewController.camera!)
     }
 }
 
@@ -35,11 +34,15 @@ class GameViewController: GLKViewController {
     var glkUpdater: GLKUpdater!
     var shader: BaseEffect!
     
+    // movement
+    var lastLocation: CGPoint?
+    var movementTime: Timer?
+    
     var models: [Model] = []
     
     var camera: Camera?
     
-    var emitter: Particle?
+    var emitter: ParticleEmitter?
     
     var map: Map? {
         didSet {
@@ -123,7 +126,7 @@ class GameViewController: GLKViewController {
                 model.render(withParentModelViewMatrix: viewMatrix)
             }
             
-            //self.emitter?.render(withParentModelViewMatrix: viewMatrix)
+            self.emitter?.render(withParentModelViewMatrix: viewMatrix)
         }
 
         // reset pitch
@@ -134,23 +137,70 @@ class GameViewController: GLKViewController {
 
 extension GameViewController {
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            if(touch.view == self.glkView) {
+                let location = touch.location(in: self.glkView)
+                
+                self.lastLocation = location
+                self.restartTimer()
+            }
+        }
+    }
+    
+    func restartTimer() {
+        self.movementTime?.invalidate() // stop timer
+        self.movementTime = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(GameViewController.updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    func updateTimer() {
+        // go forward
+        if let positionOnMap = self.camera?.predictedPositionOnMap {
+            if let tileOnMap = self.map?.tile(at: positionOnMap) {
+                // collision detection
+                if tileOnMap.canAccess() {
+                    self.camera?.moveForward()
+                    
+                    self.positionLabel.text = "\(positionOnMap.x),\(positionOnMap.y) => \(tileOnMap.type)"
+                }
+            }
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            if(touch.view == self.glkView) {
+                let location = touch.location(in: self.glkView)
+                let translation = self.lastLocation! - location
+                
+                // pan left / right
+                self.camera?.turn(leftAndRight: -Float(translation.x / 80.0))
+                
+                self.restartTimer()
+            }
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            if(touch.view == self.glkView) {
+                let location = touch.location(in: self.glkView)
+                let translation = self.lastLocation! - location
+                
+                // pan left / right
+                self.camera?.turn(leftAndRight: -Float(translation.x / 80.0))
+                
+                self.movementTime?.invalidate() // stop timer
+            }
+        }
+    }
+    
     func setupGLcontext() {
         glkView = self.view as! GLKView
         glkView.context = EAGLContext(api: .openGLES2)
         glkView.drawableDepthFormat = .format16         // for depth testing
+        glkView.isUserInteractionEnabled = true
         EAGLContext.setCurrent(glkView.context)
-        
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(GameViewController.handleTap(gestureRecognizer:)))
-        tapRecognizer.delegate = self
-        glkView.addGestureRecognizer(tapRecognizer)
-        
-        let pinchRecognizer = UIPinchGestureRecognizer(target:self, action: #selector(GameViewController.pinchDetected(gestureRecognizer:)))
-        pinchRecognizer.delegate = self
-        glkView.addGestureRecognizer(pinchRecognizer)
-        
-        let panRecognizer = UIPanGestureRecognizer(target:self, action: #selector(GameViewController.panDetected(gestureRecognizer:)))
-        panRecognizer.delegate = self
-        glkView.addGestureRecognizer(panRecognizer)
     }
     
     func setupGLupdater() {
@@ -172,13 +222,9 @@ extension GameViewController {
     }
     
     func setupParticleEmitter() {
-        self.emitter = Particle(shader: self.shader, at: GLKVector3(v: (0.5, 0.0, 0.5)), for: 60.0)
+        self.emitter = ParticleEmitter(shader: self.shader)
         
-        //self.emitter?.addParticle()
-        //self.emitter?.addParticle()
-        //for i in 0..<100 {
-            //self.emitter?.addParticle()
-        //}
+        self.emitter?.addParticle(at: GLKVector3(v: (0.5, 0.0, 0.5)), for: 60.0)
     }
     
     func rebuildDungeon() {
@@ -232,44 +278,4 @@ extension GameViewController {
         self.models.append(floor0)*/
     }
     
-}
-
-extension GameViewController: UIGestureRecognizerDelegate {
-    
-    func panDetected(gestureRecognizer: UIPanGestureRecognizer) {
-        
-        let translation = gestureRecognizer.translation(in: self.view)
-        let velocity = gestureRecognizer.velocity(in: self.view)
-        
-        if fabs(translation.x) < fabs(translation.y) {
-            // pan up / down 
-            /*if translation.y < 0 {
-                self.pitch += 0.5
-            } else {
-                self.pitch -= 0.5
-            }*/
-        } else {
-            // pan left / right
-            self.camera?.turn(leftAndRight: Float(velocity.x / 80.0))
-        }
-    }
-    
-    func pinchDetected(gestureRecognizer: UIGestureRecognizer) {
-        //print("pinch")
-    }
-    
-    func handleTap(gestureRecognizer: UIGestureRecognizer) {
-        
-        // go forward
-        if let positionOnMap = self.camera?.predictedPositionOnMap {
-            if let tileOnMap = self.map?.tile(at: positionOnMap) {
-                // collision detection
-                if tileOnMap.canAccess() {
-                    self.camera?.moveForward()
-         
-                    self.positionLabel.text = "\(positionOnMap.x),\(positionOnMap.y) => \(tileOnMap.type)"
-                }
-            }
-        }
-    }
 }
