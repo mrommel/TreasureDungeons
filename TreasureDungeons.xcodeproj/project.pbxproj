@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A1B81981F0B8ECF001A3B1B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B81971F0B8ECF001A3B1B /* button.png */; };
+		1A1B819B1F0BAC71001A3B1B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */; };
+		1A1B819D1F0BB253001A3B1B /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */; };
+		1A1B819F1F0BB6EB001A3B1B /* Bottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */; };
 		1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3408CC1F03C6D800092F53 /* treasure_chest.png */; };
 		1A3408D71F04F40600092F53 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D61F04F40600092F53 /* Random.swift */; };
 		1A3408D91F05295300092F53 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D81F05295300092F53 /* Array.swift */; };
@@ -35,6 +38,13 @@
 		1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A90C1C71EFBC75600E5CADE /* wall.png */; };
 		1A90C1D31EFBC7DF00E5CADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A90C1CF1EFBC7DE00E5CADE /* LaunchScreen.storyboard */; };
 		1A90C1D41EFBC7DF00E5CADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A90C1D11EFBC7DE00E5CADE /* Main.storyboard */; };
+		1A943BF91F0BC05500A3986A /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A943BF81F0BC05500A3986A /* Diamond.swift */; };
+		1A943BFC1F0BD07A00A3986A /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943BFA1F0BD07A00A3986A /* bottle.png */; };
+		1A943BFD1F0BD07A00A3986A /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943BFB1F0BD07A00A3986A /* diamond.png */; };
+		1A943C021F0BD42B00A3986A /* tile01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943BFE1F0BD42B00A3986A /* tile01.png */; };
+		1A943C031F0BD42B00A3986A /* tile02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943BFF1F0BD42B00A3986A /* tile02.png */; };
+		1A943C041F0BD42B00A3986A /* tile03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C001F0BD42B00A3986A /* tile03.png */; };
+		1A943C051F0BD42B00A3986A /* tile04.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C011F0BD42B00A3986A /* tile04.png */; };
 		1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57C1F01449B00CBC07B /* Camera.swift */; };
 		1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57E1F014E5200CBC07B /* Skybox.swift */; };
 		1A9CC5811F014E8300CBC07B /* skybox.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9CC5801F014E8300CBC07B /* skybox.png */; };
@@ -42,10 +52,15 @@
 		1A9CC5851F03B34400CBC07B /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC5841F03B34400CBC07B /* Treasure.swift */; };
 		1AE6EE191F0A921A00FC89E8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6EE181F0A921A00FC89E8 /* MenuViewController.swift */; };
 		1AE6EE1C1F0A94A700FC89E8 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */; };
+		6FCD152B71CDC0317D7FFA74 /* Pods_TreasureDungeons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EDE4724BC3B6A0948291B4 /* Pods_TreasureDungeons.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C8110D1B4320249588CD397 /* Pods-TreasureDungeons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureDungeons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons.debug.xcconfig"; sourceTree = "<group>"; };
 		1A1B81971F0B8ECF001A3B1B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = TreasureDungeons/Source/Presentation/HelpViewController.swift; sourceTree = "<group>"; };
+		1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = TreasureDungeons/Source/Presentation/LevelViewController.swift; sourceTree = "<group>"; };
+		1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bottle.swift; path = TreasureDungeons/Source/Models/Bottle.swift; sourceTree = "<group>"; };
 		1A3408CC1F03C6D800092F53 /* treasure_chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treasure_chest.png; path = TreasureDungeons/Resources/treasure_chest.png; sourceTree = "<group>"; };
 		1A3408D61F04F40600092F53 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = TreasureDungeons/Source/Utils/Random.swift; sourceTree = "<group>"; };
 		1A3408D81F05295300092F53 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = TreasureDungeons/Source/Utils/Array.swift; sourceTree = "<group>"; };
@@ -74,6 +89,13 @@
 		1A90C1C71EFBC75600E5CADE /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall.png; path = TreasureDungeons/Resources/wall.png; sourceTree = "<group>"; };
 		1A90C1D01EFBC7DE00E5CADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TreasureDungeons/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A90C1D21EFBC7DE00E5CADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TreasureDungeons/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A943BF81F0BC05500A3986A /* Diamond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diamond.swift; path = TreasureDungeons/Source/Models/Diamond.swift; sourceTree = "<group>"; };
+		1A943BFA1F0BD07A00A3986A /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottle.png; path = TreasureDungeons/Resources/bottle.png; sourceTree = "<group>"; };
+		1A943BFB1F0BD07A00A3986A /* diamond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diamond.png; path = TreasureDungeons/Resources/diamond.png; sourceTree = "<group>"; };
+		1A943BFE1F0BD42B00A3986A /* tile01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile01.png; path = TreasureDungeons/Resources/tile01.png; sourceTree = "<group>"; };
+		1A943BFF1F0BD42B00A3986A /* tile02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile02.png; path = TreasureDungeons/Resources/tile02.png; sourceTree = "<group>"; };
+		1A943C001F0BD42B00A3986A /* tile03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile03.png; path = TreasureDungeons/Resources/tile03.png; sourceTree = "<group>"; };
+		1A943C011F0BD42B00A3986A /* tile04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile04.png; path = TreasureDungeons/Resources/tile04.png; sourceTree = "<group>"; };
 		1A9CC57C1F01449B00CBC07B /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = TreasureDungeons/Source/OpenGL/Camera.swift; sourceTree = "<group>"; };
 		1A9CC57E1F014E5200CBC07B /* Skybox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Skybox.swift; path = TreasureDungeons/Source/Models/Skybox.swift; sourceTree = "<group>"; };
 		1A9CC5801F014E8300CBC07B /* skybox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox.png; path = TreasureDungeons/Resources/skybox.png; sourceTree = "<group>"; };
@@ -82,6 +104,8 @@
 		1AE6EE181F0A921A00FC89E8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = TreasureDungeons/Source/MenuViewController.swift; sourceTree = "<group>"; };
 		1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Storyboard.swift"; path = "TreasureDungeons/Source/Presentation/UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		4E5D7D361C84C39A006246F7 /* TreasureDungeons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreasureDungeons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB9A37083A3A37AB09B4ECD9 /* Pods-TreasureDungeons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureDungeons.release.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons.release.xcconfig"; sourceTree = "<group>"; };
+		F7EDE4724BC3B6A0948291B4 /* Pods_TreasureDungeons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TreasureDungeons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +113,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FCD152B71CDC0317D7FFA74 /* Pods_TreasureDungeons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0659ACE40096D7E6AD3AC9E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C8110D1B4320249588CD397 /* Pods-TreasureDungeons.debug.xcconfig */,
+				CB9A37083A3A37AB09B4ECD9 /* Pods-TreasureDungeons.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1A1B81991F0BAC52001A3B1B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */,
+				1A90C1B71EFBC74700E5CADE /* GameViewController.swift */,
+				1AE6EE181F0A921A00FC89E8 /* MenuViewController.swift */,
+				1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */,
+				1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
 		1A56C1751EFBFA600016BD8C /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,14 +153,12 @@
 		1A90C1981EFBC66700E5CADE /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				1AE6EE1A1F0A948C00FC89E8 /* Presentation */,
+				1A1B81991F0BAC52001A3B1B /* Presentation */,
 				1A90C1D71EFBC9B700E5CADE /* Utils */,
 				1A90C1D61EFBC97E00E5CADE /* OpenGL */,
 				1A90C1D51EFBC96C00E5CADE /* Models */,
 				1A56C1751EFBFA600016BD8C /* Game */,
 				1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */,
-				1A90C1B71EFBC74700E5CADE /* GameViewController.swift */,
-				1AE6EE181F0A921A00FC89E8 /* MenuViewController.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -122,6 +166,12 @@
 		1A90C1AD1EFBC6D900E5CADE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A943BFE1F0BD42B00A3986A /* tile01.png */,
+				1A943BFF1F0BD42B00A3986A /* tile02.png */,
+				1A943C001F0BD42B00A3986A /* tile03.png */,
+				1A943C011F0BD42B00A3986A /* tile04.png */,
+				1A943BFA1F0BD07A00A3986A /* bottle.png */,
+				1A943BFB1F0BD07A00A3986A /* diamond.png */,
 				1A3408CC1F03C6D800092F53 /* treasure_chest.png */,
 				1A56C17C1EFC57F60016BD8C /* floor_gray.png */,
 				1A56C17D1EFC57F60016BD8C /* floor_blue.png */,
@@ -145,6 +195,8 @@
 				1A90C1B51EFBC74700E5CADE /* Square.swift */,
 				1A90C1B81EFBC74700E5CADE /* Wall.swift */,
 				1A9CC5841F03B34400CBC07B /* Treasure.swift */,
+				1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */,
+				1A943BF81F0BC05500A3986A /* Diamond.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -175,14 +227,6 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		1AE6EE1A1F0A948C00FC89E8 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */,
-			);
-			name = Presentation;
-			sourceTree = "<group>";
-		};
 		4E5D7D2D1C84C39A006246F7 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +235,8 @@
 				1A90C1CF1EFBC7DE00E5CADE /* LaunchScreen.storyboard */,
 				1A90C1D11EFBC7DE00E5CADE /* Main.storyboard */,
 				4E5D7D371C84C39A006246F7 /* Products */,
+				0659ACE40096D7E6AD3AC9E1 /* Pods */,
+				956B88A539DFC6DC4D017576 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +248,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		956B88A539DFC6DC4D017576 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7EDE4724BC3B6A0948291B4 /* Pods_TreasureDungeons.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E5D7D481C84C39A006246F7 /* Build configuration list for PBXNativeTarget "TreasureDungeons" */;
 			buildPhases = (
+				344EE67B23AD414509FC1157 /* [CP] Check Pods Manifest.lock */,
 				4E5D7D321C84C39A006246F7 /* Sources */,
 				4E5D7D331C84C39A006246F7 /* Frameworks */,
 				4E5D7D341C84C39A006246F7 /* Resources */,
+				11C91453271899F2D8784D69 /* [CP] Embed Pods Frameworks */,
+				3D1ACA8E56C3282E64298229 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,18 +324,72 @@
 				1A1B81981F0B8ECF001A3B1B /* button.png in Resources */,
 				1A90C1D41EFBC7DF00E5CADE /* Main.storyboard in Resources */,
 				1A90C1C81EFBC75600E5CADE /* Assets.xcassets in Resources */,
+				1A943BFD1F0BD07A00A3986A /* diamond.png in Resources */,
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
 				1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */,
 				1A90C1CA1EFBC75600E5CADE /* SimpleFragmentShader.glsl in Resources */,
+				1A943C021F0BD42B00A3986A /* tile01.png in Resources */,
 				1A9CC5811F014E8300CBC07B /* skybox.png in Resources */,
 				1A90C1D31EFBC7DF00E5CADE /* LaunchScreen.storyboard in Resources */,
 				1A56C17E1EFC57F60016BD8C /* floor_gray.png in Resources */,
 				1A90C1CB1EFBC75600E5CADE /* SimpleVertexShader.glsl in Resources */,
+				1A943C031F0BD42B00A3986A /* tile02.png in Resources */,
+				1A943C041F0BD42B00A3986A /* tile03.png in Resources */,
+				1A943BFC1F0BD07A00A3986A /* bottle.png in Resources */,
 				1A90C1C91EFBC75600E5CADE /* dungeon_01.png in Resources */,
+				1A943C051F0BD42B00A3986A /* tile04.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11C91453271899F2D8784D69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		344EE67B23AD414509FC1157 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3D1ACA8E56C3282E64298229 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E5D7D321C84C39A006246F7 /* Sources */ = {
@@ -286,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A90C1BD1EFBC74700E5CADE /* GLKMatrix+Array.swift in Sources */,
+				1A1B819D1F0BB253001A3B1B /* LevelViewController.swift in Sources */,
 				1A9CC5831F0157CF00CBC07B /* Matrix4.swift in Sources */,
 				1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */,
 				1A90C1BC1EFBC74700E5CADE /* Floor.swift in Sources */,
@@ -299,13 +411,16 @@
 				1A90C1BE1EFBC74700E5CADE /* Model.swift in Sources */,
 				1A56C1771EFBFA770016BD8C /* Game.swift in Sources */,
 				1A3408D71F04F40600092F53 /* Random.swift in Sources */,
+				1A943BF91F0BC05500A3986A /* Diamond.swift in Sources */,
 				1A90C1C01EFBC74700E5CADE /* Vertex.swift in Sources */,
 				1AE6EE191F0A921A00FC89E8 /* MenuViewController.swift in Sources */,
 				1A90C1C21EFBC74700E5CADE /* Wall.swift in Sources */,
 				1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */,
 				1AE6EE1C1F0A94A700FC89E8 /* UIViewController+Storyboard.swift in Sources */,
+				1A1B819B1F0BAC71001A3B1B /* HelpViewController.swift in Sources */,
 				1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */,
 				1A56C1791EFBFA830016BD8C /* Map.swift in Sources */,
+				1A1B819F1F0BB6EB001A3B1B /* Bottle.swift in Sources */,
 				1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */,
 				1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */,
 			);
@@ -421,6 +536,7 @@
 		};
 		4E5D7D491C84C39A006246F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C8110D1B4320249588CD397 /* Pods-TreasureDungeons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -439,6 +555,7 @@
 		};
 		4E5D7D4A1C84C39A006246F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB9A37083A3A37AB09B4ECD9 /* Pods-TreasureDungeons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

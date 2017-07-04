@@ -14,19 +14,18 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Test"
+        self.title = "Menu"
     }
-    
     
     @IBAction func startGame(sender: AnyObject) {
         
-        guard let mapViewController = GameViewController.instantiateFromStoryboard("Main") else {
+        guard let levelViewController = LevelViewController.instantiateFromStoryboard("Main") else {
             let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
         
-        self.navigationController?.pushViewController(mapViewController, animated: true)
+        self.navigationController?.pushViewController(levelViewController, animated: true)
     }
 }

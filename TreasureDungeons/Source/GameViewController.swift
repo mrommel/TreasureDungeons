@@ -8,6 +8,7 @@
 
 import UIKit
 import GLKit
+import SCLAlertView
 
 class GLKUpdater : NSObject, GLKViewControllerDelegate {
     
@@ -46,7 +47,7 @@ class GameViewController: GLKViewController {
     
     var map: Map? {
         didSet {
-            rebuildDungeon()
+            //rebuildDungeon()
         }
     }
     
@@ -58,50 +59,12 @@ class GameViewController: GLKViewController {
         setupCamera()
         setupScene()
         setupParticleEmitter()
-        
-        let map = Map(width: 5, height: 7)
-        
-        map.tiles[0, 0] = Tile(at: Point(x: 0, y: 0), type: .wall)
-        map.tiles[0, 1] = Tile(at: Point(x: 0, y: 1), type: .wall)
-        map.tiles[0, 2] = Tile(at: Point(x: 0, y: 2), type: .wall)
-        map.tiles[0, 3] = Tile(at: Point(x: 0, y: 3), type: .wall)
-        map.tiles[0, 4] = Tile(at: Point(x: 0, y: 4), type: .wall)
-        map.tiles[0, 5] = Tile(at: Point(x: 0, y: 5), type: .wall)
-        map.tiles[0, 6] = Tile(at: Point(x: 0, y: 6), type: .wall)
-        
-        map.tiles[1, 0] = Tile(at: Point(x: 1, y: 0), type: .wall)
-        map.tiles[1, 1] = Tile(at: Point(x: 1, y: 1), type: .floor)
-        map.tiles[1, 2] = Tile(at: Point(x: 1, y: 2), type: .floor)
-        map.tiles[1, 3] = Tile(at: Point(x: 1, y: 3), type: .floor)
-        map.tiles[1, 4] = Tile(at: Point(x: 1, y: 4), type: .wall)
-        map.tiles[1, 5] = Tile(at: Point(x: 1, y: 5), type: .floor)
-        map.tiles[1, 6] = Tile(at: Point(x: 1, y: 6), type: .wall)
-        
-        map.tiles[2, 0] = Tile(at: Point(x: 2, y: 0), type: .floor)
-        map.tiles[2, 1] = Tile(at: Point(x: 2, y: 1), type: .floor)
-        map.tiles[2, 2] = Tile(at: Point(x: 2, y: 2), type: .floor)
-        map.tiles[2, 3] = Tile(at: Point(x: 2, y: 3), type: .floor)
-        map.tiles[2, 4] = Tile(at: Point(x: 2, y: 4), type: .floor)
-        map.tiles[2, 5] = Tile(at: Point(x: 2, y: 5), type: .floor)
-        map.tiles[2, 6] = Tile(at: Point(x: 2, y: 6), type: .wall)
-        
-        map.tiles[3, 0] = Tile(at: Point(x: 3, y: 0), type: .wall)
-        map.tiles[3, 1] = Tile(at: Point(x: 3, y: 1), type: .floor)
-        map.tiles[3, 2] = Tile(at: Point(x: 3, y: 2), type: .floor)
-        map.tiles[3, 3] = Tile(at: Point(x: 3, y: 3), type: .floor)
-        map.tiles[3, 4] = Tile(at: Point(x: 3, y: 4), type: .wall)
-        map.tiles[3, 5] = Tile(at: Point(x: 3, y: 5), type: .floor)
-        map.tiles[3, 6] = Tile(at: Point(x: 3, y: 6), type: .wall)
-        
-        map.tiles[4, 0] = Tile(at: Point(x: 4, y: 0), type: .wall)
-        map.tiles[4, 1] = Tile(at: Point(x: 4, y: 1), type: .wall)
-        map.tiles[4, 2] = Tile(at: Point(x: 4, y: 2), type: .wall)
-        map.tiles[4, 3] = Tile(at: Point(x: 4, y: 3), type: .wall)
-        map.tiles[4, 4] = Tile(at: Point(x: 4, y: 4), type: .wall)
-        map.tiles[4, 5] = Tile(at: Point(x: 4, y: 5), type: .wall)
-        map.tiles[4, 6] = Tile(at: Point(x: 4, y: 6), type: .wall)
-        
-        self.map = map
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    
+        SCLAlertView().showInfo("Important info", subTitle: "You are great")
     }
     
     override func didReceiveMemoryWarning() {
@@ -118,6 +81,8 @@ class GameViewController: GLKViewController {
         glEnable(GLenum(GL_DEPTH_TEST))
         glEnable(GLenum(GL_CULL_FACE))
         glEnable(GLenum(GL_BLEND))
+        
+        glCullFace(GLenum(GL_FRONT_AND_BACK))
         glBlendFunc(GLenum(GL_SRC_ALPHA), GLenum(GL_ONE_MINUS_SRC_ALPHA))
         
         // construct view matrix = camera
@@ -261,21 +226,15 @@ extension GameViewController {
             }
         }
         
-        let treasure = Treasure(shader: self.shader)
-        treasure.position = GLKVector3(v: (3.0, -1.0, 3.0))
-        self.models.append(treasure)
+        /*let bottle = Bottle(shader: self.shader)
+        bottle.position = GLKVector3(v: (3.0, -1.0, 3.0))
+        self.models.append(bottle)*/
+        
+        let diamond = Diamond(shader: self.shader)
+        diamond.position = GLKVector3(v: (3.0, -1.0, 3.0))
+        self.models.append(diamond)
         
         self.models.append(Skybox(shader: self.shader))
-        
-        /*self.models.append(Cube(shader: self.shader))
-        
-        let wall0 = Wall(shader: self.shader)
-        wall0.position = GLKVector3(v: (5.0, 0.0, 0.0))
-        self.models.append(wall0)
-        
-        let floor0 = Floor(shader: self.shader)
-        floor0.position = GLKVector3(v: (-1.0, 0.0, -1.0))
-        self.models.append(floor0)*/
     }
     
 }
