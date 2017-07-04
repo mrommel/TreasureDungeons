@@ -26,7 +26,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6z-Ju-AEV">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
-                                        <state key="normal" title="Start"/>
+                                        <state key="normal" title="Start" backgroundImage="button.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="startGameWithSender:" destination="7ST-Lb-xbn" eventType="touchDown" id="2kQ-4q-Zhw"/>
                                         </connections>
@@ -37,16 +39,20 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-qj-2h3">
                                         <rect key="frame" x="0.0" y="301.5" width="375" height="151"/>
-                                        <state key="normal" title="Option"/>
+                                        <state key="normal" title="Option" backgroundImage="button.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdv-vh-3au">
                                         <rect key="frame" x="0.0" y="452.5" width="375" height="150.5"/>
-                                        <state key="normal" title="Help"/>
+                                        <state key="normal" title="Help" backgroundImage="button.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2156862745" green="0.25490196079999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="7AO-ZR-hfP" secondAttribute="trailing" id="2bg-ZU-eFF"/>
                             <constraint firstItem="7AO-ZR-hfP" firstAttribute="top" secondItem="JsJ-Vp-lIP" secondAttribute="top" id="3pn-iF-Li8"/>
@@ -62,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="1460" y="-280.20989505247377"/>
         </scene>
-        <!--GLKit View Controller-->
+        <!--Game-->
         <scene sceneID="nBQ-zt-7QO">
             <objects>
-                <glkViewController storyboardIdentifier="GameViewController" preferredFramesPerSecond="30" id="94b-jH-d8g" customClass="GameViewController" customModule="TreasureDungeons" customModuleProvider="target" sceneMemberID="viewController">
+                <glkViewController storyboardIdentifier="GameViewController" title="Game" preferredFramesPerSecond="30" id="94b-jH-d8g" customClass="GameViewController" customModule="TreasureDungeons" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vMb-od-cEg"/>
                         <viewControllerLayoutGuide type="bottom" id="cxv-ZR-TWZ"/>
@@ -134,4 +140,7 @@
             <point key="canvasLocation" x="522.39999999999998" y="491.60419790104953"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button.png" width="243" height="102"/>
+    </resources>
 </document>

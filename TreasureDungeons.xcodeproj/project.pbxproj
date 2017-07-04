@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1B81981F0B8ECF001A3B1B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B81971F0B8ECF001A3B1B /* button.png */; };
 		1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3408CC1F03C6D800092F53 /* treasure_chest.png */; };
 		1A3408D71F04F40600092F53 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D61F04F40600092F53 /* Random.swift */; };
 		1A3408D91F05295300092F53 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D81F05295300092F53 /* Array.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1B81971F0B8ECF001A3B1B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		1A3408CC1F03C6D800092F53 /* treasure_chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treasure_chest.png; path = TreasureDungeons/Resources/treasure_chest.png; sourceTree = "<group>"; };
 		1A3408D61F04F40600092F53 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = TreasureDungeons/Source/Utils/Random.swift; sourceTree = "<group>"; };
 		1A3408D81F05295300092F53 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = TreasureDungeons/Source/Utils/Array.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				1A90C1C51EFBC75600E5CADE /* SimpleFragmentShader.glsl */,
 				1A90C1C61EFBC75600E5CADE /* SimpleVertexShader.glsl */,
 				1A90C1C71EFBC75600E5CADE /* wall.png */,
+				1A1B81971F0B8ECF001A3B1B /* button.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A56C17F1EFC57F60016BD8C /* floor_blue.png in Resources */,
+				1A1B81981F0B8ECF001A3B1B /* button.png in Resources */,
 				1A90C1D41EFBC7DF00E5CADE /* Main.storyboard in Resources */,
 				1A90C1C81EFBC75600E5CADE /* Assets.xcassets in Resources */,
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
