@@ -45,6 +45,10 @@
 		1A943C031F0BD42B00A3986A /* tile02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943BFF1F0BD42B00A3986A /* tile02.png */; };
 		1A943C041F0BD42B00A3986A /* tile03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C001F0BD42B00A3986A /* tile03.png */; };
 		1A943C051F0BD42B00A3986A /* tile04.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C011F0BD42B00A3986A /* tile04.png */; };
+		1A943C0A1F0CEA5200A3986A /* bubble_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C061F0CEA5200A3986A /* bubble_blue.png */; };
+		1A943C0B1F0CEA5200A3986A /* bubble_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C071F0CEA5200A3986A /* bubble_green.png */; };
+		1A943C0C1F0CEA5200A3986A /* bubble_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C081F0CEA5200A3986A /* bubble_red.png */; };
+		1A943C0D1F0CEA5200A3986A /* bubble_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C091F0CEA5200A3986A /* bubble_yellow.png */; };
 		1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57C1F01449B00CBC07B /* Camera.swift */; };
 		1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57E1F014E5200CBC07B /* Skybox.swift */; };
 		1A9CC5811F014E8300CBC07B /* skybox.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9CC5801F014E8300CBC07B /* skybox.png */; };
@@ -96,6 +100,10 @@
 		1A943BFF1F0BD42B00A3986A /* tile02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile02.png; path = TreasureDungeons/Resources/tile02.png; sourceTree = "<group>"; };
 		1A943C001F0BD42B00A3986A /* tile03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile03.png; path = TreasureDungeons/Resources/tile03.png; sourceTree = "<group>"; };
 		1A943C011F0BD42B00A3986A /* tile04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile04.png; path = TreasureDungeons/Resources/tile04.png; sourceTree = "<group>"; };
+		1A943C061F0CEA5200A3986A /* bubble_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble_blue.png; path = TreasureDungeons/Resources/bubble_blue.png; sourceTree = "<group>"; };
+		1A943C071F0CEA5200A3986A /* bubble_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble_green.png; path = TreasureDungeons/Resources/bubble_green.png; sourceTree = "<group>"; };
+		1A943C081F0CEA5200A3986A /* bubble_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble_red.png; path = TreasureDungeons/Resources/bubble_red.png; sourceTree = "<group>"; };
+		1A943C091F0CEA5200A3986A /* bubble_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble_yellow.png; path = TreasureDungeons/Resources/bubble_yellow.png; sourceTree = "<group>"; };
 		1A9CC57C1F01449B00CBC07B /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = TreasureDungeons/Source/OpenGL/Camera.swift; sourceTree = "<group>"; };
 		1A9CC57E1F014E5200CBC07B /* Skybox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Skybox.swift; path = TreasureDungeons/Source/Models/Skybox.swift; sourceTree = "<group>"; };
 		1A9CC5801F014E8300CBC07B /* skybox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox.png; path = TreasureDungeons/Resources/skybox.png; sourceTree = "<group>"; };
@@ -182,6 +190,10 @@
 				1A90C1C61EFBC75600E5CADE /* SimpleVertexShader.glsl */,
 				1A90C1C71EFBC75600E5CADE /* wall.png */,
 				1A1B81971F0B8ECF001A3B1B /* button.png */,
+				1A943C061F0CEA5200A3986A /* bubble_blue.png */,
+				1A943C071F0CEA5200A3986A /* bubble_green.png */,
+				1A943C081F0CEA5200A3986A /* bubble_red.png */,
+				1A943C091F0CEA5200A3986A /* bubble_yellow.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -323,7 +335,9 @@
 				1A56C17F1EFC57F60016BD8C /* floor_blue.png in Resources */,
 				1A1B81981F0B8ECF001A3B1B /* button.png in Resources */,
 				1A90C1D41EFBC7DF00E5CADE /* Main.storyboard in Resources */,
+				1A943C0A1F0CEA5200A3986A /* bubble_blue.png in Resources */,
 				1A90C1C81EFBC75600E5CADE /* Assets.xcassets in Resources */,
+				1A943C0D1F0CEA5200A3986A /* bubble_yellow.png in Resources */,
 				1A943BFD1F0BD07A00A3986A /* diamond.png in Resources */,
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
 				1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */,
@@ -334,10 +348,12 @@
 				1A56C17E1EFC57F60016BD8C /* floor_gray.png in Resources */,
 				1A90C1CB1EFBC75600E5CADE /* SimpleVertexShader.glsl in Resources */,
 				1A943C031F0BD42B00A3986A /* tile02.png in Resources */,
+				1A943C0B1F0CEA5200A3986A /* bubble_green.png in Resources */,
 				1A943C041F0BD42B00A3986A /* tile03.png in Resources */,
 				1A943BFC1F0BD07A00A3986A /* bottle.png in Resources */,
 				1A90C1C91EFBC75600E5CADE /* dungeon_01.png in Resources */,
 				1A943C051F0BD42B00A3986A /* tile04.png in Resources */,
+				1A943C0C1F0CEA5200A3986A /* bubble_red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

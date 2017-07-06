@@ -18,12 +18,16 @@ class LevelViewController: UIViewController {
         
         self.title = "Levels"
         
-        let button = UIButton();
+        let buttonImage = UIImage(named: "bubble_blue") as UIImage?
+        
+        let button = UIButton(type: .custom)
         button.setTitle("01", for: .normal)
         button.tag = 1
-        button.setTitleColor(UIColor.blue, for: .normal)
-        button.frame = CGRect(origin: CGPoint(x: 15, y: 10), size: CGSize(width: 60, height: 60))
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.frame = CGRect(origin: CGPoint(x: 15, y: 10), size: CGSize(width: 64, height: 64))
+        button.setBackgroundImage(buttonImage, for: .normal)
         button.addTarget(self, action: #selector(LevelViewController.buttonPressed), for: .touchUpInside)
+        
         self.scrollView?.addSubview(button)
     }
     

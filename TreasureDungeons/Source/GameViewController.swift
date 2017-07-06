@@ -64,7 +64,7 @@ class GameViewController: GLKViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     
-        SCLAlertView().showInfo("Important info", subTitle: "You are great")
+        SCLAlertView().showNotice("Hello Notice", subTitle: "This is a more descriptive notice text.") // Notice
     }
     
     override func didReceiveMemoryWarning() {
