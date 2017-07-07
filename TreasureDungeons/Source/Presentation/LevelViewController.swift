@@ -12,19 +12,25 @@ import UIKit
 class LevelViewController: UIViewController {
     
     var scrollView: UIScrollView?
+    let buttonImage = UIImage(named: "bubble_blue") as UIImage?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Levels"
         
-        let buttonImage = UIImage(named: "bubble_blue") as UIImage?
+        self.createGameButton(at: CGPoint(x: 15, y: 10), with: 1)
+        self.createGameButton(at: CGPoint(x: 80, y: 65), with: 2)
+    }
+    
+    func createGameButton(at point: CGPoint, with level: Int) {
         
         let button = UIButton(type: .custom)
-        button.setTitle("01", for: .normal)
-        button.tag = 1
+        button.setTitle("\(level)", for: .normal)
+        button.tag = level
         button.setTitleColor(UIColor.white, for: .normal)
-        button.frame = CGRect(origin: CGPoint(x: 15, y: 10), size: CGSize(width: 64, height: 64))
+        button.frame = CGRect(origin: CGPoint(x: point.x, y: point.y), size: CGSize(width: 42, height: 42))
         button.setBackgroundImage(buttonImage, for: .normal)
         button.addTarget(self, action: #selector(LevelViewController.buttonPressed), for: .touchUpInside)
         
@@ -35,7 +41,7 @@ class LevelViewController: UIViewController {
         print("pressed \(sender.tag)")
         
         guard let gameViewController = GameViewController.instantiateFromStoryboard("Main") else {
-            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Alert", message: "Cannot open GameViewController", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return

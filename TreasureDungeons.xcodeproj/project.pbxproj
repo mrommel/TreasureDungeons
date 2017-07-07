@@ -49,6 +49,8 @@
 		1A943C0B1F0CEA5200A3986A /* bubble_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C071F0CEA5200A3986A /* bubble_green.png */; };
 		1A943C0C1F0CEA5200A3986A /* bubble_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C081F0CEA5200A3986A /* bubble_red.png */; };
 		1A943C0D1F0CEA5200A3986A /* bubble_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C091F0CEA5200A3986A /* bubble_yellow.png */; };
+		1A943C0F1F0F91A700A3986A /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A943C0E1F0F91A700A3986A /* Key.swift */; };
+		1A943C111F0F985800A3986A /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A943C101F0F985800A3986A /* key.png */; };
 		1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57C1F01449B00CBC07B /* Camera.swift */; };
 		1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CC57E1F014E5200CBC07B /* Skybox.swift */; };
 		1A9CC5811F014E8300CBC07B /* skybox.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A9CC5801F014E8300CBC07B /* skybox.png */; };
@@ -61,7 +63,7 @@
 
 /* Begin PBXFileReference section */
 		0C8110D1B4320249588CD397 /* Pods-TreasureDungeons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureDungeons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons.debug.xcconfig"; sourceTree = "<group>"; };
-		1A1B81971F0B8ECF001A3B1B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		1A1B81971F0B8ECF001A3B1B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = TreasureDungeons/Resources/button.png; sourceTree = "<group>"; };
 		1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = TreasureDungeons/Source/Presentation/HelpViewController.swift; sourceTree = "<group>"; };
 		1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = TreasureDungeons/Source/Presentation/LevelViewController.swift; sourceTree = "<group>"; };
 		1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bottle.swift; path = TreasureDungeons/Source/Models/Bottle.swift; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 		1A90C1B41EFBC74700E5CADE /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = TreasureDungeons/Source/OpenGL/Model.swift; sourceTree = "<group>"; };
 		1A90C1B51EFBC74700E5CADE /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Square.swift; path = TreasureDungeons/Source/Models/Square.swift; sourceTree = "<group>"; };
 		1A90C1B61EFBC74700E5CADE /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vertex.swift; path = TreasureDungeons/Source/OpenGL/Vertex.swift; sourceTree = "<group>"; };
-		1A90C1B71EFBC74700E5CADE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = TreasureDungeons/Source/GameViewController.swift; sourceTree = "<group>"; };
+		1A90C1B71EFBC74700E5CADE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = TreasureDungeons/Source/Presentation/GameViewController.swift; sourceTree = "<group>"; };
 		1A90C1B81EFBC74700E5CADE /* Wall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wall.swift; path = TreasureDungeons/Source/Models/Wall.swift; sourceTree = "<group>"; };
 		1A90C1C31EFBC75600E5CADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = TreasureDungeons/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		1A90C1C41EFBC75600E5CADE /* dungeon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dungeon_01.png; path = TreasureDungeons/Resources/dungeon_01.png; sourceTree = "<group>"; };
@@ -104,12 +106,14 @@
 		1A943C071F0CEA5200A3986A /* bubble_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble_green.png; path = TreasureDungeons/Resources/bubble_green.png; sourceTree = "<group>"; };
 		1A943C081F0CEA5200A3986A /* bubble_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble_red.png; path = TreasureDungeons/Resources/bubble_red.png; sourceTree = "<group>"; };
 		1A943C091F0CEA5200A3986A /* bubble_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble_yellow.png; path = TreasureDungeons/Resources/bubble_yellow.png; sourceTree = "<group>"; };
+		1A943C0E1F0F91A700A3986A /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Key.swift; path = TreasureDungeons/Source/Models/Key.swift; sourceTree = "<group>"; };
+		1A943C101F0F985800A3986A /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = key.png; path = TreasureDungeons/Resources/key.png; sourceTree = "<group>"; };
 		1A9CC57C1F01449B00CBC07B /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = TreasureDungeons/Source/OpenGL/Camera.swift; sourceTree = "<group>"; };
 		1A9CC57E1F014E5200CBC07B /* Skybox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Skybox.swift; path = TreasureDungeons/Source/Models/Skybox.swift; sourceTree = "<group>"; };
 		1A9CC5801F014E8300CBC07B /* skybox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybox.png; path = TreasureDungeons/Resources/skybox.png; sourceTree = "<group>"; };
 		1A9CC5821F0157CE00CBC07B /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix4.swift; path = TreasureDungeons/Source/OpenGL/Matrix4.swift; sourceTree = "<group>"; };
 		1A9CC5841F03B34400CBC07B /* Treasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Treasure.swift; path = TreasureDungeons/Source/Models/Treasure.swift; sourceTree = "<group>"; };
-		1AE6EE181F0A921A00FC89E8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = TreasureDungeons/Source/MenuViewController.swift; sourceTree = "<group>"; };
+		1AE6EE181F0A921A00FC89E8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = TreasureDungeons/Source/Presentation/MenuViewController.swift; sourceTree = "<group>"; };
 		1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Storyboard.swift"; path = "TreasureDungeons/Source/Presentation/UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		4E5D7D361C84C39A006246F7 /* TreasureDungeons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreasureDungeons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9A37083A3A37AB09B4ECD9 /* Pods-TreasureDungeons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureDungeons.release.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				1A943BFF1F0BD42B00A3986A /* tile02.png */,
 				1A943C001F0BD42B00A3986A /* tile03.png */,
 				1A943C011F0BD42B00A3986A /* tile04.png */,
+				1A943C101F0F985800A3986A /* key.png */,
 				1A943BFA1F0BD07A00A3986A /* bottle.png */,
 				1A943BFB1F0BD07A00A3986A /* diamond.png */,
 				1A3408CC1F03C6D800092F53 /* treasure_chest.png */,
@@ -209,6 +214,7 @@
 				1A9CC5841F03B34400CBC07B /* Treasure.swift */,
 				1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */,
 				1A943BF81F0BC05500A3986A /* Diamond.swift */,
+				1A943C0E1F0F91A700A3986A /* Key.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A943C111F0F985800A3986A /* key.png in Resources */,
 				1A56C17F1EFC57F60016BD8C /* floor_blue.png in Resources */,
 				1A1B81981F0B8ECF001A3B1B /* button.png in Resources */,
 				1A90C1D41EFBC7DF00E5CADE /* Main.storyboard in Resources */,
@@ -433,6 +440,7 @@
 				1A90C1C21EFBC74700E5CADE /* Wall.swift in Sources */,
 				1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */,
 				1AE6EE1C1F0A94A700FC89E8 /* UIViewController+Storyboard.swift in Sources */,
+				1A943C0F1F0F91A700A3986A /* Key.swift in Sources */,
 				1A1B819B1F0BAC71001A3B1B /* HelpViewController.swift in Sources */,
 				1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */,
 				1A56C1791EFBFA830016BD8C /* Map.swift in Sources */,
