@@ -12,6 +12,8 @@
 		1A1B819D1F0BB253001A3B1B /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */; };
 		1A1B819F1F0BB6EB001A3B1B /* Bottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */; };
 		1A23C71C1F14D3EE00691442 /* Game02.game in Resources */ = {isa = PBXBuildFile; fileRef = 1A23C71B1F14D3EE00691442 /* Game02.game */; };
+		1A23C71E1F150C5D00691442 /* GamePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23C71D1F150C5D00691442 /* GamePreview.swift */; };
+		1A23C7201F150DF500691442 /* GoalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23C71F1F150DF500691442 /* GoalCondition.swift */; };
 		1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3408CC1F03C6D800092F53 /* treasure_chest.png */; };
 		1A3408D71F04F40600092F53 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D61F04F40600092F53 /* Random.swift */; };
 		1A3408D91F05295300092F53 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D81F05295300092F53 /* Array.swift */; };
@@ -72,6 +74,8 @@
 		1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = TreasureDungeons/Source/Presentation/LevelViewController.swift; sourceTree = "<group>"; };
 		1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bottle.swift; path = TreasureDungeons/Source/Models/Bottle.swift; sourceTree = "<group>"; };
 		1A23C71B1F14D3EE00691442 /* Game02.game */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Game02.game; path = TreasureDungeons/Resources/Games/Game02.game; sourceTree = "<group>"; };
+		1A23C71D1F150C5D00691442 /* GamePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePreview.swift; path = TreasureDungeons/Source/Game/GamePreview.swift; sourceTree = "<group>"; };
+		1A23C71F1F150DF500691442 /* GoalCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalCondition.swift; path = TreasureDungeons/Source/Game/GoalCondition.swift; sourceTree = "<group>"; };
 		1A3408CC1F03C6D800092F53 /* treasure_chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treasure_chest.png; path = TreasureDungeons/Resources/treasure_chest.png; sourceTree = "<group>"; };
 		1A3408D61F04F40600092F53 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = TreasureDungeons/Source/Utils/Random.swift; sourceTree = "<group>"; };
 		1A3408D81F05295300092F53 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = TreasureDungeons/Source/Utils/Array.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				1A56C1761EFBFA770016BD8C /* Game.swift */,
+				1A23C71D1F150C5D00691442 /* GamePreview.swift */,
+				1A23C71F1F150DF500691442 /* GoalCondition.swift */,
 				1A56C1781EFBFA830016BD8C /* Map.swift */,
 			);
 			name = Game;
@@ -444,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A90C1BD1EFBC74700E5CADE /* GLKMatrix+Array.swift in Sources */,
+				1A23C71E1F150C5D00691442 /* GamePreview.swift in Sources */,
 				1A1B819D1F0BB253001A3B1B /* LevelViewController.swift in Sources */,
 				1A9CC5831F0157CF00CBC07B /* Matrix4.swift in Sources */,
 				1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */,
@@ -462,6 +469,7 @@
 				1A90C1C01EFBC74700E5CADE /* Vertex.swift in Sources */,
 				1AE6EE191F0A921A00FC89E8 /* MenuViewController.swift in Sources */,
 				1A90C1C21EFBC74700E5CADE /* Wall.swift in Sources */,
+				1A23C7201F150DF500691442 /* GoalCondition.swift in Sources */,
 				1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */,
 				1AE6EE1C1F0A94A700FC89E8 /* UIViewController+Storyboard.swift in Sources */,
 				1A943C0F1F0F91A700A3986A /* Key.swift in Sources */,

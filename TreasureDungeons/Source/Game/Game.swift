@@ -9,42 +9,6 @@
 import Foundation
 import JSONCodable
 
-enum GoalType: String {
-    case time // time until treasure is found
-    case portions // number of portions to collect
-}
-
-struct GoalCondition {
-    
-    let type: GoalType
-    let value: Int // value dependant to type
-    
-    init(ofType type: GoalType, andValue value: Int) {
-        self.type = type
-        self.value = value
-    }
-    
-    
-}
-
-extension GoalCondition: JSONDecodable {
-    
-    init(object: JSONObject) throws {
-        let decoder = JSONDecoder(object: object)
-        self.type = try decoder.decode("type")
-        self.value = try decoder.decode("value")
-    }
-}
-
-extension GoalCondition: JSONEncodable {
-    func toJSON() throws -> Any {
-        return try JSONEncoder.create({ (encoder) -> Void in
-            try encoder.encode(type, key: "type")
-            try encoder.encode(value, key: "value")
-        })
-    }
-}
-
 struct Game {
     
     var identifier: Int?
@@ -69,28 +33,6 @@ extension Game: JSONDecodable {
     }
 }
 
-struct GamePreview {
-    
-    var identifier: Int?
-    var title: String?
-    var teaser: String?
-    var x: Float?
-    var y: Float?
-}
-
-extension GamePreview: JSONDecodable {
-    
-    init(object: JSONObject) throws {
-        let decoder = JSONDecoder(object: object)
-        
-        self.identifier = try decoder.decode("identifier")
-        self.title = try decoder.decode("title")
-        self.teaser = try decoder.decode("teaser")
-        
-        self.x = try decoder.decode("x")
-        self.y = try decoder.decode("y")
-    }
-}
 
 typealias GameCompletionBlock = (_ game: Game?, _ error: Error?) -> Void
 typealias GamesCompletionBlock = (_ game: [GamePreview]?, _ error: Error?) -> Void
