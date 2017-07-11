@@ -13,24 +13,30 @@ class LevelViewController: UIViewController {
     
     var scrollView: UIScrollView?
     let buttonImage = UIImage(named: "bubble_blue") as UIImage?
-
+    var games: [GamePreview]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Levels"
         
-        self.createGameButton(at: CGPoint(x: 15, y: 10), with: 1)
-        self.createGameButton(at: CGPoint(x: 80, y: 65), with: 2)
+        if let previews = self.games {
+            for gamePreview in previews {
+                self.createGameButton(for: gamePreview)
+            }
+        }
     }
     
-    func createGameButton(at point: CGPoint, with level: Int) {
+    func createGameButton(for preview: GamePreview) {
+        
+        let x = CGFloat(preview.x!)
+        let y = CGFloat(preview.y!)
         
         let button = UIButton(type: .custom)
-        button.setTitle("\(level)", for: .normal)
-        button.tag = level
+        button.setTitle("\(preview.identifier ?? 0)", for: .normal)
+        button.tag = preview.identifier!
         button.setTitleColor(UIColor.white, for: .normal)
-        button.frame = CGRect(origin: CGPoint(x: point.x, y: point.y), size: CGSize(width: 42, height: 42))
+        button.frame = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: 42, height: 42))
         button.setBackgroundImage(buttonImage, for: .normal)
         button.addTarget(self, action: #selector(LevelViewController.buttonPressed), for: .touchUpInside)
         

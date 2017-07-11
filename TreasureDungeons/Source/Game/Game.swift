@@ -47,6 +47,7 @@ extension GoalCondition: JSONEncodable {
 
 struct Game {
     
+    var identifier: Int?
     var title: String?
     var teaser: String?
     
@@ -61,6 +62,8 @@ extension Game: JSONDecodable {
     
     init(object: JSONObject) throws {
         let decoder = JSONDecoder(object: object)
+        
+        self.identifier = try decoder.decode("identifier")
         self.title = try decoder.decode("title")
         self.teaser = try decoder.decode("teaser")
     }
@@ -68,16 +71,24 @@ extension Game: JSONDecodable {
 
 struct GamePreview {
     
+    var identifier: Int?
     var title: String?
     var teaser: String?
+    var x: Float?
+    var y: Float?
 }
 
 extension GamePreview: JSONDecodable {
     
     init(object: JSONObject) throws {
         let decoder = JSONDecoder(object: object)
+        
+        self.identifier = try decoder.decode("identifier")
         self.title = try decoder.decode("title")
         self.teaser = try decoder.decode("teaser")
+        
+        self.x = try decoder.decode("x")
+        self.y = try decoder.decode("y")
     }
 }
 
@@ -177,7 +188,6 @@ class GameProvider {
         
         do {
             let jsonData = try NSData(contentsOf: NSURL(fileURLWithPath: filePath) as URL, options: NSData.ReadingOptions.mappedIfSafe)
-            print("jsonData: \(jsonData)")
             let object = try JSONSerialization.jsonObject(with: jsonData as Data, options: .allowFragments)
             
             if let dictionary = object as? JSONObject {

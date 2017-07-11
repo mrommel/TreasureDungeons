@@ -13,6 +13,7 @@ class MenuViewController: UIViewController {
  
     @IBOutlet weak var startButton: UIButton!
     let gameProvider: GameProvider = GameProvider()
+    var games: [GamePreview]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,9 @@ class MenuViewController: UIViewController {
         self.startButton.isEnabled = false
         
         self.gameProvider.loadGamePreviewList(completionHandler: { (list, error) in
-            print("loaded list")
+            print("loaded list with \(list?.count ?? 0) items")
             self.startButton.isEnabled = true
+            self.games = list
         })
     }
     
@@ -36,7 +38,7 @@ class MenuViewController: UIViewController {
             return
         }
         
-        levelViewController.seg
+        levelViewController.games = self.games
         
         self.navigationController?.pushViewController(levelViewController, animated: true)
     }

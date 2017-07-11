@@ -1,4 +1,7 @@
 {
+    "identifier": 2,
     "title": "Test Game2",
-    "teaser": "Teaser of test game2"
+    "teaser": "Teaser of test game2",
+    "x": 80.0,
+    "y": 65.0
 }
