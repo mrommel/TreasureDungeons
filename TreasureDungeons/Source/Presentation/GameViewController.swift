@@ -235,7 +235,7 @@ extension GameViewController {
         self.models.append(diamond)*/
         
         let key = Key(shader: self.shader)
-        key.position = GLKVector3(v: (3.0, -1.0, 3.0))
+        key.position = GLKVector3(v: (3.0, 0.0, 3.0))
         self.models.append(key)
         
         self.models.append(Skybox(shader: self.shader))

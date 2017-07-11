@@ -5,7 +5,7 @@ TreasureDungeons is a small trial based on
 * https://github.com/skyfe79/LearningOpenGLES2 - a great tutorial
 * https://github.com/71squared/ParticleEmitterDemo-GLKit-ARC - a paritcle emitter in obj-c ported to swift (WIP)
 * https://learnopengl.com/#!In-Practice/2D-Game/Particles
-* https://github.com/matthewcheok/JSONCodable - for game loading
+* https://github.com/matthewcheok/JSONCodable - for game file loading
 
 ## Models
 
@@ -19,6 +19,9 @@ TreasureDungeons is a small trial based on
 
 ## ToDo
 
+* game logic (goals, key, treasure, time extender)
+* tutorials (find treasure, find key)
+* game loading from file system
 * sound
 * small game handling
 

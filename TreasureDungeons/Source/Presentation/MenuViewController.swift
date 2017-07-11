@@ -11,10 +11,20 @@ import UIKit
 
 class MenuViewController: UIViewController {
  
+    @IBOutlet weak var startButton: UIButton!
+    let gameProvider: GameProvider = GameProvider()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Menu"
+        
+        self.startButton.isEnabled = false
+        
+        self.gameProvider.loadGamePreviewList(completionHandler: { (list, error) in
+            print("loaded list")
+            self.startButton.isEnabled = true
+        })
     }
     
     @IBAction func startGame(sender: AnyObject) {
@@ -25,6 +35,8 @@ class MenuViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             return
         }
+        
+        levelViewController.seg
         
         self.navigationController?.pushViewController(levelViewController, animated: true)
     }
