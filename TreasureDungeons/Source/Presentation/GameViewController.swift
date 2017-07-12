@@ -54,6 +54,8 @@ class GameViewController: GLKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.hidesBarsOnSwipe = true
+        
         setupGLcontext()
         setupGLupdater()
         setupCamera()

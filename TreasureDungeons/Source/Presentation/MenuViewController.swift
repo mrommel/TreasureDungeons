@@ -24,7 +24,10 @@ class MenuViewController: UIViewController {
         
         self.gameProvider.loadGamePreviewList(completionHandler: { (list, error) in
             print("loaded list with \(list?.count ?? 0) items")
-            self.startButton.isEnabled = true
+            
+            DispatchQueue.main.async() {
+                self.startButton.isEnabled = true
+            }
             self.games = list
         })
     }
@@ -41,5 +44,22 @@ class MenuViewController: UIViewController {
         levelViewController.games = self.games
         
         self.navigationController?.pushViewController(levelViewController, animated: true)
+    }
+    
+    @IBAction func startOptions(sender: AnyObject) {
+        print("options")
+    }
+    
+    @IBAction func startHelp(sender: AnyObject) {
+        print("help")
+        
+        guard let helpViewController = HelpViewController.instantiateFromStoryboard("Main") else {
+            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        self.navigationController?.pushViewController(helpViewController, animated: true)
     }
 }

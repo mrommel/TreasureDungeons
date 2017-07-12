@@ -18,6 +18,8 @@ class LevelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.hidesBarsOnSwipe = true
+        
         self.title = "Levels"
         
         if let previews = self.games {
