@@ -44,7 +44,7 @@ class LevelViewController: UIViewController {
     }
     
     func buttonPressed(sender: UIButton!) {
-        print("pressed \(sender.tag)")
+        print("pressed game: \(sender.tag)")
         
         guard let gameViewController = GameViewController.instantiateFromStoryboard("Main") else {
             let alert = UIAlertController(title: "Alert", message: "Cannot open GameViewController", preferredStyle: UIAlertControllerStyle.alert)
@@ -54,6 +54,8 @@ class LevelViewController: UIViewController {
         }
         
         // setup game
+        var game = Game()
+        
         let map = Map(width: 5, height: 7)
         
         map.tiles[0, 0] = Tile(at: Point(x: 0, y: 0), type: .wall)
@@ -96,7 +98,9 @@ class LevelViewController: UIViewController {
         map.tiles[4, 5] = Tile(at: Point(x: 4, y: 5), type: .wall)
         map.tiles[4, 6] = Tile(at: Point(x: 4, y: 6), type: .wall)
         
-        gameViewController.map = map
+        game.map = map
+        
+        gameViewController.game = game
         
         self.navigationController?.pushViewController(gameViewController, animated: true)
     }

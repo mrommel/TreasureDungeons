@@ -45,7 +45,7 @@ class GameViewController: GLKViewController {
     
     var emitter: ParticleEmitter?
     
-    var map: Map? {
+    var game: Game? {
         didSet {
             //rebuildDungeon()
         }
@@ -121,7 +121,7 @@ extension GameViewController {
     func updateTimer() {
         // go forward
         if let positionOnMap = self.camera?.predictedPositionOnMap {
-            if let tileOnMap = self.map?.tile(at: positionOnMap) {
+            if let tileOnMap = self.game?.map?.tile(at: positionOnMap) {
                 // collision detection
                 if tileOnMap.canAccess() {
                     self.camera?.moveForward()
@@ -196,11 +196,11 @@ extension GameViewController {
         
         self.models = []
         
-        guard self.map != nil else {
+        guard self.game?.map != nil else {
             return
         }
         
-        if let map = self.map {
+        if let map = self.game?.map {
             
             for x in 0..<map.tiles.columnCount() {
                 for y in 0..<map.tiles.rowCount() {

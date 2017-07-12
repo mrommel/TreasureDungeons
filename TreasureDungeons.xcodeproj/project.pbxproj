@@ -14,6 +14,8 @@
 		1A23C71C1F14D3EE00691442 /* Game02.game in Resources */ = {isa = PBXBuildFile; fileRef = 1A23C71B1F14D3EE00691442 /* Game02.game */; };
 		1A23C71E1F150C5D00691442 /* GamePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23C71D1F150C5D00691442 /* GamePreview.swift */; };
 		1A23C7201F150DF500691442 /* GoalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23C71F1F150DF500691442 /* GoalCondition.swift */; };
+		1A23C7221F1636E100691442 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A23C7211F1636E100691442 /* splash.png */; };
+		1A23C7241F163F4400691442 /* GameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23C7231F163F4400691442 /* GameProvider.swift */; };
 		1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3408CC1F03C6D800092F53 /* treasure_chest.png */; };
 		1A3408D71F04F40600092F53 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D61F04F40600092F53 /* Random.swift */; };
 		1A3408D91F05295300092F53 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3408D81F05295300092F53 /* Array.swift */; };
@@ -76,6 +78,8 @@
 		1A23C71B1F14D3EE00691442 /* Game02.game */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Game02.game; path = TreasureDungeons/Resources/Games/Game02.game; sourceTree = "<group>"; };
 		1A23C71D1F150C5D00691442 /* GamePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePreview.swift; path = TreasureDungeons/Source/Game/GamePreview.swift; sourceTree = "<group>"; };
 		1A23C71F1F150DF500691442 /* GoalCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalCondition.swift; path = TreasureDungeons/Source/Game/GoalCondition.swift; sourceTree = "<group>"; };
+		1A23C7211F1636E100691442 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = TreasureDungeons/Resources/splash.png; sourceTree = "<group>"; };
+		1A23C7231F163F4400691442 /* GameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameProvider.swift; path = TreasureDungeons/Source/Game/GameProvider.swift; sourceTree = "<group>"; };
 		1A3408CC1F03C6D800092F53 /* treasure_chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treasure_chest.png; path = TreasureDungeons/Resources/treasure_chest.png; sourceTree = "<group>"; };
 		1A3408D61F04F40600092F53 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = TreasureDungeons/Source/Utils/Random.swift; sourceTree = "<group>"; };
 		1A3408D81F05295300092F53 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = TreasureDungeons/Source/Utils/Array.swift; sourceTree = "<group>"; };
@@ -156,11 +160,11 @@
 		1A1B81991F0BAC52001A3B1B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */,
-				1A90C1B71EFBC74700E5CADE /* GameViewController.swift */,
 				1AE6EE181F0A921A00FC89E8 /* MenuViewController.swift */,
-				1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */,
 				1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */,
+				1A90C1B71EFBC74700E5CADE /* GameViewController.swift */,
+				1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */,
+				1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -172,6 +176,7 @@
 				1A23C71D1F150C5D00691442 /* GamePreview.swift */,
 				1A23C71F1F150DF500691442 /* GoalCondition.swift */,
 				1A56C1781EFBFA830016BD8C /* Map.swift */,
+				1A23C7231F163F4400691442 /* GameProvider.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				1A943C091F0CEA5200A3986A /* bubble_yellow.png */,
 				1AB4B4531F0F9F6900B22017 /* bubble_gray_focus.png */,
 				1AB4B4541F0F9F6900B22017 /* bubble_gray.png */,
+				1A23C7211F1636E100691442 /* splash.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				1A90C1C81EFBC75600E5CADE /* Assets.xcassets in Resources */,
 				1A943C0D1F0CEA5200A3986A /* bubble_yellow.png in Resources */,
 				1A943BFD1F0BD07A00A3986A /* diamond.png in Resources */,
+				1A23C7221F1636E100691442 /* splash.png in Resources */,
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
 				1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */,
 				1AB4B4591F13950E00B22017 /* Game01.game in Resources */,
@@ -469,6 +476,7 @@
 				1A90C1C01EFBC74700E5CADE /* Vertex.swift in Sources */,
 				1AE6EE191F0A921A00FC89E8 /* MenuViewController.swift in Sources */,
 				1A90C1C21EFBC74700E5CADE /* Wall.swift in Sources */,
+				1A23C7241F163F4400691442 /* GameProvider.swift in Sources */,
 				1A23C7201F150DF500691442 /* GoalCondition.swift in Sources */,
 				1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */,
 				1AE6EE1C1F0A94A700FC89E8 /* UIViewController+Storyboard.swift in Sources */,
