@@ -124,21 +124,21 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="tile02.png" translatesAutoresizingMaskIntoConstraints="NO" id="bZ2-l9-ZpZ">
-                                        <rect key="frame" x="0.0" y="292" width="375" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="292" width="375" height="375"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="375" id="Q3O-wP-SZT"/>
                                             <constraint firstAttribute="height" constant="375" id="dX0-MS-JYI"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="tile03.png" translatesAutoresizingMaskIntoConstraints="NO" id="PXL-wm-a6v">
-                                        <rect key="frame" x="0.0" y="292" width="375" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="375" id="aym-ZJ-1qM"/>
                                             <constraint firstAttribute="height" constant="375" id="kh2-P9-dQW"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="tile04.png" translatesAutoresizingMaskIntoConstraints="NO" id="fba-Su-EDw">
-                                        <rect key="frame" x="0.0" y="292" width="375" height="375"/>
+                                        <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="375" id="1Vm-az-rGf"/>
                                             <constraint firstAttribute="width" constant="375" id="QMG-UB-PEp"/>

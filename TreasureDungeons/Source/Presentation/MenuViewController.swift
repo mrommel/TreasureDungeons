@@ -32,6 +32,12 @@ class MenuViewController: UIViewController {
         })
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+    }
+    
     @IBAction func startGame(sender: AnyObject) {
         
         guard let levelViewController = LevelViewController.instantiateFromStoryboard("Main") else {

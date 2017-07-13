@@ -50,8 +50,6 @@ class GameViewController: GLKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.hidesBarsOnSwipe = true
-        
         setupGLcontext()
         setupGLupdater()
         setupCamera()
@@ -62,6 +60,8 @@ class GameViewController: GLKViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     
+        navigationController?.hidesBarsOnSwipe = false
+        
         SCLAlertView().showNotice("Hello Notice", subTitle: "This is a more descriptive notice text.") // Notice
     }
     
