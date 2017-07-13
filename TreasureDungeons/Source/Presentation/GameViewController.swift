@@ -45,11 +45,7 @@ class GameViewController: GLKViewController {
     
     var emitter: ParticleEmitter?
     
-    var game: Game? {
-        didSet {
-            //rebuildDungeon()
-        }
-    }
+    var game: Game?
     
     override func viewDidLoad() {
         super.viewDidLoad()
