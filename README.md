@@ -16,12 +16,14 @@ TreasureDungeons is a small trial based on
 
 * emitter system
 * main menu / game intro / game outro
+* game loading from file system
 
 ## ToDo
 
 * game logic (goals, key, treasure, time extender)
 * tutorials (find treasure, find key)
-* game loading from file system
 * sound
 * small game handling
+* inventory (take and use objects) - use #key with #treasure, open #door
+* 
 

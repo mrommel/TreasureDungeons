@@ -26,7 +26,7 @@ class MenuViewController: UIViewController {
             print("loaded list with \(list?.count ?? 0) items")
             
             DispatchQueue.main.async() {
-                self.startButton.isEnabled = true
+                self.startButton.isEnabled = true // need to run on ui thread
             }
             self.games = list
         })
