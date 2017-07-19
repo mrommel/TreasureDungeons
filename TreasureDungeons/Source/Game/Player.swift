@@ -7,38 +7,26 @@
 //
 
 import Foundation
-import JSONCodable
+import CoreData
+import UIKit
 
 /*!
     class to store all properties of the current player
 */
-struct Player {
+class Player: NSManagedObject {
     
-    var name: String?
-    var level: Int = 0
+    @NSManaged var name: String?
+    @NSManaged var level: NSNumber?
     
-    init() {
+    func hasWon(newlevel: Int) {
+        if let level = self.level {
+            self.level = max(level.intValue, newlevel) as NSNumber
+        }
+    }
+    
+    func reset() {
         self.name = "default"
         self.level = 0
-    }
-    
-    mutating func hasWon(newlevel: Int) {
-        self.level = max(self.level, newlevel)
-    }
-    
-    mutating func reset() {
-        self.name = "default"
-        self.level = 0
-    }
-}
-
-extension Player: JSONDecodable {
-    
-    init(object: JSONObject) throws {
-        let decoder = JSONDecoder(object: object)
-        
-        self.name = try decoder.decode("name")
-        self.level = try decoder.decode("level")
     }
 }
 
@@ -46,36 +34,31 @@ typealias PlayerCompletionBlock = (_ player: Player?, _ error: Error?) -> Void
 
 class PlayerProvider {
     
-    lazy var documentPath: String? = {
-        return Bundle.main.resourcePath!
-    }()
+    static let sharedInstance = PlayerProvider()
     
-    init() {
+    func fetchPlayer(completionHandler: @escaping PlayerCompletionBlock) {
         
-    }
-    
-    func loadPlayer(completionHandler: @escaping PlayerCompletionBlock) {
-        
-        let filePath = documentPath! + "/player.json"
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         do {
-            let jsonData = try NSData(contentsOf: NSURL(fileURLWithPath: filePath) as URL, options: NSData.ReadingOptions.mappedIfSafe)
-            let object = try JSONSerialization.jsonObject(with: jsonData as Data, options: .allowFragments)
+            let players = try context.fetch(Player.fetchRequest()) as? [Player]
             
-            if let dictionary = object as? JSONObject {
-                do {
-                    let player = try Player(object: dictionary)
-                    completionHandler(player, nil)
-                } catch _ as NSError {
-                    let player = Player()
-                    completionHandler(player, nil)
-                }
+            if players != nil && (players?.count)! > 0 {
+                completionHandler(players?.first, nil)
+            } else {
+                // load default
+                let player = Player(context: context)
+                player.reset()
+                
+                // Save the data to coredata
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                
+                completionHandler(player, nil)
             }
-        } catch let error as NSError {
-            completionHandler(nil, error)
-            print("error during read player from disc: \(error)")
+        } catch {
+            print("Fetching failed - loading default")
+            print("error during read player from db: \(error)")
         }
-        
-        return
     }
+ 
 }

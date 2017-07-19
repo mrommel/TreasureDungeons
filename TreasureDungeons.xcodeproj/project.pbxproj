@@ -27,6 +27,8 @@
 		1A56C17E1EFC57F60016BD8C /* floor_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A56C17C1EFC57F60016BD8C /* floor_gray.png */; };
 		1A56C17F1EFC57F60016BD8C /* floor_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A56C17D1EFC57F60016BD8C /* floor_blue.png */; };
 		1A69130B1F176F6600C66C09 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A69130A1F176F6600C66C09 /* Player.swift */; };
+		1A6913111F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A69130F1F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld */; };
+		1A6913131F1F62FE00C66C09 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6913121F1F62FE00C66C09 /* OptionViewController.swift */; };
 		1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */; };
 		1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */; };
 		1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B11EFBC74700E5CADE /* Cube.swift */; };
@@ -92,6 +94,8 @@
 		1A56C17C1EFC57F60016BD8C /* floor_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = floor_gray.png; path = TreasureDungeons/Resources/floor_gray.png; sourceTree = "<group>"; };
 		1A56C17D1EFC57F60016BD8C /* floor_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = floor_blue.png; path = TreasureDungeons/Resources/floor_blue.png; sourceTree = "<group>"; };
 		1A69130A1F176F6600C66C09 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = TreasureDungeons/Source/Game/Player.swift; sourceTree = "<group>"; };
+		1A6913101F1F5EB400C66C09 /* TreasureDungeons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TreasureDungeons.xcdatamodel; sourceTree = "<group>"; };
+		1A6913121F1F62FE00C66C09 /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionViewController.swift; path = TreasureDungeons/Source/Presentation/OptionViewController.swift; sourceTree = "<group>"; };
 		1A90C1AE1EFBC74700E5CADE /* TreasureDungeons-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TreasureDungeons-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TreasureDungeons/Source/AppDelegate.swift; sourceTree = "<group>"; };
 		1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEffect.swift; path = TreasureDungeons/Source/OpenGL/BaseEffect.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				1A90C1B71EFBC74700E5CADE /* GameViewController.swift */,
 				1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */,
 				1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */,
+				1A6913121F1F62FE00C66C09 /* OptionViewController.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -182,6 +187,14 @@
 				1A69130A1F176F6600C66C09 /* Player.swift */,
 			);
 			name = Game;
+			sourceTree = "<group>";
+		};
+		1A69130E1F1F5E8D00C66C09 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1A69130F1F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		1A90C1981EFBC66700E5CADE /* Source */ = {
@@ -201,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				1AB4B4571F1394DE00B22017 /* Games */,
+				1A69130E1F1F5E8D00C66C09 /* Data */,
 				1A943BFE1F0BD42B00A3986A /* tile01.png */,
 				1A943BFF1F0BD42B00A3986A /* tile02.png */,
 				1A943C001F0BD42B00A3986A /* tile03.png */,
@@ -462,7 +476,9 @@
 				1A90C1BD1EFBC74700E5CADE /* GLKMatrix+Array.swift in Sources */,
 				1A23C71E1F150C5D00691442 /* GamePreview.swift in Sources */,
 				1A1B819D1F0BB253001A3B1B /* LevelViewController.swift in Sources */,
+				1A6913131F1F62FE00C66C09 /* OptionViewController.swift in Sources */,
 				1A9CC5831F0157CF00CBC07B /* Matrix4.swift in Sources */,
+				1A6913111F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld in Sources */,
 				1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */,
 				1A90C1BC1EFBC74700E5CADE /* Floor.swift in Sources */,
 				1A3408DB1F06441C00092F53 /* ParticleEmitter.swift in Sources */,
@@ -661,6 +677,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1A69130F1F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1A6913101F1F5EB400C66C09 /* TreasureDungeons.xcdatamodel */,
+			);
+			currentVersion = 1A6913101F1F5EB400C66C09 /* TreasureDungeons.xcdatamodel */;
+			name = TreasureDungeons.xcdatamodeld;
+			path = TreasureDungeons/Resources/Data/TreasureDungeons.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4E5D7D2E1C84C39A006246F7 /* Project object */;
 }

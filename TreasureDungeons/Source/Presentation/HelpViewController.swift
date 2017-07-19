@@ -11,4 +11,10 @@ import UIKit
 
 class HelpViewController: UIViewController {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+    }
+    
 }

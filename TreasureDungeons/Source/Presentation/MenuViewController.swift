@@ -53,11 +53,18 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func startOptions(sender: AnyObject) {
-        print("options")
+        
+        guard let optionViewController = OptionViewController.instantiateFromStoryboard("Main") else {
+            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        self.navigationController?.pushViewController(optionViewController, animated: true)
     }
     
     @IBAction func startHelp(sender: AnyObject) {
-        print("help")
         
         guard let helpViewController = HelpViewController.instantiateFromStoryboard("Main") else {
             let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
