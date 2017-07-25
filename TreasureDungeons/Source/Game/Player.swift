@@ -32,32 +32,34 @@ class Player: NSManagedObject {
 
 typealias PlayerCompletionBlock = (_ player: Player?, _ error: Error?) -> Void
 
-class PlayerProvider {
+class PlayerDataManager {
     
-    static let sharedInstance = PlayerProvider()
+    var coreDataStore: CoreDataStore?
     
     func fetchPlayer(completionHandler: @escaping PlayerCompletionBlock) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let context = coreDataStore?.managedObjectContext
         
         do {
-            let players = try context.fetch(Player.fetchRequest()) as? [Player]
+            let players = try context!.fetch(Player.fetchRequest()) as? [Player]
             
             if players != nil && (players?.count)! > 0 {
                 completionHandler(players?.first, nil)
             } else {
                 // load default
-                let player = Player(context: context)
+                let player = Player(context: context!)
                 player.reset()
                 
                 // Save the data to coredata
-                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                coreDataStore?.save()
                 
                 completionHandler(player, nil)
             }
         } catch {
             print("Fetching failed - loading default")
             print("error during read player from db: \(error)")
+            
+            completionHandler(nil, error)
         }
     }
  

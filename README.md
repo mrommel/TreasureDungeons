@@ -1,6 +1,7 @@
 # TreasureDungeons
 
 ## Description
+
 TreasureDungeons is a small trial based on 
 * https://github.com/skyfe79/LearningOpenGLES2 - a great tutorial
 * https://github.com/71squared/ParticleEmitterDemo-GLKit-ARC - a paritcle emitter in obj-c ported to swift (WIP)
@@ -25,5 +26,7 @@ TreasureDungeons is a small trial based on
 * sound
 * small game handling
 * inventory (take and use objects) - use #key with #treasure, open #door
-* 
 
+## Links
+
+* https://www.objc.io/issues/13-architecture/viper/ about the architecture

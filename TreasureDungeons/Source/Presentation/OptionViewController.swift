@@ -16,10 +16,10 @@ class OptionViewController: UIViewController {
         
         navigationController?.hidesBarsOnSwipe = false
         
-        PlayerProvider.sharedInstance.fetchPlayer(completionHandler: { (player, error) in
+        /*PlayerProvider.sharedInstance.fetchPlayer(completionHandler: { (player, error) in
             
             if let player = player {
-                print("player name: \(player.name) at level: \(player.level!)")
+                print("player name: \(player.name!) at level: \(player.level!)")
             } else {
                 if let error = error {
                     print("error: \(error)")
@@ -27,6 +27,6 @@ class OptionViewController: UIViewController {
                     print("no error")
                 }
             }
-        })
+        })*/
     }
 }

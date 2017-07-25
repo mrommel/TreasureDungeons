@@ -49,13 +49,13 @@ class GameProvider {
                             }
                         }
                     }
+                    completionHandler(gamePreviews, nil)
                 } catch let error as NSError {
                     
                     //TODO: This code needs to generate an error
                     NSLog("Error \(error)")
+                    completionHandler(nil, error)
                 }
-                
-                completionHandler(gamePreviews, nil)
             } else {
                 let error = GameError.documentPathNotSet
                 completionHandler(nil, error)

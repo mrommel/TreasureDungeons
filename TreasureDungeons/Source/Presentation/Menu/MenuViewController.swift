@@ -9,11 +9,25 @@
 import Foundation
 import UIKit
 
+protocol MenuModuleInterface {
+
+    func updateView()
+}
+
+protocol MenuViewInterface {
+    
+    func showNoGamePreviewsMessage()
+    func showGamePreviews(_ data: [GamePreview]?)
+}
+
 class MenuViewController: UIViewController {
  
     @IBOutlet weak var startButton: UIButton!
-    let gameProvider: GameProvider = GameProvider()
     var games: [GamePreview]?
+    
+    //var interactor: MenuInteractor?
+    //var presenter: MenuPresenter?
+    var eventHandler: MenuModuleInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +36,22 @@ class MenuViewController: UIViewController {
         
         self.startButton.isEnabled = false
         
-        self.gameProvider.loadGamePreviewList(completionHandler: { (list, error) in
+        /*self.gameProvider.loadGamePreviewList(completionHandler: { (list, error) in
             print("loaded list with \(list?.count ?? 0) items")
             
             DispatchQueue.main.async() {
                 self.startButton.isEnabled = true // need to run on ui thread
             }
             self.games = list
-        })
+        })*/
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         navigationController?.hidesBarsOnSwipe = false
+        
+        self.eventHandler?.updateView()
     }
     
     @IBAction func startGame(sender: AnyObject) {
@@ -74,5 +90,16 @@ class MenuViewController: UIViewController {
         }
         
         self.navigationController?.pushViewController(helpViewController, animated: true)
+    }
+}
+
+extension MenuViewController: MenuViewInterface {
+    
+    func showGamePreviews(_ data: [GamePreview]?) {
+        print("showGamePreviews")
+    }
+
+    func showNoGamePreviewsMessage() {
+        print("showNoGamePreviewsMessage")
     }
 }
