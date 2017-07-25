@@ -13,11 +13,22 @@ class MenuPresenter {
     var userInterface: MenuViewInterface?
     var interactor: MenuInteractorInput?
     var wireframe: MenuWireFrame?
-    
 }
 
 extension MenuPresenter: MenuModuleInterface {
     
+    func startGame(withPreviews previews: [GamePreview]?) {
+        self.wireframe?.presentGameInterface(withPreviews: previews)
+    }
+    
+    func startOptions() {
+        self.wireframe?.presentOptionInterface()
+    }
+    
+    func startHelp() {
+        self.wireframe?.presentHelpInterface()
+    }
+
     func updateView() {
         self.interactor?.fetchGamePreviews()
     }

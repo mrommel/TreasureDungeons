@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-let MenuViewControllerIdentifier = "MenuViewController"
+let kMenuViewControllerIdentifier = "MenuViewController"
 
-class MenuWireFrame : NSObject {
+class MenuWireFrame {
 
     var menuPresenter : MenuPresenter?
     var rootWireframe : RootWireframe?
@@ -25,19 +25,40 @@ class MenuWireFrame : NSObject {
         self.rootWireframe?.showRootViewController(viewController, inWindow: window)
     }
     
-    /*func presentAddInterface() {
-        addWireframe?.presentAddInterfaceFromViewController(listViewController!)
-    }*/
+    func presentGameInterface(withPreviews previews: [GamePreview]?) {
+        guard let levelViewController = LevelViewController.instantiateFromStoryboard("Main") else {
+            return
+        }
+        
+        levelViewController.games = previews
+        
+        self.menuViewController?.present(levelViewController, animated: true)
+    }
     
-    func menuViewControllerFromStoryboard() -> MenuViewController {
+    func presentOptionInterface() {
+        guard let optionViewController = OptionViewController.instantiateFromStoryboard("Main") else {
+            return
+        }
+        
+        self.menuViewController?.present(optionViewController, animated: true)
+    }
+    
+    func presentHelpInterface() {
+        guard let helpViewController = HelpViewController.instantiateFromStoryboard("Main") else {
+            return
+        }
+         
+        self.menuViewController?.present(helpViewController, animated: true)
+    }
+    
+    private func menuViewControllerFromStoryboard() -> MenuViewController {
         let storyboard = mainStoryboard()
-        let viewController = storyboard.instantiateViewController(withIdentifier: MenuViewControllerIdentifier) as! MenuViewController
+        let viewController = storyboard.instantiateViewController(withIdentifier: kMenuViewControllerIdentifier) as! MenuViewController
         return viewController
     }
     
-    func mainStoryboard() -> UIStoryboard {
+    private func mainStoryboard() -> UIStoryboard {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         return storyboard
     }
-    
 }
