@@ -19,14 +19,16 @@ class MenuWireFrame {
     
     func presentMenuInterfaceFromWindow(_ window: UIWindow) {
         let viewController = self.menuViewControllerFromStoryboard()
-        viewController.eventHandler = menuPresenter
+        viewController.presenter = menuPresenter
         self.menuViewController = viewController
         self.menuPresenter!.userInterface = viewController
         self.rootWireframe?.showRootViewController(viewController, inWindow: window)
     }
     
     func presentGameInterface(withPreviews previews: [GamePreview]?) {
+        
         guard let levelViewController = LevelViewController.instantiateFromStoryboard("Main") else {
+            print("Fatal: can't create LevelViewController from storyboard")
             return
         }
         
@@ -36,7 +38,9 @@ class MenuWireFrame {
     }
     
     func presentOptionInterface() {
+        
         guard let optionViewController = OptionViewController.instantiateFromStoryboard("Main") else {
+            print("Fatal: can't create OptionViewController from storyboard")
             return
         }
         
@@ -44,7 +48,9 @@ class MenuWireFrame {
     }
     
     func presentHelpInterface() {
+        
         guard let helpViewController = HelpViewController.instantiateFromStoryboard("Main") else {
+            print("Fatal: can't create HelpViewController from storyboard")
             return
         }
          

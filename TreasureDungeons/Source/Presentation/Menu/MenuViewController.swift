@@ -28,7 +28,7 @@ class MenuViewController: UIViewController {
  
     @IBOutlet weak var startButton: UIButton!
     var games: [GamePreview]?
-    var eventHandler: MenuModuleInterface?
+    var presenter: MenuModuleInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,22 +43,22 @@ class MenuViewController: UIViewController {
         
         navigationController?.hidesBarsOnSwipe = false
         
-        self.eventHandler?.updateView()
+        self.presenter?.updateView()
     }
     
     @IBAction func startGame(sender: AnyObject) {
         
-        self.eventHandler?.startGame(withPreviews: self.games)
+        self.presenter?.startGame(withPreviews: self.games)
     }
     
     @IBAction func startOptions(sender: AnyObject) {
         
-        self.eventHandler?.startOptions()
+        self.presenter?.startOptions()
     }
     
     @IBAction func startHelp(sender: AnyObject) {
         
-        self.eventHandler?.startHelp()
+        self.presenter?.startHelp()
     }
 }
 

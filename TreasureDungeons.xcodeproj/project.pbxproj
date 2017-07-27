@@ -28,6 +28,7 @@
 		1A402E471F274E59004F74FD /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E461F274E59004F74FD /* CoreDataStore.swift */; };
 		1A402E491F274FD1004F74FD /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E481F274FD1004F74FD /* RootWireframe.swift */; };
 		1A402E4B1F2750F2004F74FD /* MenuDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E4A1F2750F2004F74FD /* MenuDataManager.swift */; };
+		1A402E531F29D497004F74FD /* TreasureDungeonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E521F29D497004F74FD /* TreasureDungeonsTests.swift */; };
 		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
 		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
 		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
@@ -79,6 +80,16 @@
 		6FCD152B71CDC0317D7FFA74 /* Pods_TreasureDungeons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EDE4724BC3B6A0948291B4 /* Pods_TreasureDungeons.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1A402E551F29D497004F74FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E5D7D2E1C84C39A006246F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E5D7D351C84C39A006246F7;
+			remoteInfo = TreasureDungeons;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0C8110D1B4320249588CD397 /* Pods-TreasureDungeons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureDungeons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons.debug.xcconfig"; sourceTree = "<group>"; };
 		1A1B81971F0B8ECF001A3B1B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = TreasureDungeons/Resources/button.png; sourceTree = "<group>"; };
@@ -102,6 +113,9 @@
 		1A402E461F274E59004F74FD /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = TreasureDungeons/Source/Utils/CoreDataStore.swift; sourceTree = "<group>"; };
 		1A402E481F274FD1004F74FD /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootWireframe.swift; path = TreasureDungeons/Source/Presentation/RootWireframe.swift; sourceTree = "<group>"; };
 		1A402E4A1F2750F2004F74FD /* MenuDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuDataManager.swift; path = TreasureDungeons/Source/Presentation/Menu/MenuDataManager.swift; sourceTree = "<group>"; };
+		1A402E501F29D497004F74FD /* TreasureDungeonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreasureDungeonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A402E521F29D497004F74FD /* TreasureDungeonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureDungeonsTests.swift; sourceTree = "<group>"; };
+		1A402E541F29D497004F74FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = TreasureDungeons/Source/Game/Game.swift; sourceTree = "<group>"; };
 		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = TreasureDungeons/Source/Game/Map.swift; sourceTree = "<group>"; };
 		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = TreasureDungeons/Source/Utils/Array2D.swift; sourceTree = "<group>"; };
@@ -157,6 +171,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1A402E4D1F29D497004F74FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E5D7D331C84C39A006246F7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +222,16 @@
 				1A402E4A1F2750F2004F74FD /* MenuDataManager.swift */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		1A402E511F29D497004F74FD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1A402E521F29D497004F74FD /* TreasureDungeonsTests.swift */,
+				1A402E541F29D497004F74FD /* Info.plist */,
+			);
+			name = Tests;
+			path = TreasureDungeonsTests;
 			sourceTree = "<group>";
 		};
 		1A56C1751EFBFA600016BD8C /* Game */ = {
@@ -330,6 +361,7 @@
 				1A90C1AD1EFBC6D900E5CADE /* Resources */,
 				1A90C1CF1EFBC7DE00E5CADE /* LaunchScreen.storyboard */,
 				1A90C1D11EFBC7DE00E5CADE /* Main.storyboard */,
+				1A402E511F29D497004F74FD /* Tests */,
 				4E5D7D371C84C39A006246F7 /* Products */,
 				0659ACE40096D7E6AD3AC9E1 /* Pods */,
 				956B88A539DFC6DC4D017576 /* Frameworks */,
@@ -340,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5D7D361C84C39A006246F7 /* TreasureDungeons.app */,
+				1A402E501F29D497004F74FD /* TreasureDungeonsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -355,6 +388,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1A402E4F1F29D497004F74FD /* TreasureDungeonsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A402E571F29D497004F74FD /* Build configuration list for PBXNativeTarget "TreasureDungeonsTests" */;
+			buildPhases = (
+				1A402E4C1F29D497004F74FD /* Sources */,
+				1A402E4D1F29D497004F74FD /* Frameworks */,
+				1A402E4E1F29D497004F74FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A402E561F29D497004F74FD /* PBXTargetDependency */,
+			);
+			name = TreasureDungeonsTests;
+			productName = TreasureDungeonsTests;
+			productReference = 1A402E501F29D497004F74FD /* TreasureDungeonsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4E5D7D351C84C39A006246F7 /* TreasureDungeons */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E5D7D481C84C39A006246F7 /* Build configuration list for PBXNativeTarget "TreasureDungeons" */;
@@ -381,10 +432,16 @@
 		4E5D7D2E1C84C39A006246F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = BurtK;
 				TargetAttributes = {
+					1A402E4F1F29D497004F74FD = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CMUQ7NPWU8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4E5D7D351C84C39A006246F7;
+					};
 					4E5D7D351C84C39A006246F7 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = CMUQ7NPWU8;
@@ -407,11 +464,19 @@
 			projectRoot = "";
 			targets = (
 				4E5D7D351C84C39A006246F7 /* TreasureDungeons */,
+				1A402E4F1F29D497004F74FD /* TreasureDungeonsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1A402E4E1F29D497004F74FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E5D7D341C84C39A006246F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,6 +563,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1A402E4C1F29D497004F74FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A402E531F29D497004F74FD /* TreasureDungeonsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E5D7D321C84C39A006246F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,6 +621,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1A402E561F29D497004F74FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E5D7D351C84C39A006246F7 /* TreasureDungeons */;
+			targetProxy = 1A402E551F29D497004F74FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		1A90C1CF1EFBC7DE00E5CADE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -568,6 +649,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1A402E581F29D497004F74FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = CMUQ7NPWU8;
+				INFOPLIST_FILE = TreasureDungeonsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MiRo.TreasureDungeonsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TreasureDungeons.app/TreasureDungeons";
+			};
+			name = Debug;
+		};
+		1A402E591F29D497004F74FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = CMUQ7NPWU8;
+				INFOPLIST_FILE = TreasureDungeonsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MiRo.TreasureDungeonsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TreasureDungeons.app/TreasureDungeons";
+			};
+			name = Release;
+		};
 		4E5D7D461C84C39A006246F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -694,6 +810,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A402E571F29D497004F74FD /* Build configuration list for PBXNativeTarget "TreasureDungeonsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A402E581F29D497004F74FD /* Debug */,
+				1A402E591F29D497004F74FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4E5D7D311C84C39A006246F7 /* Build configuration list for PBXProject "TreasureDungeons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

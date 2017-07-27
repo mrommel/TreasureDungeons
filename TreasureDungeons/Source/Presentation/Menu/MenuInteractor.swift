@@ -26,8 +26,19 @@ extension MenuInteractor: MenuInteractorInput {
     
     func fetchGamePreviews() {
         
-        self.dataManager?.gamePreviewItems(completionHandler: { (previews, error) in
-            self.output?.foundGamePreviews(previews)
+        guard let dataManager = self.dataManager else {
+            print("Fatal: dataManager not initialized")
+            return
+        }
+        
+        dataManager.gamePreviewItems(completionHandler: { (previews, error) in
+            
+            guard let output = self.output else {
+                print("Fatal: output not initialized")
+                return
+            }
+            
+            output.foundGamePreviews(previews)
         })
     }
 }
