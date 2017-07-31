@@ -13,7 +13,7 @@ protocol MenuModuleInterface {
 
     func updateView()
     
-    func startGame(withPreviews: [GamePreview]?)
+    func startLevels(withPreviews: [GamePreview]?)
     func startOptions()
     func startHelp()
 }
@@ -48,7 +48,7 @@ class MenuViewController: UIViewController {
     
     @IBAction func startGame(sender: AnyObject) {
         
-        self.presenter?.startGame(withPreviews: self.games)
+        self.presenter?.startLevels(withPreviews: self.games)
     }
     
     @IBAction func startOptions(sender: AnyObject) {

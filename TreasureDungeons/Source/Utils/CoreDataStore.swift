@@ -62,3 +62,35 @@ class CoreDataStore : NSObject {
         }
     }
 }
+
+typealias PlayerCompletionBlock = (_ player: Player?, _ error: Error?) -> Void
+
+extension CoreDataStore {
+    
+    func fetchPlayer(completionHandler: @escaping PlayerCompletionBlock) {
+        
+        let context = self.managedObjectContext
+        
+        do {
+            let players = try context!.fetch(Player.fetchRequest()) as? [Player]
+            
+            if players != nil && (players?.count)! > 0 {
+                completionHandler(players?.first, nil)
+            } else {
+                // load default
+                let player = Player(context: context!)
+                player.reset()
+                
+                // Save the data to coredata
+                self.save()
+                
+                completionHandler(player, nil)
+            }
+        } catch {
+            print("Fetching failed - loading default")
+            print("error during read player from db: \(error)")
+            
+            completionHandler(nil, error)
+        }
+    }
+}

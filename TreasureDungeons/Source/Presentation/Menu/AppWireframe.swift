@@ -11,7 +11,7 @@ import UIKit
 
 let kMenuViewControllerIdentifier = "MenuViewController"
 
-class MenuWireFrame {
+class AppWireFrame {
 
     var menuPresenter : MenuPresenter?
     var rootWireframe : RootWireframe?
@@ -25,7 +25,7 @@ class MenuWireFrame {
         self.rootWireframe?.showRootViewController(viewController, inWindow: window)
     }
     
-    func presentGameInterface(withPreviews previews: [GamePreview]?) {
+    func presentLevelsInterface(withPreviews previews: [GamePreview]?) {
         
         guard let levelViewController = LevelViewController.instantiateFromStoryboard("Main") else {
             print("Fatal: can't create LevelViewController from storyboard")
@@ -37,6 +37,10 @@ class MenuWireFrame {
         self.menuViewController?.present(levelViewController, animated: true)
     }
     
+    func presentGameInterface() {
+        
+    }
+    
     func presentOptionInterface() {
         
         guard let optionViewController = OptionViewController.instantiateFromStoryboard("Main") else {
@@ -44,7 +48,26 @@ class MenuWireFrame {
             return
         }
         
-        self.menuViewController?.present(optionViewController, animated: true)
+        let coreDataStore = CoreDataStore()
+        
+        // Options
+        let optionPresenter = OptionPresenter()
+        let optionDataManager = OptionDataManager()
+        let optionInteractor = OptionInteractor()
+        
+        optionInteractor.output = optionPresenter
+        optionInteractor.dataManager = optionDataManager
+        
+        optionPresenter.interactor = optionInteractor
+        optionPresenter.userInterface = optionViewController
+        //optionPresenter.wireframe = appWireframe
+        
+        optionDataManager.coreDataStore = coreDataStore
+        
+        optionViewController.presenter = optionPresenter
+        
+        //self.menuViewController?.present(optionViewController, animated: true)
+        self.menuViewController?.navigationController?.pushViewController(optionViewController, animated: true)
     }
     
     func presentHelpInterface() {

@@ -10,7 +10,6 @@ import Foundation
 
 class MenuDataManager {
     
-    //var coreDataStore : CoreDataStore?
     var gameProvider: GameProvider?
     
     func gamePreviewItems(completionHandler: @escaping GamesCompletionBlock) {

@@ -11,22 +11,22 @@ import UIKit
 
 class AppDependencies {
  
-    var menuWireframe = MenuWireFrame()
+    var appWireframe = AppWireFrame()
     
     init() {
         configureDependencies()
     }
     
     func installRootViewControllerIntoWindow(_ window: UIWindow) {
-        self.menuWireframe.presentMenuInterfaceFromWindow(window)
+        self.appWireframe.presentMenuInterfaceFromWindow(window)
     }
     
     func configureDependencies() {
         
-        let coreDataStore = CoreDataStore()
         let rootWireframe = RootWireframe()
         let gameProvider = GameProvider()
         
+        // Menu
         let menuPresenter = MenuPresenter()
         let menuDataManager = MenuDataManager()
         let menuInteractor = MenuInteractor()
@@ -35,13 +35,12 @@ class AppDependencies {
         menuInteractor.dataManager = menuDataManager
         
         menuPresenter.interactor = menuInteractor
-        menuPresenter.wireframe = menuWireframe
+        menuPresenter.wireframe = appWireframe
         
-        menuWireframe.menuPresenter = menuPresenter
-        menuWireframe.rootWireframe = rootWireframe
+        appWireframe.menuPresenter = menuPresenter
+        appWireframe.rootWireframe = rootWireframe
         
         menuDataManager.gameProvider = gameProvider
-
     }
     
 }
