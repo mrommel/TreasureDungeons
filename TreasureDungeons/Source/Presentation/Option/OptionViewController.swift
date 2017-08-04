@@ -68,7 +68,7 @@ extension OptionViewController /*: UITableViewDataSource*/ {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
-      
+    
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
@@ -91,7 +91,6 @@ extension OptionViewController /*: UITableViewDataSource*/ {
             case 0:
                 cell.textLabel?.text = "Name"
                 cell.detailTextLabel?.text = "\(player.name ?? "unknown")"
-                //cell.imageView?.image = UIImage(named: upcomingSection!.imageName)
                 cell.selectionStyle = UITableViewCellSelectionStyle.none
                 break
             case 1:
