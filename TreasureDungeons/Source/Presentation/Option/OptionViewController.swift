@@ -68,29 +68,40 @@ extension OptionViewController /*: UITableViewDataSource*/ {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
+      
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+        let headerImage = UIImage(named: "skull.png")
+        let headerImageView = UIImageView(image: headerImage)
+        headerImageView.contentMode = .scaleAspectFit
+        header.backgroundView = headerImageView
+    }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Data"
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 80.0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: OptionEntryCellIdentifier, for: indexPath) as UITableViewCell
         
-        switch indexPath.row {
-        case 0:
-            cell.textLabel?.text = "Name"
-            cell.detailTextLabel?.text = "\(self.player?.name)"
-            //cell.imageView?.image = UIImage(named: upcomingSection!.imageName)
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
-            break
-        case 1:
-            cell.textLabel?.text = "Level"
-            cell.detailTextLabel?.text = "\(self.player?.level)"
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
-            break
-        default:
-            break
+        if let player = self.player {
+            switch indexPath.row {
+            case 0:
+                cell.textLabel?.text = "Name"
+                cell.detailTextLabel?.text = "\(player.name ?? "unknown")"
+                //cell.imageView?.image = UIImage(named: upcomingSection!.imageName)
+                cell.selectionStyle = UITableViewCellSelectionStyle.none
+                break
+            case 1:
+                cell.textLabel?.text = "Level"
+                cell.detailTextLabel?.text = "\(player.level ?? 0)"
+                cell.selectionStyle = UITableViewCellSelectionStyle.none
+                break
+            default:
+                break
+            }
         }
         
         return cell

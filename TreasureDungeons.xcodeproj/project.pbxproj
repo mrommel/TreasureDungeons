@@ -32,6 +32,7 @@
 		1A402E5C1F2B1DA3004F74FD /* OptionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E5B1F2B1DA3004F74FD /* OptionInteractor.swift */; };
 		1A402E5E1F2B1DC5004F74FD /* OptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E5D1F2B1DC5004F74FD /* OptionPresenter.swift */; };
 		1A402E601F2F465F004F74FD /* OptionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E5F1F2F465F004F74FD /* OptionDataManager.swift */; };
+		1A402E621F3470D4004F74FD /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A402E611F3470D4004F74FD /* skull.png */; };
 		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
 		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
 		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
@@ -122,6 +123,7 @@
 		1A402E5B1F2B1DA3004F74FD /* OptionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionInteractor.swift; path = TreasureDungeons/Source/Presentation/Option/OptionInteractor.swift; sourceTree = "<group>"; };
 		1A402E5D1F2B1DC5004F74FD /* OptionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionPresenter.swift; path = TreasureDungeons/Source/Presentation/Option/OptionPresenter.swift; sourceTree = "<group>"; };
 		1A402E5F1F2F465F004F74FD /* OptionDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionDataManager.swift; path = TreasureDungeons/Source/Presentation/Option/OptionDataManager.swift; sourceTree = "<group>"; };
+		1A402E611F3470D4004F74FD /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skull.png; path = TreasureDungeons/Resources/skull.png; sourceTree = "<group>"; };
 		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = TreasureDungeons/Source/Game/Game.swift; sourceTree = "<group>"; };
 		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = TreasureDungeons/Source/Game/Map.swift; sourceTree = "<group>"; };
 		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = TreasureDungeons/Source/Utils/Array2D.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			children = (
 				1AB4B4571F1394DE00B22017 /* Games */,
 				1A69130E1F1F5E8D00C66C09 /* Data */,
+				1A402E611F3470D4004F74FD /* skull.png */,
 				1A943BFE1F0BD42B00A3986A /* tile01.png */,
 				1A943BFF1F0BD42B00A3986A /* tile02.png */,
 				1A943C001F0BD42B00A3986A /* tile03.png */,
@@ -513,6 +516,7 @@
 				1A23C71C1F14D3EE00691442 /* Game02.game in Resources */,
 				1A90C1CA1EFBC75600E5CADE /* SimpleFragmentShader.glsl in Resources */,
 				1A943C021F0BD42B00A3986A /* tile01.png in Resources */,
+				1A402E621F3470D4004F74FD /* skull.png in Resources */,
 				1A9CC5811F014E8300CBC07B /* skybox.png in Resources */,
 				1A90C1D31EFBC7DF00E5CADE /* LaunchScreen.storyboard in Resources */,
 				1A56C17E1EFC57F60016BD8C /* floor_gray.png in Resources */,
