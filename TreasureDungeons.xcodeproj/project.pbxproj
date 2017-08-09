@@ -39,6 +39,7 @@
 		1A402E6C1F39E0F3004F74FD /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E6B1F39E0F3004F74FD /* GameInteractor.swift */; };
 		1A402E6F1F3AF0DA004F74FD /* HelpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E6E1F3AF0DA004F74FD /* HelpInteractor.swift */; };
 		1A402E711F3AF0F7004F74FD /* HelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */; };
+		1A402E731F3B2FF6004F74FD /* HelpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E721F3B2FF6004F74FD /* HelpDataManager.swift */; };
 		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
 		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
 		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
@@ -136,6 +137,7 @@
 		1A402E6B1F39E0F3004F74FD /* GameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameInteractor.swift; path = TreasureDungeons/Source/Presentation/Game/GameInteractor.swift; sourceTree = "<group>"; };
 		1A402E6E1F3AF0DA004F74FD /* HelpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpInteractor.swift; path = TreasureDungeons/Source/Presentation/Help/HelpInteractor.swift; sourceTree = "<group>"; };
 		1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpPresenter.swift; path = TreasureDungeons/Source/Presentation/Help/HelpPresenter.swift; sourceTree = "<group>"; };
+		1A402E721F3B2FF6004F74FD /* HelpDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpDataManager.swift; path = TreasureDungeons/Source/Presentation/Help/HelpDataManager.swift; sourceTree = "<group>"; };
 		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = TreasureDungeons/Source/Game/Game.swift; sourceTree = "<group>"; };
 		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = TreasureDungeons/Source/Game/Map.swift; sourceTree = "<group>"; };
 		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = TreasureDungeons/Source/Utils/Array2D.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */,
 				1A402E6E1F3AF0DA004F74FD /* HelpInteractor.swift */,
 				1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */,
+				1A402E721F3B2FF6004F74FD /* HelpDataManager.swift */,
 			);
 			name = Help;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				1A402E431F274B41004F74FD /* AppDependencies.swift in Sources */,
 				1A402E601F2F465F004F74FD /* OptionDataManager.swift in Sources */,
 				1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */,
+				1A402E731F3B2FF6004F74FD /* HelpDataManager.swift in Sources */,
 				1A402E671F398C43004F74FD /* LevelPresenter.swift in Sources */,
 				1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */,
 				1A402E6A1F39E0D0004F74FD /* GamePresenter.swift in Sources */,

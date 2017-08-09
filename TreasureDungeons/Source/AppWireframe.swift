@@ -167,8 +167,21 @@ class AppWireFrame {
             print("Fatal: can't create HelpViewController from storyboard")
             return
         }
-         
-        self.menuViewController?.present(helpViewController, animated: true)
+        
+        // Help
+        let helpPresenter = HelpPresenter()
+        let helpInteractor = HelpInteractor()
+        let helpDataManager = HelpDataManager()
+        
+        helpInteractor.output = helpPresenter
+        helpInteractor.dataManager = helpDataManager
+        
+        helpPresenter.interactor = helpInteractor
+        helpPresenter.userInterface = helpViewController
+        
+        helpViewController.presenter = helpPresenter
+        
+        self.menuViewController?.navigationController?.pushViewController(helpViewController, animated: true)
     }
     
     private func menuViewControllerFromStoryboard() -> MenuViewController {

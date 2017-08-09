@@ -10,4 +10,22 @@ import Foundation
 
 class HelpPresenter {
     
+    var userInterface: HelpViewInterface?
+    var interactor: HelpInteractorInput?
+    //var wireframe: AppWireFrame?
+    
+}
+
+extension HelpPresenter: HelpModuleInterface {
+    
+    func updateView() {
+        self.interactor?.fetchHelpContent()
+    }
+}
+
+extension HelpPresenter: HelpInteractorOutput {
+    
+    func fetchedHelp(content: String) {
+        self.userInterface?.show(content: content)
+    }
 }

@@ -8,6 +8,42 @@
 
 import Foundation
 
+protocol HelpInteractorInput {
+    
+    func fetchHelpContent()
+    
+}
+
+protocol HelpInteractorOutput {
+    
+    func fetchedHelp(content: String)
+    
+}
+
 class HelpInteractor {
+    
+    var output: HelpInteractorOutput?
+    var dataManager: HelpDataManagerOutput?
+}
+
+extension HelpInteractor: HelpInteractorInput {
+    
+    func fetchHelpContent() {
+        
+        self.dataManager?.loadHelp(completionHandler: { (content, error) in
+        
+            guard error == nil else {
+                self.output?.fetchedHelp(content: "Error")
+                return
+            }
+            
+            if let content = content {
+                self.output?.fetchedHelp(content: content)
+            } else {
+                self.output?.fetchedHelp(content: "Error")
+            }
+        })
+    }
+
     
 }
