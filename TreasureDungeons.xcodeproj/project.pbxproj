@@ -33,6 +33,12 @@
 		1A402E5E1F2B1DC5004F74FD /* OptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E5D1F2B1DC5004F74FD /* OptionPresenter.swift */; };
 		1A402E601F2F465F004F74FD /* OptionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E5F1F2F465F004F74FD /* OptionDataManager.swift */; };
 		1A402E621F3470D4004F74FD /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A402E611F3470D4004F74FD /* skull.png */; };
+		1A402E651F398B6E004F74FD /* LevelInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E641F398B6E004F74FD /* LevelInteractor.swift */; };
+		1A402E671F398C43004F74FD /* LevelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E661F398C43004F74FD /* LevelPresenter.swift */; };
+		1A402E6A1F39E0D0004F74FD /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E691F39E0D0004F74FD /* GamePresenter.swift */; };
+		1A402E6C1F39E0F3004F74FD /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E6B1F39E0F3004F74FD /* GameInteractor.swift */; };
+		1A402E6F1F3AF0DA004F74FD /* HelpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E6E1F3AF0DA004F74FD /* HelpInteractor.swift */; };
+		1A402E711F3AF0F7004F74FD /* HelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */; };
 		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
 		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
 		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
@@ -97,8 +103,8 @@
 /* Begin PBXFileReference section */
 		0C8110D1B4320249588CD397 /* Pods-TreasureDungeons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureDungeons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons.debug.xcconfig"; sourceTree = "<group>"; };
 		1A1B81971F0B8ECF001A3B1B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = TreasureDungeons/Resources/button.png; sourceTree = "<group>"; };
-		1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = TreasureDungeons/Source/Presentation/HelpViewController.swift; sourceTree = "<group>"; };
-		1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = TreasureDungeons/Source/Presentation/LevelViewController.swift; sourceTree = "<group>"; };
+		1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = TreasureDungeons/Source/Presentation/Help/HelpViewController.swift; sourceTree = "<group>"; };
+		1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = TreasureDungeons/Source/Presentation/Level/LevelViewController.swift; sourceTree = "<group>"; };
 		1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bottle.swift; path = TreasureDungeons/Source/Models/Bottle.swift; sourceTree = "<group>"; };
 		1A23C71B1F14D3EE00691442 /* Game02.game */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Game02.game; path = TreasureDungeons/Resources/Games/Game02.game; sourceTree = "<group>"; };
 		1A23C71D1F150C5D00691442 /* GamePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePreview.swift; path = TreasureDungeons/Source/Game/GamePreview.swift; sourceTree = "<group>"; };
@@ -113,7 +119,7 @@
 		1A402E3E1F274AAB004F74FD /* MenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuInteractor.swift; path = TreasureDungeons/Source/Presentation/Menu/MenuInteractor.swift; sourceTree = "<group>"; };
 		1A402E401F274ADF004F74FD /* MenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuPresenter.swift; path = TreasureDungeons/Source/Presentation/Menu/MenuPresenter.swift; sourceTree = "<group>"; };
 		1A402E421F274B41004F74FD /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDependencies.swift; path = TreasureDungeons/Source/AppDependencies.swift; sourceTree = "<group>"; };
-		1A402E441F274D7E004F74FD /* AppWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppWireframe.swift; path = TreasureDungeons/Source/Presentation/Menu/AppWireframe.swift; sourceTree = "<group>"; };
+		1A402E441F274D7E004F74FD /* AppWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppWireframe.swift; path = TreasureDungeons/Source/AppWireframe.swift; sourceTree = "<group>"; };
 		1A402E461F274E59004F74FD /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = TreasureDungeons/Source/Utils/CoreDataStore.swift; sourceTree = "<group>"; };
 		1A402E481F274FD1004F74FD /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootWireframe.swift; path = TreasureDungeons/Source/Presentation/RootWireframe.swift; sourceTree = "<group>"; };
 		1A402E4A1F2750F2004F74FD /* MenuDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuDataManager.swift; path = TreasureDungeons/Source/Presentation/Menu/MenuDataManager.swift; sourceTree = "<group>"; };
@@ -124,6 +130,12 @@
 		1A402E5D1F2B1DC5004F74FD /* OptionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionPresenter.swift; path = TreasureDungeons/Source/Presentation/Option/OptionPresenter.swift; sourceTree = "<group>"; };
 		1A402E5F1F2F465F004F74FD /* OptionDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionDataManager.swift; path = TreasureDungeons/Source/Presentation/Option/OptionDataManager.swift; sourceTree = "<group>"; };
 		1A402E611F3470D4004F74FD /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skull.png; path = TreasureDungeons/Resources/skull.png; sourceTree = "<group>"; };
+		1A402E641F398B6E004F74FD /* LevelInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelInteractor.swift; path = TreasureDungeons/Source/Presentation/Level/LevelInteractor.swift; sourceTree = "<group>"; };
+		1A402E661F398C43004F74FD /* LevelPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelPresenter.swift; path = TreasureDungeons/Source/Presentation/Level/LevelPresenter.swift; sourceTree = "<group>"; };
+		1A402E691F39E0D0004F74FD /* GamePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePresenter.swift; path = TreasureDungeons/Source/Presentation/Game/GamePresenter.swift; sourceTree = "<group>"; };
+		1A402E6B1F39E0F3004F74FD /* GameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameInteractor.swift; path = TreasureDungeons/Source/Presentation/Game/GameInteractor.swift; sourceTree = "<group>"; };
+		1A402E6E1F3AF0DA004F74FD /* HelpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpInteractor.swift; path = TreasureDungeons/Source/Presentation/Help/HelpInteractor.swift; sourceTree = "<group>"; };
+		1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpPresenter.swift; path = TreasureDungeons/Source/Presentation/Help/HelpPresenter.swift; sourceTree = "<group>"; };
 		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = TreasureDungeons/Source/Game/Game.swift; sourceTree = "<group>"; };
 		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = TreasureDungeons/Source/Game/Map.swift; sourceTree = "<group>"; };
 		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = TreasureDungeons/Source/Utils/Array2D.swift; sourceTree = "<group>"; };
@@ -141,7 +153,7 @@
 		1A90C1B41EFBC74700E5CADE /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = TreasureDungeons/Source/OpenGL/Model.swift; sourceTree = "<group>"; };
 		1A90C1B51EFBC74700E5CADE /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Square.swift; path = TreasureDungeons/Source/Models/Square.swift; sourceTree = "<group>"; };
 		1A90C1B61EFBC74700E5CADE /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vertex.swift; path = TreasureDungeons/Source/OpenGL/Vertex.swift; sourceTree = "<group>"; };
-		1A90C1B71EFBC74700E5CADE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = TreasureDungeons/Source/Presentation/GameViewController.swift; sourceTree = "<group>"; };
+		1A90C1B71EFBC74700E5CADE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = TreasureDungeons/Source/Presentation/Game/GameViewController.swift; sourceTree = "<group>"; };
 		1A90C1B81EFBC74700E5CADE /* Wall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wall.swift; path = TreasureDungeons/Source/Models/Wall.swift; sourceTree = "<group>"; };
 		1A90C1C31EFBC75600E5CADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = TreasureDungeons/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		1A90C1C41EFBC75600E5CADE /* dungeon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dungeon_01.png; path = TreasureDungeons/Resources/dungeon_01.png; sourceTree = "<group>"; };
@@ -211,9 +223,9 @@
 			children = (
 				1A402E3D1F2749D8004F74FD /* Menu */,
 				1A402E5A1F2B16D9004F74FD /* Option */,
-				1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */,
-				1A90C1B71EFBC74700E5CADE /* GameViewController.swift */,
-				1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */,
+				1A402E631F398B40004F74FD /* Level */,
+				1A402E681F39E0AC004F74FD /* Game */,
+				1A402E6D1F3AF06E004F74FD /* Help */,
 				1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */,
 				1A402E481F274FD1004F74FD /* RootWireframe.swift */,
 			);
@@ -250,6 +262,36 @@
 				1A402E5F1F2F465F004F74FD /* OptionDataManager.swift */,
 			);
 			name = Option;
+			sourceTree = "<group>";
+		};
+		1A402E631F398B40004F74FD /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */,
+				1A402E641F398B6E004F74FD /* LevelInteractor.swift */,
+				1A402E661F398C43004F74FD /* LevelPresenter.swift */,
+			);
+			name = Level;
+			sourceTree = "<group>";
+		};
+		1A402E681F39E0AC004F74FD /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				1A90C1B71EFBC74700E5CADE /* GameViewController.swift */,
+				1A402E6B1F39E0F3004F74FD /* GameInteractor.swift */,
+				1A402E691F39E0D0004F74FD /* GamePresenter.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		1A402E6D1F3AF06E004F74FD /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */,
+				1A402E6E1F3AF0DA004F74FD /* HelpInteractor.swift */,
+				1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */,
+			);
+			name = Help;
 			sourceTree = "<group>";
 		};
 		1A56C1751EFBFA600016BD8C /* Game */ = {
@@ -603,6 +645,7 @@
 				1A6913131F1F62FE00C66C09 /* OptionViewController.swift in Sources */,
 				1A9CC5831F0157CF00CBC07B /* Matrix4.swift in Sources */,
 				1A402E471F274E59004F74FD /* CoreDataStore.swift in Sources */,
+				1A402E6F1F3AF0DA004F74FD /* HelpInteractor.swift in Sources */,
 				1A6913111F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld in Sources */,
 				1A402E5E1F2B1DC5004F74FD /* OptionPresenter.swift in Sources */,
 				1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */,
@@ -612,11 +655,13 @@
 				1A90C1C11EFBC74700E5CADE /* GameViewController.swift in Sources */,
 				1A90C1BF1EFBC74700E5CADE /* Square.swift in Sources */,
 				1A402E4B1F2750F2004F74FD /* MenuDataManager.swift in Sources */,
+				1A402E711F3AF0F7004F74FD /* HelpPresenter.swift in Sources */,
 				1A3408D91F05295300092F53 /* Array.swift in Sources */,
 				1A9CC5851F03B34400CBC07B /* Treasure.swift in Sources */,
 				1A3408DD1F0A4A5900092F53 /* CGPoint.swift in Sources */,
 				1A90C1BE1EFBC74700E5CADE /* Model.swift in Sources */,
 				1A56C1771EFBFA770016BD8C /* Game.swift in Sources */,
+				1A402E651F398B6E004F74FD /* LevelInteractor.swift in Sources */,
 				1A3408D71F04F40600092F53 /* Random.swift in Sources */,
 				1A402E491F274FD1004F74FD /* RootWireframe.swift in Sources */,
 				1A943BF91F0BC05500A3986A /* Diamond.swift in Sources */,
@@ -631,6 +676,7 @@
 				1AE6EE1C1F0A94A700FC89E8 /* UIViewController+Storyboard.swift in Sources */,
 				1A943C0F1F0F91A700A3986A /* Key.swift in Sources */,
 				1A1B819B1F0BAC71001A3B1B /* HelpViewController.swift in Sources */,
+				1A402E6C1F39E0F3004F74FD /* GameInteractor.swift in Sources */,
 				1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */,
 				1A402E5C1F2B1DA3004F74FD /* OptionInteractor.swift in Sources */,
 				1A56C1791EFBFA830016BD8C /* Map.swift in Sources */,
@@ -638,7 +684,9 @@
 				1A402E431F274B41004F74FD /* AppDependencies.swift in Sources */,
 				1A402E601F2F465F004F74FD /* OptionDataManager.swift in Sources */,
 				1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */,
+				1A402E671F398C43004F74FD /* LevelPresenter.swift in Sources */,
 				1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */,
+				1A402E6A1F39E0D0004F74FD /* GamePresenter.swift in Sources */,
 				1A402E411F274ADF004F74FD /* MenuPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

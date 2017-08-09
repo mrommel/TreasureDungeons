@@ -10,6 +10,17 @@ import UIKit
 import GLKit
 import SCLAlertView
 
+protocol GameModuleInterface {
+    
+    func updateView()
+}
+
+protocol GameViewInterface {
+    
+    //func showNoPlayerMessage()
+    //func showPlayer(_ player: Player?)
+}
+
 class GLKUpdater : NSObject, GLKViewControllerDelegate {
     
     weak var glkViewController : GameViewController!
@@ -29,6 +40,9 @@ class GLKUpdater : NSObject, GLKViewControllerDelegate {
 
 
 class GameViewController: GLKViewController {
+    
+    // VIPER
+    var presenter: GameModuleInterface?
     
     var glkView: GLKView!
     @IBOutlet weak var positionLabel: UILabel!
@@ -61,6 +75,8 @@ class GameViewController: GLKViewController {
         super.viewDidAppear(animated)
     
         navigationController?.hidesBarsOnSwipe = false
+        
+        self.presenter?.updateView()
         
         SCLAlertView().showNotice("Hello Notice", subTitle: "This is a more descriptive notice text.") // Notice
     }
@@ -97,6 +113,8 @@ class GameViewController: GLKViewController {
     }
 }
 
+extension GameViewController: GameViewInterface {
+}
 
 extension GameViewController {
     
