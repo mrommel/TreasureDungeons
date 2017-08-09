@@ -10,6 +10,10 @@ import Foundation
 
 typealias HelpCompletionBlock = (_ content: String?, _ error: Error?) -> Void
 
+enum HelpError: Error {
+    case cannotReadHelp
+}
+
 protocol HelpDataManagerOutput {
     func loadHelp(completionHandler: @escaping HelpCompletionBlock)
 }

@@ -31,19 +31,12 @@ extension HelpInteractor: HelpInteractorInput {
     func fetchHelpContent() {
         
         self.dataManager?.loadHelp(completionHandler: { (content, error) in
-        
-            guard error == nil else {
-                self.output?.fetchedHelp(content: "Error")
-                return
-            }
             
             if let content = content {
                 self.output?.fetchedHelp(content: content)
             } else {
-                self.output?.fetchedHelp(content: "Error")
+                self.output?.fetchedHelp(content: "Error: \(error ?? HelpError.cannotReadHelp)")
             }
         })
     }
-
-    
 }

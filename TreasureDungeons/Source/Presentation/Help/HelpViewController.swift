@@ -28,8 +28,6 @@ class HelpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,7 +37,6 @@ class HelpViewController: UIViewController {
         
         navigationController?.hidesBarsOnSwipe = false
     }
-    
 }
 
 extension HelpViewController: HelpViewInterface {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A1B81981F0B8ECF001A3B1B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B81971F0B8ECF001A3B1B /* button.png */; };
-		1A1B819B1F0BAC71001A3B1B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */; };
 		1A1B819D1F0BB253001A3B1B /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */; };
 		1A1B819F1F0BB6EB001A3B1B /* Bottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */; };
 		1A23C71C1F14D3EE00691442 /* Game02.game in Resources */ = {isa = PBXBuildFile; fileRef = 1A23C71B1F14D3EE00691442 /* Game02.game */; };
@@ -40,6 +39,7 @@
 		1A402E6F1F3AF0DA004F74FD /* HelpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E6E1F3AF0DA004F74FD /* HelpInteractor.swift */; };
 		1A402E711F3AF0F7004F74FD /* HelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */; };
 		1A402E731F3B2FF6004F74FD /* HelpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E721F3B2FF6004F74FD /* HelpDataManager.swift */; };
+		1A402E741F3B3BBE004F74FD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */; };
 		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
 		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
 		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
@@ -669,6 +669,7 @@
 				1A402E491F274FD1004F74FD /* RootWireframe.swift in Sources */,
 				1A943BF91F0BC05500A3986A /* Diamond.swift in Sources */,
 				1A90C1C01EFBC74700E5CADE /* Vertex.swift in Sources */,
+				1A402E741F3B3BBE004F74FD /* HelpViewController.swift in Sources */,
 				1AE6EE191F0A921A00FC89E8 /* MenuViewController.swift in Sources */,
 				1A90C1C21EFBC74700E5CADE /* Wall.swift in Sources */,
 				1A402E451F274D7E004F74FD /* AppWireframe.swift in Sources */,
@@ -678,7 +679,6 @@
 				1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */,
 				1AE6EE1C1F0A94A700FC89E8 /* UIViewController+Storyboard.swift in Sources */,
 				1A943C0F1F0F91A700A3986A /* Key.swift in Sources */,
-				1A1B819B1F0BAC71001A3B1B /* HelpViewController.swift in Sources */,
 				1A402E6C1F39E0F3004F74FD /* GameInteractor.swift in Sources */,
 				1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */,
 				1A402E5C1F2B1DA3004F74FD /* OptionInteractor.swift in Sources */,
