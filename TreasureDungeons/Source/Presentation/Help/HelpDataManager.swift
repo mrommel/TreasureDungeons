@@ -12,6 +12,7 @@ typealias HelpCompletionBlock = (_ content: String?, _ error: Error?) -> Void
 
 enum HelpError: Error {
     case cannotReadHelp
+    case cannotFindHelpFile
 }
 
 protocol HelpDataManagerOutput {
@@ -23,8 +24,19 @@ class HelpDataManager {
 }
 
 extension HelpDataManager: HelpDataManagerOutput {
-    
+
     func loadHelp(completionHandler: @escaping HelpCompletionBlock) {
-            completionHandler("<html><body><p>Hello!</p></body></html>", nil)
+        
+        if let helpPath = Bundle.main.path(forResource: "Help", ofType: "html") {
+            do {
+                let helpContent = try String(contentsOfFile: helpPath)
+        
+                completionHandler(helpContent, nil)
+            } catch {
+                completionHandler(nil, HelpError.cannotReadHelp)
+            }
+        } else {
+            completionHandler(nil, HelpError.cannotFindHelpFile)
+        }
     }
 }

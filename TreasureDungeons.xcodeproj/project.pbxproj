@@ -40,6 +40,7 @@
 		1A402E711F3AF0F7004F74FD /* HelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */; };
 		1A402E731F3B2FF6004F74FD /* HelpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402E721F3B2FF6004F74FD /* HelpDataManager.swift */; };
 		1A402E741F3B3BBE004F74FD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */; };
+		1A402E771F3D82F2004F74FD /* Help.html in Resources */ = {isa = PBXBuildFile; fileRef = 1A402E761F3D82F2004F74FD /* Help.html */; };
 		1A56C1771EFBFA770016BD8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1761EFBFA770016BD8C /* Game.swift */; };
 		1A56C1791EFBFA830016BD8C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C1781EFBFA830016BD8C /* Map.swift */; };
 		1A56C17B1EFBFAD50016BD8C /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56C17A1EFBFAD50016BD8C /* Array2D.swift */; };
@@ -138,6 +139,7 @@
 		1A402E6E1F3AF0DA004F74FD /* HelpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpInteractor.swift; path = TreasureDungeons/Source/Presentation/Help/HelpInteractor.swift; sourceTree = "<group>"; };
 		1A402E701F3AF0F7004F74FD /* HelpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpPresenter.swift; path = TreasureDungeons/Source/Presentation/Help/HelpPresenter.swift; sourceTree = "<group>"; };
 		1A402E721F3B2FF6004F74FD /* HelpDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpDataManager.swift; path = TreasureDungeons/Source/Presentation/Help/HelpDataManager.swift; sourceTree = "<group>"; };
+		1A402E761F3D82F2004F74FD /* Help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Help.html; path = TreasureDungeons/Resources/HTML/Help.html; sourceTree = "<group>"; };
 		1A56C1761EFBFA770016BD8C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = TreasureDungeons/Source/Game/Game.swift; sourceTree = "<group>"; };
 		1A56C1781EFBFA830016BD8C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = TreasureDungeons/Source/Game/Map.swift; sourceTree = "<group>"; };
 		1A56C17A1EFBFAD50016BD8C /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array2D.swift; path = TreasureDungeons/Source/Utils/Array2D.swift; sourceTree = "<group>"; };
@@ -297,6 +299,14 @@
 			name = Help;
 			sourceTree = "<group>";
 		};
+		1A402E751F3D82CF004F74FD /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				1A402E761F3D82F2004F74FD /* Help.html */,
+			);
+			name = HTML;
+			sourceTree = "<group>";
+		};
 		1A56C1751EFBFA600016BD8C /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +346,7 @@
 		1A90C1AD1EFBC6D900E5CADE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A402E751F3D82CF004F74FD /* HTML */,
 				1AB4B4571F1394DE00B22017 /* Games */,
 				1A69130E1F1F5E8D00C66C09 /* Data */,
 				1A402E611F3470D4004F74FD /* skull.png */,
@@ -555,6 +566,7 @@
 				1A943C0D1F0CEA5200A3986A /* bubble_yellow.png in Resources */,
 				1A943BFD1F0BD07A00A3986A /* diamond.png in Resources */,
 				1A23C7221F1636E100691442 /* splash.png in Resources */,
+				1A402E771F3D82F2004F74FD /* Help.html in Resources */,
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
 				1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */,
 				1AB4B4591F13950E00B22017 /* Game01.game in Resources */,
