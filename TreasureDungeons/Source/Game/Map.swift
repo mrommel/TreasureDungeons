@@ -26,6 +26,9 @@ func == (lhs: Point, rhs: Point) -> Bool {
 enum TileType {
     case floor
     case wall
+    //case door_h
+    //case door_v
+    case teleporter
     
     case outside
 }

@@ -88,7 +88,7 @@ class AppWireFrame {
         map.tiles[2, 0] = Tile(at: Point(x: 2, y: 0), type: .floor)
         map.tiles[2, 1] = Tile(at: Point(x: 2, y: 1), type: .floor)
         map.tiles[2, 2] = Tile(at: Point(x: 2, y: 2), type: .floor)
-        map.tiles[2, 3] = Tile(at: Point(x: 2, y: 3), type: .floor)
+        map.tiles[2, 3] = Tile(at: Point(x: 2, y: 3), type: .teleporter)
         map.tiles[2, 4] = Tile(at: Point(x: 2, y: 4), type: .floor)
         map.tiles[2, 5] = Tile(at: Point(x: 2, y: 5), type: .floor)
         map.tiles[2, 6] = Tile(at: Point(x: 2, y: 6), type: .wall)

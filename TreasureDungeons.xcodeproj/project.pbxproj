@@ -49,6 +49,10 @@
 		1A69130B1F176F6600C66C09 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A69130A1F176F6600C66C09 /* Player.swift */; };
 		1A6913111F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A69130F1F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld */; };
 		1A6913131F1F62FE00C66C09 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6913121F1F62FE00C66C09 /* OptionViewController.swift */; };
+		1A6CE2F11F4B275E00D13D84 /* Teleporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CE2F01F4B275E00D13D84 /* Teleporter.swift */; };
+		1A6CE2F71F4B281400D13D84 /* teleporter.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A6CE2F41F4B281400D13D84 /* teleporter.png */; };
+		1A6CE2FA1F4C0D8700D13D84 /* teleporter_disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A6CE2F81F4C0D8700D13D84 /* teleporter_disabled.png */; };
+		1A6CE2FB1F4C0D8700D13D84 /* teleporter_enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A6CE2F91F4C0D8700D13D84 /* teleporter_enabled.png */; };
 		1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */; };
 		1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */; };
 		1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B11EFBC74700E5CADE /* Cube.swift */; };
@@ -148,6 +152,10 @@
 		1A69130A1F176F6600C66C09 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = TreasureDungeons/Source/Game/Player.swift; sourceTree = "<group>"; };
 		1A6913101F1F5EB400C66C09 /* TreasureDungeons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TreasureDungeons.xcdatamodel; sourceTree = "<group>"; };
 		1A6913121F1F62FE00C66C09 /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionViewController.swift; path = TreasureDungeons/Source/Presentation/Option/OptionViewController.swift; sourceTree = "<group>"; };
+		1A6CE2F01F4B275E00D13D84 /* Teleporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Teleporter.swift; path = TreasureDungeons/Source/Models/Teleporter.swift; sourceTree = "<group>"; };
+		1A6CE2F41F4B281400D13D84 /* teleporter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teleporter.png; path = TreasureDungeons/Resources/teleporter.png; sourceTree = "<group>"; };
+		1A6CE2F81F4C0D8700D13D84 /* teleporter_disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teleporter_disabled.png; path = TreasureDungeons/Resources/teleporter_disabled.png; sourceTree = "<group>"; };
+		1A6CE2F91F4C0D8700D13D84 /* teleporter_enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teleporter_enabled.png; path = TreasureDungeons/Resources/teleporter_enabled.png; sourceTree = "<group>"; };
 		1A90C1AE1EFBC74700E5CADE /* TreasureDungeons-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TreasureDungeons-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TreasureDungeons/Source/AppDelegate.swift; sourceTree = "<group>"; };
 		1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEffect.swift; path = TreasureDungeons/Source/OpenGL/BaseEffect.swift; sourceTree = "<group>"; };
@@ -349,6 +357,9 @@
 				1A402E751F3D82CF004F74FD /* HTML */,
 				1AB4B4571F1394DE00B22017 /* Games */,
 				1A69130E1F1F5E8D00C66C09 /* Data */,
+				1A6CE2F41F4B281400D13D84 /* teleporter.png */,
+				1A6CE2F81F4C0D8700D13D84 /* teleporter_disabled.png */,
+				1A6CE2F91F4C0D8700D13D84 /* teleporter_enabled.png */,
 				1A402E611F3470D4004F74FD /* skull.png */,
 				1A943BFE1F0BD42B00A3986A /* tile01.png */,
 				1A943BFF1F0BD42B00A3986A /* tile02.png */,
@@ -390,6 +401,7 @@
 				1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */,
 				1A943BF81F0BC05500A3986A /* Diamond.swift */,
 				1A943C0E1F0F91A700A3986A /* Key.swift */,
+				1A6CE2F01F4B275E00D13D84 /* Teleporter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -564,12 +576,14 @@
 				1A943C0A1F0CEA5200A3986A /* bubble_blue.png in Resources */,
 				1A90C1C81EFBC75600E5CADE /* Assets.xcassets in Resources */,
 				1A943C0D1F0CEA5200A3986A /* bubble_yellow.png in Resources */,
+				1A6CE2FA1F4C0D8700D13D84 /* teleporter_disabled.png in Resources */,
 				1A943BFD1F0BD07A00A3986A /* diamond.png in Resources */,
 				1A23C7221F1636E100691442 /* splash.png in Resources */,
 				1A402E771F3D82F2004F74FD /* Help.html in Resources */,
 				1A90C1CC1EFBC75600E5CADE /* wall.png in Resources */,
 				1A3408CD1F03C6D800092F53 /* treasure_chest.png in Resources */,
 				1AB4B4591F13950E00B22017 /* Game01.game in Resources */,
+				1A6CE2FB1F4C0D8700D13D84 /* teleporter_enabled.png in Resources */,
 				1A23C71C1F14D3EE00691442 /* Game02.game in Resources */,
 				1A90C1CA1EFBC75600E5CADE /* SimpleFragmentShader.glsl in Resources */,
 				1A943C021F0BD42B00A3986A /* tile01.png in Resources */,
@@ -585,6 +599,7 @@
 				1A943BFC1F0BD07A00A3986A /* bottle.png in Resources */,
 				1A90C1C91EFBC75600E5CADE /* dungeon_01.png in Resources */,
 				1AB4B4551F0F9F6900B22017 /* bubble_gray_focus.png in Resources */,
+				1A6CE2F71F4B281400D13D84 /* teleporter.png in Resources */,
 				1A943C051F0BD42B00A3986A /* tile04.png in Resources */,
 				1A943C0C1F0CEA5200A3986A /* bubble_red.png in Resources */,
 			);
@@ -654,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A402E3F1F274AAB004F74FD /* MenuInteractor.swift in Sources */,
+				1A6CE2F11F4B275E00D13D84 /* Teleporter.swift in Sources */,
 				1A90C1BD1EFBC74700E5CADE /* GLKMatrix+Array.swift in Sources */,
 				1A23C71E1F150C5D00691442 /* GamePreview.swift in Sources */,
 				1A1B819D1F0BB253001A3B1B /* LevelViewController.swift in Sources */,
@@ -905,6 +921,7 @@
 				1A402E591F29D497004F74FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E5D7D311C84C39A006246F7 /* Build configuration list for PBXProject "TreasureDungeons" */ = {
 			isa = XCConfigurationList;

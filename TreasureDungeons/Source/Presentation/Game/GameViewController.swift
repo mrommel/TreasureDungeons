@@ -234,6 +234,11 @@ extension GameViewController {
                             wall0.position = GLKVector3(v: (Float(tile.point.x * 2), 0.0, Float(tile.point.y * 2)))
                             self.models.append(wall0)
                             break
+                        case .teleporter:
+                            let teleporter0 = Teleporter(shader: self.shader)
+                            teleporter0.position = GLKVector3(v: (Float(tile.point.x * 2), 0.0, Float(tile.point.y * 2)))
+                            self.models.append(teleporter0)
+                            break
                         case .outside:
                             break
                         }
