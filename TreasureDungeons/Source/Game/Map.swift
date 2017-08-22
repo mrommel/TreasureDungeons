@@ -37,10 +37,16 @@ class Tile: Equatable {
     
     let type: TileType
     let point: Point
+    var discovered: Bool = false
     
     init(at point: Point, type: TileType) {
         self.point = point
         self.type = type
+        self.discovered = false
+    }
+    
+    func discover() {
+        self.discovered = true
     }
     
     func canAccess() -> Bool {
@@ -76,7 +82,6 @@ class Map {
      Getter for `Tile` at `position`
      
      - Parameter position: location in the grid to return the `Tile`
-     
      - Returns: `Tile` at `position`
      */
     public func tile(at position: Point) -> Tile {
@@ -92,6 +97,21 @@ class Map {
     public func tileAt(x: Int, y: Int) -> Tile {
         
         return tile(at: Point(x: x, y: y))
+    }
+}
+
+extension Map {
+    
+    func getNumberOfDiscoveredTiles() -> Int {
+        var numberOfTiles = 0
+        
+        for tile in self.tiles {
+            if tile.discovered {
+                numberOfTiles += 1
+            }
+        }
+        
+        return numberOfTiles
     }
     
 }

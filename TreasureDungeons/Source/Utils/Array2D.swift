@@ -39,6 +39,7 @@ public class Array2D <T: Equatable> {
     }
 }
 
+
 extension Array2D {
     
     subscript(point: Point) -> T? {
@@ -61,5 +62,31 @@ extension Array2D {
                 self[x, y] = value
             }
         }
+    }
+}
+
+extension Array2D: Sequence {
+
+    public func makeIterator() -> Array2DIterator<T> {
+        return Array2DIterator<T>(self)
+    }
+}
+
+public struct Array2DIterator<T: Equatable>: IteratorProtocol {
+    
+    let array: Array2D<T>
+    var index = 0
+    
+    init(_ array: Array2D<T>) {
+        self.array = array
+    }
+    
+    mutating public func next() -> T? {
+        let nextNumber = self.array.array.count - index
+        guard nextNumber > 0
+            else { return nil }
+        
+        index += 1
+        return self.array.array[nextNumber]
     }
 }
