@@ -54,6 +54,10 @@ class Tile: Equatable {
             return true
         }
         
+        if self.type == .teleporter {
+            return true
+        }
+        
         return false
     }
 }

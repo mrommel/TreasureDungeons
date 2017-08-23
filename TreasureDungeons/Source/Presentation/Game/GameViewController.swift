@@ -46,6 +46,7 @@ class GameViewController: GLKViewController {
     
     var glkView: GLKView!
     @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var overviewLabel: OverviewView!
     var glkUpdater: GLKUpdater!
     var shader: BaseEffect!
     
@@ -191,6 +192,7 @@ extension GameViewController {
     
     func setupCamera() {
         self.camera = Camera()
+        self.camera?.addChangeListener(changeListener: self.overviewLabel)
     }
     
     func setupScene() {
@@ -200,6 +202,9 @@ extension GameViewController {
         self.shader.projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(85.0), Float(aspect), 0.1, 100)
         
         self.rebuildDungeon()
+        
+        self.overviewLabel.game = self.game
+        self.overviewLabel.rebuildScene()
     }
     
     func setupParticleEmitter() {
@@ -261,5 +266,5 @@ extension GameViewController {
         
         self.models.append(Skybox(shader: self.shader))
     }
-    
+
 }

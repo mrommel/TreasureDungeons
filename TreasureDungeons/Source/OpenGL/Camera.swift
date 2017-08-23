@@ -9,13 +9,21 @@
 import Foundation
 import GLKit
 
+protocol CameraChangeListener {
+    
+    func moveCameraTo(x: Float, andY y: Float, withYaw yaw: Float)
+    
+}
+
 class Camera {
  
-    var pitch: Float = 0
-    var yaw: Float = 0
-    var roll: Float = 0
+    fileprivate var pitch: Float = 0
+    fileprivate var yaw: Float = 0
+    //fileprivate var roll: Float = 0
     var x: Float = -2
     var y: Float = -2
+    
+    fileprivate var changeListeners: [CameraChangeListener] = []
     
     init() {
         
@@ -26,7 +34,7 @@ class Camera {
             var viewMatrix: GLKMatrix4 = GLKMatrix4Identity
             viewMatrix = GLKMatrix4RotateX(viewMatrix, GLKMathDegreesToRadians(self.pitch))
             viewMatrix = GLKMatrix4RotateY(viewMatrix, GLKMathDegreesToRadians(self.yaw))
-            viewMatrix = GLKMatrix4RotateZ(viewMatrix, GLKMathDegreesToRadians(self.roll))
+            //viewMatrix = GLKMatrix4RotateZ(viewMatrix, GLKMathDegreesToRadians(self.roll))
             viewMatrix = GLKMatrix4Translate(viewMatrix, self.x, 0, self.y)
             return viewMatrix
         }
@@ -50,13 +58,25 @@ class Camera {
     func moveForward() {
         self.x = self.x - sin(GLKMathDegreesToRadians(self.yaw)) * 0.5
         self.y = self.y + cos(GLKMathDegreesToRadians(self.yaw)) * 0.5
+        
+        for changeListener in self.changeListeners {
+            changeListener.moveCameraTo(x: self.x, andY: self.y, withYaw: self.yaw)
+        }
     }
 
     func turn(leftAndRight value: Float) {
         self.yaw -= value
+        
+        for changeListener in self.changeListeners {
+            changeListener.moveCameraTo(x: self.x, andY: self.y, withYaw: self.yaw)
+        }
     }
     
     func reset() {
         self.pitch = self.pitch * 0.95
+    }
+    
+    func addChangeListener(changeListener: CameraChangeListener) {
+        self.changeListeners.append(changeListener)
     }
 }

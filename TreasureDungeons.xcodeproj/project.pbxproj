@@ -53,6 +53,7 @@
 		1A6CE2F71F4B281400D13D84 /* teleporter.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A6CE2F41F4B281400D13D84 /* teleporter.png */; };
 		1A6CE2FA1F4C0D8700D13D84 /* teleporter_disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A6CE2F81F4C0D8700D13D84 /* teleporter_disabled.png */; };
 		1A6CE2FB1F4C0D8700D13D84 /* teleporter_enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A6CE2F91F4C0D8700D13D84 /* teleporter_enabled.png */; };
+		1A6CE2FE1F4C31CD00D13D84 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CE2FD1F4C31CD00D13D84 /* OverviewView.swift */; };
 		1A90C1B91EFBC74700E5CADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */; };
 		1A90C1BA1EFBC74700E5CADE /* BaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */; };
 		1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C1B11EFBC74700E5CADE /* Cube.swift */; };
@@ -156,6 +157,7 @@
 		1A6CE2F41F4B281400D13D84 /* teleporter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teleporter.png; path = TreasureDungeons/Resources/teleporter.png; sourceTree = "<group>"; };
 		1A6CE2F81F4C0D8700D13D84 /* teleporter_disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teleporter_disabled.png; path = TreasureDungeons/Resources/teleporter_disabled.png; sourceTree = "<group>"; };
 		1A6CE2F91F4C0D8700D13D84 /* teleporter_enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teleporter_enabled.png; path = TreasureDungeons/Resources/teleporter_enabled.png; sourceTree = "<group>"; };
+		1A6CE2FD1F4C31CD00D13D84 /* OverviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverviewView.swift; path = TreasureDungeons/Source/Presentation/Views/OverviewView.swift; sourceTree = "<group>"; };
 		1A90C1AE1EFBC74700E5CADE /* TreasureDungeons-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TreasureDungeons-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A90C1AF1EFBC74700E5CADE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TreasureDungeons/Source/AppDelegate.swift; sourceTree = "<group>"; };
 		1A90C1B01EFBC74700E5CADE /* BaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEffect.swift; path = TreasureDungeons/Source/OpenGL/BaseEffect.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				1A402E6D1F3AF06E004F74FD /* Help */,
 				1AE6EE1B1F0A94A700FC89E8 /* UIViewController+Storyboard.swift */,
 				1A402E481F274FD1004F74FD /* RootWireframe.swift */,
+				1A6CE2FC1F4C315600D13D84 /* Views */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -334,6 +337,14 @@
 				1A69130F1F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		1A6CE2FC1F4C315600D13D84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A6CE2FD1F4C31CD00D13D84 /* OverviewView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		1A90C1981EFBC66700E5CADE /* Source */ = {
@@ -715,6 +726,7 @@
 				1A402E431F274B41004F74FD /* AppDependencies.swift in Sources */,
 				1A402E601F2F465F004F74FD /* OptionDataManager.swift in Sources */,
 				1A9CC57D1F01449B00CBC07B /* Camera.swift in Sources */,
+				1A6CE2FE1F4C31CD00D13D84 /* OverviewView.swift in Sources */,
 				1A402E731F3B2FF6004F74FD /* HelpDataManager.swift in Sources */,
 				1A402E671F398C43004F74FD /* LevelPresenter.swift in Sources */,
 				1A90C1BB1EFBC74700E5CADE /* Cube.swift in Sources */,
