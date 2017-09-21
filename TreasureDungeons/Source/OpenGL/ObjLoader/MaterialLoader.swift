@@ -168,7 +168,7 @@ extension ObjLoading {
                         }
 
                         state = State()
-                        state.materialName = scanner.readLine() as! String
+                        state.materialName = scanner.readLine()! as String
                         scanner.moveToNextLine()
                         continue
                     }

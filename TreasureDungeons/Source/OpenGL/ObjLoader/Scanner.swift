@@ -47,6 +47,7 @@ extension ObjLoading {
         }
 
         // Read rom the current scanner location till the end of the line
+        @discardableResult
         func readLine() -> NSString? {
             var string: NSString?
             scanner.scanUpToCharacters(from: CharacterSet.newlines, into: &string)

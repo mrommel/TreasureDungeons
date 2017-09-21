@@ -6,7 +6,7 @@ target 'TreasureDungeons' do
     
     pod 'SCLAlertView'
     pod 'JSONCodable', '~> 3.0.1'
-    pod 'Macaw', '0.8.2'
+    pod 'Macaw', '0.9.0'
 end
 
 

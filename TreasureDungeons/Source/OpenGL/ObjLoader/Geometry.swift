@@ -179,6 +179,6 @@ func ==(lhs: ObjLoading.VertexIndex, rhs: ObjLoading.VertexIndex) -> Bool {
 
 extension ObjLoading.VertexIndex: CustomStringConvertible {
     public var description: String {
-        return "\(vIndex)/\(nIndex)/\(tIndex)"
+        return "\(vIndex ?? -1)/\(nIndex ?? -1)/\(tIndex ?? -1)"
     }
 }

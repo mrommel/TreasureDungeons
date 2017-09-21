@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0469CA1F67E76E00A330CD /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0469C91F67E76E00A330CD /* Tree.swift */; };
+		1A0469CC1F6815BD00A330CD /* Quaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0469CB1F6815BD00A330CD /* Quaternion.swift */; };
 		1A1B81981F0B8ECF001A3B1B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B81971F0B8ECF001A3B1B /* button.png */; };
 		1A1B819D1F0BB253001A3B1B /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */; };
 		1A1B819F1F0BB6EB001A3B1B /* Bottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B819E1F0BB6EB001A3B1B /* Bottle.swift */; };
@@ -119,6 +121,8 @@
 
 /* Begin PBXFileReference section */
 		0C8110D1B4320249588CD397 /* Pods-TreasureDungeons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureDungeons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons.debug.xcconfig"; sourceTree = "<group>"; };
+		1A0469C91F67E76E00A330CD /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tree.swift; path = TreasureDungeons/Source/Models/Tree.swift; sourceTree = "<group>"; };
+		1A0469CB1F6815BD00A330CD /* Quaternion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quaternion.swift; path = TreasureDungeons/Source/OpenGL/Quaternion.swift; sourceTree = "<group>"; };
 		1A1B81971F0B8ECF001A3B1B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = TreasureDungeons/Resources/button.png; sourceTree = "<group>"; };
 		1A1B819A1F0BAC71001A3B1B /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = TreasureDungeons/Source/Presentation/Help/HelpViewController.swift; sourceTree = "<group>"; };
 		1A1B819C1F0BB253001A3B1B /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = TreasureDungeons/Source/Presentation/Level/LevelViewController.swift; sourceTree = "<group>"; };
@@ -434,6 +438,7 @@
 				1A943BF81F0BC05500A3986A /* Diamond.swift */,
 				1A943C0E1F0F91A700A3986A /* Key.swift */,
 				1A6CE2F01F4B275E00D13D84 /* Teleporter.swift */,
+				1A0469C91F67E76E00A330CD /* Tree.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				1A9CC5821F0157CE00CBC07B /* Matrix4.swift */,
 				1A3408DA1F06441C00092F53 /* ParticleEmitter.swift */,
 				1ADED0D91F61617B00C24944 /* ObjModel.swift */,
+				1A0469CB1F6815BD00A330CD /* Quaternion.swift */,
 			);
 			name = OpenGL;
 			sourceTree = "<group>";
@@ -578,7 +584,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = BurtK;
 				TargetAttributes = {
 					1A402E4F1F29D497004F74FD = {
@@ -674,9 +680,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TreasureDungeons/Pods-TreasureDungeons-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSONCodable/JSONCodable.framework",
+				"${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONCodable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Macaw.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -689,13 +704,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TreasureDungeons-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3D1ACA8E56C3282E64298229 /* [CP] Copy Pods Resources */ = {
@@ -739,6 +757,7 @@
 				1A402E471F274E59004F74FD /* CoreDataStore.swift in Sources */,
 				1A402E6F1F3AF0DA004F74FD /* HelpInteractor.swift in Sources */,
 				1A6913111F1F5EB400C66C09 /* TreasureDungeons.xcdatamodeld in Sources */,
+				1A0469CA1F67E76E00A330CD /* Tree.swift in Sources */,
 				1A402E5E1F2B1DC5004F74FD /* OptionPresenter.swift in Sources */,
 				1A9CC57F1F014E5300CBC07B /* Skybox.swift in Sources */,
 				1A90C1BC1EFBC74700E5CADE /* Floor.swift in Sources */,
@@ -750,6 +769,7 @@
 				1A402E4B1F2750F2004F74FD /* MenuDataManager.swift in Sources */,
 				1A402E711F3AF0F7004F74FD /* HelpPresenter.swift in Sources */,
 				1A3408D91F05295300092F53 /* Array.swift in Sources */,
+				1A0469CC1F6815BD00A330CD /* Quaternion.swift in Sources */,
 				1A9CC5851F03B34400CBC07B /* Treasure.swift in Sources */,
 				1ADED0D41F615FD000C24944 /* ObjLoader.swift in Sources */,
 				1A3408DD1F0A4A5900092F53 /* CGPoint.swift in Sources */,
@@ -864,14 +884,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -894,7 +920,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -910,14 +936,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -934,7 +966,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
